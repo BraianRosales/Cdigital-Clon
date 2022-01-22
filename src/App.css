@@ -3,7 +3,6 @@
   color: white;
   min-height: 30px;
   line-height: 30px;
-  border-bottom: 1px solid white;
 }
 #navBar ul {
   text-align: center;
@@ -16,6 +15,12 @@
   font-weight: 400;
   font-size: 17px;
   cursor: pointer;
+}
+#navBar #brand {
+  width: 10%;
+  position: absolute;
+  left: 100px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 * {

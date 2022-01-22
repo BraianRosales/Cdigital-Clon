@@ -1,6 +1,9 @@
+const Brand = "CdigitalClone";
+
 const NavBar = () => {
   return (
     <nav id="navBar">
+    <div id="brand">{Brand}</div>
       <ul>
         <li>Ofertas</li>
         <li>Almacén</li>
