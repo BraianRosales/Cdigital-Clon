@@ -2,30 +2,71 @@
   background-color: #47b8d6;
   color: white;
   min-height: 30px;
-  line-height: 30px;
+  line-height: 35px;
 }
 #navBar ul {
   text-align: center;
 }
 #navBar li {
-  margin-left: 20px;
-  margin-right: 20px;
+  padding: 0 18px;
   display: inline-block;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 17px;
   cursor: pointer;
 }
-#navBar #brand {
-  width: 10%;
+#navBar li:hover {
+  background-color: white;
+  color: #47b8d6;
+}
+
+.cartWidget {
+  float: right;
+  font-size: 20px;
+  margin-top: 8px;
+}
+
+.total-price {
+  font-size: 15px;
+  margin-left: 13px;
+}
+
+.quantify-products {
+  display: block;
   position: absolute;
-  left: 100px;
+  font-size: 15px;
+  width: 17px;
+  height: 17px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: red;
+  top: 0px;
+  margin-left: 15px;
+  text-align: center;
+}
+
+.number {
+  position: absolute;
+  bottom: 0px;
+  right: 5px;
+}
+
+#brand {
+  float: left;
+  margin-left: 200px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #fdeb88;
+  text-shadow: 5px 1px 3px #60490f;
 }
 
 * {
   margin: 0px auto;
   padding: 0px auto;
+}
+
+.wrap {
+  width: 70%;
 }
 
 /*# sourceMappingURL=App.css.map */

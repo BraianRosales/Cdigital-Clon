@@ -1,0 +1,11 @@
+@mixin brandElements {
+    float: left;
+    margin-left: 200px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #fdeb88;
+    text-shadow: 5px 1px 3px #60490f;
+  }
+
+  #brand {
+    @include brandElements();
+  }

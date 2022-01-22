@@ -2,24 +2,16 @@
   background-color: #47b8d6;
   color: white;
   min-height: 30px;
-  line-height: 30px;
+  line-height: 35px;
 }
 
-@mixin elementsLi {
-  margin-left: 20px;
-  margin-right: 20px;
+@mixin listItems {
+  padding: 0 18px;
   display: inline-block;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 17px;
   cursor: pointer;
-}
-
-@mixin elementsBrand {
-  width: 10%;
-  position: absolute;
-  left: 100px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 #navBar {
@@ -28,9 +20,10 @@
     text-align: center;
   }
   li {
-    @include elementsLi();
+    @include listItems();
   }
-  #brand {
-    @include elementsBrand();
+  li:hover{
+    background-color: white;
+    color: #47b8d6;
   }
 }

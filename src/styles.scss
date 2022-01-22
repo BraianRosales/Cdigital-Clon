@@ -1,8 +1,12 @@
 @use './components/components-css/navBar';
+@use './components/components-css/cartWidget';
+@use './components/components-css/logo';
 
 *{
     margin: 0px auto;
     padding: 0px auto;
 }
 
-
+.wrap{
+    width: 70%;
+}

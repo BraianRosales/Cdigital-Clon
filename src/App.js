@@ -8,7 +8,6 @@ const App = () => {
   return (
     <>
       {<NavBar /* props: titlePage= {titlePage}*//> }
-      
     </>
   );
 };
