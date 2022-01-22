@@ -60,6 +60,12 @@
   text-shadow: 5px 1px 3px #60490f;
 }
 
+#catalogs {
+  text-align: center;
+  line-height: 200px;
+  font-size: 25px;
+}
+
 * {
   margin: 0px auto;
   padding: 0px auto;

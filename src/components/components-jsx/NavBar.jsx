@@ -4,7 +4,7 @@ import Logo from "./Logo";
 const NavBar = () => {
   return (
     <nav id="navBar">
-      <Logo/>
+      <Logo />
       <div className="wrap">
         <CartWidget />
         <ul>

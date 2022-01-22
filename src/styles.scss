@@ -1,12 +1,13 @@
-@use './components/components-css/navBar';
-@use './components/components-css/cartWidget';
-@use './components/components-css/logo';
+@use "./components/components-css/navBar";
+@use "./components/components-css/cartWidget";
+@use "./components/components-css/logo";
+@use "./components/components-css/itemListContainer";
 
-*{
-    margin: 0px auto;
-    padding: 0px auto;
+* {
+  margin: 0px auto;
+  padding: 0px auto;
 }
 
-.wrap{
-    width: 70%;
+.wrap {
+  width: 70%;
 }

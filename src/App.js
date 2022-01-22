@@ -1,13 +1,14 @@
 import "./App.css";
 import NavBar from "./components/components-jsx/NavBar";
+import ItemListContainer from "./components/components-jsx/ItemListContainer";
 
-//variable jsx.
-// const titlePage = <h1>Aca comienza mi aplicacion.</h1>
+const greeting = "Hola! aca van todos los catalagos.";
 
 const App = () => {
   return (
     <>
-      {<NavBar /* props: titlePage= {titlePage}*//> }
+      <NavBar />
+      <ItemListContainer greeting={greeting} />
     </>
   );
 };
