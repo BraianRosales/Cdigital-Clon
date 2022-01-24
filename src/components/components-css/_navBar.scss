@@ -1,11 +1,11 @@
-@mixin elementsNavBar {
+@mixin navProperties {
   background-color: #47b8d6;
   color: white;
   min-height: 30px;
   line-height: 40px;
 }
 
-@mixin listItems {
+@mixin listProperties {
   padding: 0 18px;
   display: inline-block;
   font-family: Arial, Helvetica, sans-serif;
@@ -15,12 +15,12 @@
 }
 
 #navBar {
-  @include elementsNavBar();
+  @include navProperties();
   ul {
     text-align: center;
   }
   li {
-    @include listItems();
+    @include listProperties();
   }
   li:hover {
     background-color: white;
