@@ -1,7 +1,12 @@
 .cartWidget {
   float: right;
   font-size: 20px;
-  margin-top: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.fas:hover{
+  color: #fff7c9;
 }
 
 .total-price {
@@ -19,12 +24,12 @@
   -webkit-border-radius: 50%;
   border-radius: 50%;
   background: red;
-  top: 0px;
+  top: 2px;
   margin-left: 15px;
   text-align: center;
 }
 
-.number{
+.number {
   position: absolute;
   bottom: 0px;
   right: 5px;

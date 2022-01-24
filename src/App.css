@@ -2,7 +2,7 @@
   background-color: #47b8d6;
   color: white;
   min-height: 30px;
-  line-height: 35px;
+  line-height: 40px;
 }
 #navBar ul {
   text-align: center;
@@ -23,7 +23,12 @@
 .cartWidget {
   float: right;
   font-size: 20px;
-  margin-top: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.fas:hover {
+  color: #fff7c9;
 }
 
 .total-price {
@@ -41,7 +46,7 @@
   -webkit-border-radius: 50%;
   border-radius: 50%;
   background: red;
-  top: 0px;
+  top: 2px;
   margin-left: 15px;
   text-align: center;
 }
@@ -55,9 +60,10 @@
 #brand {
   float: left;
   margin-left: 200px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  color: #fdeb88;
-  text-shadow: 5px 1px 3px #60490f;
+  font-family: "Satisfy", cursive;
+  color: wheat;
+  text-shadow: 5px 1px 5px black;
+  font-size: 25px;
 }
 
 #catalogs {

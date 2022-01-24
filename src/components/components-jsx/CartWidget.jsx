@@ -5,7 +5,7 @@ const products = <span className='quantify-products'><span className='number'>0<
 
 const CartWidget = () => {
   return <div>
-      <i class="fas fa-shopping-cart cartWidget">{amount}{products}</i>
+      <i className="fas fa-shopping-cart cartWidget">{amount}{products}</i>
   </div>;
 };
 

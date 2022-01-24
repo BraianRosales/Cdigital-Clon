@@ -1,10 +1,12 @@
+$font-satisfy: 'Satisfy', cursive;
+
 @mixin brandElements {
   float: left;
   margin-left: 200px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  color: #fdeb88;
-  text-shadow: 5px 1px 3px #60490f;
+  font-family: $font-satisfy;
+  color: wheat;
+  text-shadow: 5px 1px 5px black;
+  font-size: 25px;
 }
 
 #brand {

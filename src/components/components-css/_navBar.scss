@@ -2,7 +2,7 @@
   background-color: #47b8d6;
   color: white;
   min-height: 30px;
-  line-height: 35px;
+  line-height: 40px;
 }
 
 @mixin listItems {
@@ -22,7 +22,7 @@
   li {
     @include listItems();
   }
-  li:hover{
+  li:hover {
     background-color: white;
     color: #47b8d6;
   }
