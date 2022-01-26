@@ -123,6 +123,10 @@
   margin-top: 7px;
 }
 
+.card-w {
+  width: 18%;
+}
+
 * {
   margin: 0px auto;
   padding: 0px auto;

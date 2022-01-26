@@ -4,6 +4,7 @@
 @use "./components/components-css/itemListContainer";
 @use "./components/components-css/header";
 @use "./components/components-css/search";
+@use "./components/components-css/product";
 
 * {
   margin: 0px auto;
@@ -13,3 +14,4 @@
 .wrap {
   width: 70%;
 }
+
