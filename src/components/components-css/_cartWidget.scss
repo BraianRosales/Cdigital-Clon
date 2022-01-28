@@ -1,36 +1,4 @@
-.cartWidget {
-  float: right;
-  font-size: 20px;
-  margin-top: 10px;
-  cursor: pointer;
-}
-
-.fas:hover {
-  color: #fff7c9;
-}
-
-.total-price {
-  font-size: 15px;
-  margin-left: 13px;
-}
-
-.quantify-products {
-  display: block;
-  position: absolute;
-  font-size: 15px;
-  width: 17px;
-  height: 17px;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  background: red;
-  top: 87px;
-  margin-left: 15px;
-  text-align: center;
-}
-
-.number {
-  position: absolute;
-  bottom: 0px;
-  right: 5px;
+#total-price{
+    font-size: 15px;
+    margin-left: 10px;
 }

@@ -20,41 +20,9 @@
   color: #47b8d6;
 }
 
-.cartWidget {
-  float: right;
-  font-size: 20px;
-  margin-top: 10px;
-  cursor: pointer;
-}
-
-.fas:hover {
-  color: #fff7c9;
-}
-
-.total-price {
+#total-price {
   font-size: 15px;
-  margin-left: 13px;
-}
-
-.quantify-products {
-  display: block;
-  position: absolute;
-  font-size: 15px;
-  width: 17px;
-  height: 17px;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  background: red;
-  top: 87px;
-  margin-left: 15px;
-  text-align: center;
-}
-
-.number {
-  position: absolute;
-  bottom: 0px;
-  right: 5px;
+  margin-left: 10px;
 }
 
 #brand {
@@ -70,6 +38,13 @@
   text-align: center;
   line-height: 200px;
   font-size: 25px;
+}
+
+#p-greeting {
+  text-align: center;
+  font-size: 25px;
+  margin: 20px;
+  margin-top: 3em;
 }
 
 #header {
@@ -136,11 +111,29 @@
 .btn {
   background-color: #47b8d6 !important;
   color: white !important;
-  font-Weight: normal !important;
+  font-weight: normal !important;
 }
 
 .btn:hover {
   color: black !important;
+}
+
+.box-in-product {
+  margin-bottom: 10px;
+}
+
+#alert {
+  margin-left: -60px;
+}
+
+#btn-add {
+  margin-top: 10px;
+  background-color: #47b8d6;
+  width: 90%;
+}
+
+.btn-card:hover {
+  border: none !important;
 }
 
 * {

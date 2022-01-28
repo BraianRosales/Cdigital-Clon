@@ -4,7 +4,7 @@ import Product from "./Product";
 const ItemListContainer = (props) => {
   return (
     <div className="wrap">
-      <h3 className="text-center m-5">{props.greeting}</h3>
+      <p id="p-greeting">{props.greeting}</p>
       <Product />
     </div>
   );

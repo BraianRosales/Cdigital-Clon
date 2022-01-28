@@ -1,21 +1,33 @@
-import React from "react";
+import * as React from "react";
+import Badge from "@mui/material/Badge";
+import { styled } from "@mui/material/styles";
+import IconButton from "@mui/material/IconButton";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { Box } from "@mui/system";
 
-const amount = <span className="total-price">$0,00</span>;
-const products = (
-  <span className="quantify-products">
-    <span className="number">{0}</span>
-  </span>
-);
+const StyledBadge = styled(Badge)(({ theme }) => ({
+  "& .MuiBadge-badge": {
+    top: 2,
+    padding: "0 4px",
+    backgroundColor: "red",
+  },
+}));
 
-const CartWidget = () => {
+export default function CartWidget() {
   return (
-    <div>
-      <i className="fas fa-shopping-cart cartWidget">
-        {amount}
-        {products}
-      </i>
-    </div>
+    <IconButton
+      aria-label="cart"
+      sx={{
+        float: "right",
+        color: "white",
+        backgroundColor: "#47b8d6!important",
+        marginLeft: "-50px",
+      }}
+    >
+      <StyledBadge badgeContent={1}>
+        <ShoppingCartIcon />
+      </StyledBadge>
+      <Box id="total-price">$0,00</Box>
+    </IconButton>
   );
-};
-
-export default CartWidget;
+}
