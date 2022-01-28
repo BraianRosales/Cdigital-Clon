@@ -4,6 +4,7 @@ import CardMedia from "@mui/material/CardMedia";
 import { Box } from "@mui/system";
 import ItemCount from "./ItemCount";
 import Typography from "@mui/material/Typography";
+import { grey } from "@mui/material/colors";
 
 const price = "$176,99";
 
@@ -14,7 +15,7 @@ export default function Product() {
 
   return (
     <>
-      <Card sx={{ maxWidth: "17%" }}>
+      <Card sx={{ maxWidth: "18%" }}>
         <CardMedia
           component="img"
           sx={{ width: "100%" }}

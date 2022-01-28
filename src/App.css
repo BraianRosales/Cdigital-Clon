@@ -126,6 +126,12 @@
   margin-left: -60px;
 }
 
+hr {
+  border: none;
+  height: 1px;
+  background-color: #e1e1e1;
+}
+
 #btn-add {
   margin-top: 10px;
   background-color: #47b8d6;
