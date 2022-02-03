@@ -142,6 +142,11 @@ hr {
   border: none !important;
 }
 
+#layout {
+  display: inline-flex;
+  width: auto;
+}
+
 * {
   margin: 0px auto;
   padding: 0px auto;
