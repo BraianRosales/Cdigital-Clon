@@ -48,5 +48,55 @@
     "description": "Galletitas Dulces Pepitos Mini Bsa 50 Grm ",
     "price": "$46,99",
     "stock": 20
+  },
+  {
+    "id": 5,
+    "category": "almacen",
+    "type": "galletita",
+    "image": "img/criollitas.jpg",
+    "name": "criollitas",
+    "description": "Galletitas . Criollitas Paq 300 Grm",
+    "price": "$98,00",
+    "stock": 10
+  },
+  {
+    "id": 6,
+    "category": "almacen",
+    "type": "galletita",
+    "image": "img/anillosTerrabusi.jpg",
+    "name": "anillos",
+    "description": "Gall.Dulces Anillos Terrabusi Paq 170 Grm",
+    "price": "$43.99",
+    "stock": 8
+  },
+  {
+    "id": 7,
+    "category": "almacen",
+    "type": "galletita",
+    "image": "img/chocolinas.jpg",
+    "name": "chocolinas",
+    "description": "Gall.Dulces Chocolat Chocolinas Paq 250 Grm",
+    "price": "$100,65 ",
+    "stock": 5
+  },
+  {
+    "id": 9,
+    "category": "almacen",
+    "type": "galletita",
+    "image": "img/anillosTerrabusi.jpg",
+    "name": "anillos",
+    "description": "Gall.Dulces Anillos Terrabusi Paq 170 Grm",
+    "price": "$43.99",
+    "stock": 8
+  },
+  {
+    "id": 10,
+    "category": "almacen",
+    "type": "galletita",
+    "image": "img/chocolinas.jpg",
+    "name": "chocolinas",
+    "description": "Gall.Dulces Chocolat Chocolinas Paq 250 Grm",
+    "price": "$100,65 ",
+    "stock": 5
   }
 ]

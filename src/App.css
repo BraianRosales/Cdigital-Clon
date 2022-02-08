@@ -98,10 +98,6 @@
   margin-top: 7px;
 }
 
-.card-w {
-  width: 19%;
-}
-
 .price {
   text-align: center;
   font-size: 23px;
@@ -143,8 +139,10 @@ hr {
 }
 
 #layout {
-  display: inline-flex;
-  width: auto;
+  width: 64%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 * {
