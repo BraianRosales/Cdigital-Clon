@@ -3,28 +3,30 @@ import ItemDetail from "./ItemDetail";
 import mockApi from "./../../mockApi.json";
 
 const ItemDetailContainer = () => {
-  const [item, setItem] = useState();
-  const id = 4;
+  const [item, setItem] = useState({});
+  let id = 2;
 
   useEffect(() => {
-    function productFind(mockApi) {
+    function findItem() {
       return mockApi.find((p) => p.id === id);
     }
 
-    const getItem = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(productFind(mockApi));
-      }, 2000);
-    });
+    function getItem() {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve(findItem());
+        }, 2000);
+      });
+    }
 
-    getItem
+    getItem()
       .then((res) => {
         setItem(res);
       })
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [id]);
 
   return (
     <>
@@ -32,5 +34,4 @@ const ItemDetailContainer = () => {
     </>
   );
 };
-
 export default ItemDetailContainer;
