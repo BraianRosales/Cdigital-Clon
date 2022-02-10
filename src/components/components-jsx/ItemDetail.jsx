@@ -16,7 +16,7 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-const ItemDetail = ({ item }) => {
+const ItemDetail = ({ item, img }) => {
   return (
     <div className="wrap">
       <Card sx={{ boxShadow: "none" }}>
@@ -28,7 +28,7 @@ const ItemDetail = ({ item }) => {
           >
             <Grid item xs={6}>
               <Item sx={{ border: "1px solid #d7d7d7" }}>
-                <CardMedia component="img" image={item.image} />
+                <CardMedia component="img" image={`/${img}`} />
               </Item>
             </Grid>
             <Grid item xs={6}>
@@ -39,6 +39,11 @@ const ItemDetail = ({ item }) => {
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
                     {item.description}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                  <h1>
+                  {item.price}
+                  </h1>
                   </Typography>
                 </CardContent>
               </Item>

@@ -1,13 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Item from "./Item";
+import { Link } from "react-router-dom";
+import Spinner from "./Spinner";
 
 const ItemList = ({ products }) => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+  }, []);
+
   return (
-    <div id="layout">
-      {products.map((product) => (
-        <Item key={product.id} product={product} />
-      ))}
-    </div>
+    <>
+      {isLoading ? (
+        <Spinner />
+      ) : (
+        <div className="wrap">
+          {products.map((product) => (
+            <Link to={`/item/${product.id}`} key={product.id}>
+              <Item product={product} />
+            </Link>
+          ))}
+        </div>
+      )}
+    </>
   );
 };
 

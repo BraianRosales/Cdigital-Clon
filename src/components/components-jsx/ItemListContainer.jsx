@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import mockApi from "./../../mockApi.json";
 
-const ItemListContainer = (props) => {
+const ItemListContainer = ({ greeting }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const ItemListContainer = (props) => {
 
   return (
     <>
-      <p id="p-greeting">{props.greeting}</p>
+      <p id="p-greeting">{greeting}</p>
       <ItemList products={products} />
     </>
   );

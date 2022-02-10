@@ -18,11 +18,14 @@
   @include navProperties();
   ul {
     text-align: center;
+    a{
+      color: white;
+    }
   }
-  li {
+  .li {
     @include listProperties();
   }
-  li:hover {
+  .li:hover {
     background-color: white;
     color: #47b8d6;
   }

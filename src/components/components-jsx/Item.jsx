@@ -4,36 +4,19 @@ import CardMedia from "@mui/material/CardMedia";
 import { Box } from "@mui/system";
 import ItemCount from "./ItemCount";
 import Typography from "@mui/material/Typography";
-import React, { useState } from "react";
-import { Alert } from "@mui/material";
+
 
 export default function Item({ product }) {
-  let [alert, setAlert] = useState();
-  console.log(product);
-
-  function onAdd() {
-    setAlert(
-      <Alert
-        severity="success"
-        sx={{
-          width: "80%",
-          mt: "15px",
-          backgroundColor: "rgb(233, 255, 233)",
-        }}
-      >
-        Cantidad agregada carrito!
-      </Alert>
-    );
-  }
-
   return (
     <>
       <Card
         sx={{
           border: "1px solid #d7d7d7",
-          width: "19%",
           mt: "10px",
-          ml: "4px",
+          width:"18%",
+          float:"left",
+          marginTop:"42px",
+          marginLeft:"22px"
         }}
       >
         <CardMedia component="img" image={product.image} alt="Criollita" />
@@ -62,10 +45,9 @@ export default function Item({ product }) {
           </Box>
           <Box className="price box-in-product">{product.price}</Box>
           <hr></hr>
-          <ItemCount stock={product.stock} initial="1" onAdd={onAdd} />
+          <ItemCount stock={product.stock} initial="1" />
         </CardContent>
       </Card>
-      <p>{alert}</p>
     </>
   );
 }

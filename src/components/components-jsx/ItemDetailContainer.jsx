@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
 import mockApi from "./../../mockApi.json";
+import Spinner from "./Spinner";
 
-const ItemDetailContainer = () => {
+const ItemDetailContainer = ({ id }) => {
   const [item, setItem] = useState({});
-  let id = 2;
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     function findItem() {
@@ -15,6 +16,7 @@ const ItemDetailContainer = () => {
       return new Promise((resolve, reject) => {
         setTimeout(() => {
           resolve(findItem());
+          setIsLoading(false);
         }, 2000);
       });
     }
@@ -29,9 +31,9 @@ const ItemDetailContainer = () => {
   }, [id]);
 
   return (
-    <>
-      <ItemDetail item={item} />
-    </>
+    <div id="itemDetail">
+      {isLoading ? <Spinner /> : <ItemDetail item={item} img={item.image} />}
+    </div>
   );
 };
 export default ItemDetailContainer;
