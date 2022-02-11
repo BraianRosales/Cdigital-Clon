@@ -9,16 +9,36 @@ const NavBar = () => {
       <div className="wrap">
         <CartWidget />
         <ul>
-          <Link className="li" to="/category/:id">Almacén</Link>
-          <Link className="li" to="/category/:id">Bebidas</Link>
-          <Link className="li" to="/category/:id">Frescos</Link>
-          <Link className="li" to="/category/:id">Congelados</Link>
-          <Link className="li" to="/category/:id">Limpieza</Link>
-          <Link className="li" to="/category/:id">Perfumeria</Link>
-          <Link className="li" to="/category/:id">Electro</Link>
-          <Link className="li" to="/category/:id">Textil</Link>
-          <Link className="li" to="/category/:id">Hogar</Link>
-          <Link className="li" to="/category/:id">Aire libre</Link>
+          <Link className="li" to="/category/almacen">
+            Almacén
+          </Link>
+          <Link className="li" to="/category/bebidas">
+            Bebidas
+          </Link>
+          <Link className="li" to="/category/frescos">
+            Frescos
+          </Link>
+          <Link className="li" to="/category/congelados">
+            Congelados
+          </Link>
+          <Link className="li" to="/category/limpieza">
+            Limpieza
+          </Link>
+          <Link className="li" to="/category/perfumeria">
+            Perfumeria
+          </Link>
+          <Link className="li" to="/category/electro">
+            Electro
+          </Link>
+          <Link className="li" to="/category/textil">
+            Textil
+          </Link>
+          <Link className="li" to="/category/hogar">
+            Hogar
+          </Link>
+          <Link className="li" to="/category/aireLibre">
+            Aire libre
+          </Link>
         </ul>
       </div>
     </nav>

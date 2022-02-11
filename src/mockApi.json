@@ -26,7 +26,7 @@
     "image": "img/chocolinas.jpg",
     "name": "chocolinas",
     "description": "Gall.Dulces Chocolat Chocolinas Paq 250 Grm",
-    "price": "$100,65 ",
+    "price": "$100,65",
     "stock": 5
   },
   {
@@ -45,8 +45,108 @@
     "type": "galletita",
     "image": "img/pepitosMini.jpg",
     "name": "pepitos mini",
-    "description": "Galletitas Dulces Pepitos Mini Bsa 50 Grm ",
+    "description": "Galletitas Dulces Pepitos Mini Bsa 50 Grm",
     "price": "$46,99",
     "stock": 20
+  },
+  {
+    "id": 5,
+    "category": "bebidas",
+    "type": "bebidas sin alcohol",
+    "image": "img/aguaMineral.jpg",
+    "name": "coto agua",
+    "description": "Agua Mineral Natural Coto Bidón 6.5 L",
+    "price": "$192,59",
+    "stock": 18
+  },
+  {
+    "id": 6,
+    "category": "bebidas",
+    "type": "bebidas sin alcohol",
+    "image": "img/aguaPomelo.jpg",
+    "name": "coto pomelo",
+    "description": "Agua Saborizada Coto Pomelo Botella 1.5 L",
+    "price": "$67,18",
+    "stock": 10
+  },
+  {
+    "id": 7,
+    "category": "bebidas",
+    "type": "bebidas con alcohol",
+    "image": "img/cervezaSchneider.jpg",
+    "name": "cerv. schneider",
+    "description": "Cerveza Lager SCHNEIDER Lata 473 Cc",
+    "price": "$113,30",
+    "stock": 5
+  },
+  {
+    "id": 8,
+    "category": "bebidas",
+    "type": "bebidas con alcohol",
+    "image": "img/cervezaQuilmes.jpg",
+    "name": "cerv. quilmes",
+    "description": "Cerveza QUILMES Botella 1 L",
+    "price": "$137,80",
+    "stock": 10
+  },
+  {
+    "id": 9,
+    "category": "bebidas",
+    "type": "bebidas con alcohol",
+    "image": "img/crotaMistela.jpg",
+    "name": "mistela crotta",
+    "description": "Mistela . CROTTA Botella 2 Ltr",
+    "price": "$399,00",
+    "stock": 10
+  },
+  {
+    "id": 10,
+    "category": "perfumeria",
+    "type": "shampoo",
+    "image": "img/plusbelle.jpg",
+    "name": "shampoo detox",
+    "description": "Shampoo Detox C/Bio Pr Plusbelle Bot 1000 Ml",
+    "price": "$326,99",
+    "stock": 15
+  },
+  {
+    "id": 11,
+    "category": "perfumeria",
+    "type": "cremas dentales",
+    "image": "img/oralB.jpg",
+    "name": "oral-B",
+    "description": "Pasta Dental Anti-Caries Oral B Cja 150 Uni",
+    "price": "$192,99",
+    "stock": 5
+  },
+  {
+    "id": 12,
+    "category": "perfumeria",
+    "type": "jabones",
+    "image": "img/jabonRexona.jpg",
+    "name": "jabon rexona",
+    "description": "Jabón En Barra Antibacterial Rexona",
+    "price": "$136,75",
+    "stock": 8
+  },
+  {
+    "id": 13,
+    "category": "perfumeria",
+    "type": "afeitado",
+    "image": "img/gillette.jpg",
+    "name": "Gillette",
+    "description": "Máquina Para Afeitar Gillette Prestobarba 10 Un",
+    "price": "$908,99",
+    "stock": 6
+  },
+  {
+    "id": 14,
+    "category": "perfumeria",
+    "type": "cuidado de la piel",
+    "image": "img/locionNivea.jpg",
+    "name": "locion nivea",
+    "description": "Locion Protect & Bron Nivea Bot 200 Ml",
+    "price": "$779,00",
+    "stock": 5
   }
 ]

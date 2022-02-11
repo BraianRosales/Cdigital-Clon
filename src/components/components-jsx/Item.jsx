@@ -5,7 +5,6 @@ import { Box } from "@mui/system";
 import ItemCount from "./ItemCount";
 import Typography from "@mui/material/Typography";
 
-
 export default function Item({ product }) {
   return (
     <>
@@ -13,13 +12,13 @@ export default function Item({ product }) {
         sx={{
           border: "1px solid #d7d7d7",
           mt: "10px",
-          width:"18%",
-          float:"left",
-          marginTop:"42px",
-          marginLeft:"22px"
+          width: "18%",
+          float: "left",
+          marginTop: "80px",
+          marginLeft: "22px",
         }}
       >
-        <CardMedia component="img" image={product.image} alt="Criollita" />
+        <CardMedia component="img" image={`/${product.image}`} alt="Imagen" />
         <CardContent>
           <Box
             className="box-in-product"

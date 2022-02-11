@@ -20,7 +20,7 @@ const ItemDetail = ({ item, img }) => {
   return (
     <div className="wrap">
       <Card sx={{ boxShadow: "none" }}>
-        <Box sx={{ width: "100%" }}>
+        <Box sx={{ width: "80%" }}>
           <Grid
             container
             rowSpacing={1}
@@ -41,9 +41,7 @@ const ItemDetail = ({ item, img }) => {
                     {item.description}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                  <h1>
-                  {item.price}
-                  </h1>
+                    <h1>{item.price}</h1>
                   </Typography>
                 </CardContent>
               </Item>
