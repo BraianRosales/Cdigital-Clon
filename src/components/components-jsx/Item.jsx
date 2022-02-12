@@ -44,7 +44,7 @@ export default function Item({ product }) {
           </Box>
           <Box className="price box-in-product">{product.price}</Box>
           <hr></hr>
-          <ItemCount stock={product.stock} initial="1" />
+          <ItemCount stock={product.stock} initial="1" wd={100} />
         </CardContent>
       </Card>
     </>

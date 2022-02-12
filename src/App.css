@@ -135,7 +135,6 @@ hr {
 #btn-add {
   margin-top: 10px;
   background-color: #47b8d6;
-  width: 90%;
 }
 
 .btn-card:hover {
@@ -150,10 +149,6 @@ hr {
 
 .wrap {
   width: 70%;
-}
-
-#itemDetail{
-  margin-top: 100px;
 }
 
 /*# sourceMappingURL=App.css.map */
