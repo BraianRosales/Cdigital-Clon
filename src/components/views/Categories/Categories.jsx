@@ -1,13 +1,13 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import NavDetailContainer from "../../components-jsx/NavDetailContainer";
+import ItemListContainer from "../../components-jsx/ItemListContainer";
 
-const Categories = () => {
+const Categories = ({ greeting }) => {
   let category = useParams().categoryId;
 
   return (
     <div>
-      <NavDetailContainer category={category} />
+      <ItemListContainer category={category} greeting={greeting} />
     </div>
   );
 };

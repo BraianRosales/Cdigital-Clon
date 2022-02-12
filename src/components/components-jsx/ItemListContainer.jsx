@@ -2,30 +2,38 @@ import React, { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import mockApi from "./../../mockApi.json";
 
-const ItemListContainer = ({ greeting }) => {
-  const [products, setProducts] = useState([]);
+const ItemListContainer = ({ greeting, category }) => {
+  const [productsCategory, setProductsCategory] = useState([]);
 
   useEffect(() => {
-    const promiseProducts = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(mockApi);
-      }, 1000);
-    });
+    function mapItemsCategory() {
+      console.log(category);
+      return mockApi.filter((p) => p.category === category);
+    }
 
-    promiseProducts
+    function getItemsCategory() {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve(mapItemsCategory());
+        }, 1000);
+      });
+    }
+
+    getItemsCategory()
       .then((res) => {
-        setProducts(res);
+        console.log(res);
+        setProductsCategory(res);
       })
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [category]);
 
   return (
-    <>
-      <p id="p-greeting">{greeting}</p>
-      <ItemList products={products} />
-    </>
+    <div>
+      <div id="p-greeting">{greeting}</div>
+      <ItemList products={productsCategory} />
+    </div>
   );
 };
 
