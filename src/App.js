@@ -3,11 +3,11 @@ import NavBar from "./components/components-jsx/NavBar";
 import Header from "./components/components-jsx/Header";
 import Home from "./components/views/Home/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ViewItemDetail from "./components/views/ViewItemDetail/ViewItemDetail";
-import ViewCategoryNav from "./components/views/ViewCategoryNav/ViewCategoryNav";
-import ViewError404 from "./components/views/ViewError404/ViewError404";
+import ItemDetails from "./components/views/ItemDetails/ItemDetails";
+import Categories from "./components/views/Categories/Categories";
+import Error404 from "./components/views/Error404/Error404";
 
-const greeting = "Indica la galletita con la cantidad que queres agregar!";
+const greeting = "Indica la cantidad del productos que queres agregar al carrito!";
 
 const App = () => {
   return (
@@ -16,9 +16,9 @@ const App = () => {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home greeting={greeting} />} />
-        <Route path="/item/:id" element={<ViewItemDetail />} />
-        <Route path="/category/:categoryId" element={<ViewCategoryNav />} />
-        <Route path="*" element={<ViewError404 />} />
+        <Route path="/item/:id" element={<ItemDetails />} />
+        <Route path="/category/:categoryId" element={<Categories />} />
+        <Route path="*" element={<Error404/>} />
       </Routes>
     </Router>
   );

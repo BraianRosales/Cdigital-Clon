@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import NavDetailContainer from "../../components-jsx/NavDetailContainer";
 
-const ViewCategoryNav = () => {
+const Categories = () => {
   let category = useParams().categoryId;
 
   return (
@@ -12,4 +12,4 @@ const ViewCategoryNav = () => {
   );
 };
 
-export default ViewCategoryNav;
+export default Categories;

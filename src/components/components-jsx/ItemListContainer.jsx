@@ -9,7 +9,7 @@ const ItemListContainer = ({ greeting }) => {
     const promiseProducts = new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(mockApi);
-      }, 2000);
+      }, 1000);
     });
 
     promiseProducts
