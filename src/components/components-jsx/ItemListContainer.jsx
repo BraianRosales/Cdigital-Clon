@@ -30,10 +30,10 @@ const ItemListContainer = ({ greeting, category }) => {
   }, [category]);
 
   return (
-    <div>
+    <>
       <div id="p-greeting">{greeting}</div>
       <ItemList products={productsCategory} />
-    </div>
+    </>
   );
 };
 

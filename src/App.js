@@ -7,8 +7,7 @@ import ItemDetails from "./components/views/ItemDetails/ItemDetails";
 import Categories from "./components/views/Categories/Categories";
 import Error404 from "./components/views/Error404/Error404";
 
-const greeting =
-  "Indica la cantidad del productos que queres agregar al carrito!";
+const greeting = "Indica la cantidad del productos que queres agregar al carrito!"
 
 const App = () => {
   return (

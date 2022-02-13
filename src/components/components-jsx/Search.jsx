@@ -1,5 +1,5 @@
 import React from "react";
-import {BsSearch} from "react-icons/bs";
+import { BsSearch } from "react-icons/bs";
 
 const Search = () => {
   return (
@@ -10,7 +10,7 @@ const Search = () => {
         id="input-search"
       ></input>
       <span id="search-for">
-        <BsSearch className="fa-search"/>
+        <BsSearch className="fa-search" />
       </span>
     </div>
   );

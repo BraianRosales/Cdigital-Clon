@@ -141,6 +141,12 @@ hr {
   border: none !important;
 }
 
+.layout {
+  display: flex;
+  background-color: gainsboro;
+  align-items: center;
+}
+
 * {
   margin: 0px auto;
   padding: 0px auto;

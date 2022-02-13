@@ -18,11 +18,15 @@ const ItemList = ({ products }) => {
         <Spinner />
       ) : (
         <div className="wrap">
-          {products.map((product) => (
-            <Link to={`/item/${product.id}`} key={product.id}>
-              <Item product={product} />
-            </Link>
-          ))}
+          {products.map((product) => {
+            return (
+              <div key={product.id}>
+                <Link to={`/item/${product.id}`}>
+                  <Item product={product} />
+                </Link>
+              </div>
+            );
+          })}
         </div>
       )}
     </>

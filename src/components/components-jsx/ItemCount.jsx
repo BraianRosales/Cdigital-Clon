@@ -5,16 +5,12 @@ import React, { useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import ButtonGroup from "@mui/material/ButtonGroup";
+import FormGroup from "@mui/material/FormGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
 
-const ItemCount = ({ stock, initial, wd, float }) => {
+const ItemCount = ({ stock, initial, onAdd }) => {
   let [numInitial, setInitial] = useState(Number(initial));
-
-  function handleBtnAdd(e) {
-    e.preventDefault();
-    if (numInitial > 0) {
-      console.log(`Se agrego ${numInitial} productos al carrito.`);
-    }
-  }
 
   function handleAdd(e) {
     e.preventDefault();
@@ -66,11 +62,18 @@ const ItemCount = ({ stock, initial, wd, float }) => {
         <Button
           variant="contained"
           id="btn-add"
-          onClick={handleBtnAdd}
-          sx={{ width: `${wd}%`, float: `${float}` }}
+          onClick={onAdd}
+          sx={{ width: "30%", float: "right" }}
         >
           Agregar
         </Button>
+        <FormGroup>
+          <FormControlLabel
+            control={<Checkbox defaultChecked color="success" />}
+            label="Comparar"
+            sx={{ mt: "10px", ml: "10px", float: "left" }}
+          />
+        </FormGroup>
       </Box>
     </div>
   );

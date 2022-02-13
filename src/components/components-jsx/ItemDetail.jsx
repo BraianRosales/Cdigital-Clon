@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -8,9 +8,8 @@ import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import ItemCount from "./ItemCount";
-import FormGroup from "@mui/material/FormGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
+import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -20,6 +19,13 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const ItemDetail = ({ item, img }) => {
+  const [render, setRender] = useState(true);
+
+  function onAdd() {
+    setRender(false);
+    return console.log("agregaste producto al carrito");
+  }
+
   return (
     <div className="wrap">
       <Card sx={{ boxShadow: "none", mt: "100px" }}>
@@ -73,19 +79,28 @@ const ItemDetail = ({ item, img }) => {
                 </Box>
                 <Box className="price box-in-product">{item.price}</Box>
                 <hr></hr>
-                <ItemCount
-                  stock={item.stock}
-                  initial="1"
-                  wd={30}
-                  float="right"
-                />
-                <FormGroup>
-                  <FormControlLabel
-                    control={<Checkbox defaultChecked color="success" />}
-                    label="Comparar"
-                    sx={{ mt: "10px", ml: "10px" }}
-                  />
-                </FormGroup>
+                {render ? (
+                  <ItemCount stock={item.stock} initial="1" onAdd={onAdd} />
+                ) : (
+                  <CardContent>
+                    <p style={{ textAlign: "center", color: "#22e122" }}>
+                      ¡Se agrego la cantidad al carrito!
+                    </p>
+                    <Button
+                      variant="contained"
+                      id="btn-add"
+                      onClick={onAdd}
+                      sx={{
+                        color:"white",
+                        width: "73%",
+                        display: "block",
+                        margin: "0px auto",
+                      }}
+                    >
+                      <Link style={{color:"white"}} to="/cart">Terminar mi compra</Link>
+                    </Button>
+                  </CardContent>
+                )}
               </CardContent>
             </Grid>
           </Grid>

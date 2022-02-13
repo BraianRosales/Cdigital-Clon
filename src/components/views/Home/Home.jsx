@@ -23,7 +23,7 @@ const Home = ({ greeting }) => {
   return (
     <div>
       <div id="p-greeting">{greeting}</div>
-      <ItemList products={products} />;
+      <ItemList products={products} />
     </div>
   );
 };
