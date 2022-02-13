@@ -1,7 +1,7 @@
 import ItemDetailContainer from "../../components-jsx/ItemDetailContainer";
 import { useParams } from "react-router-dom";
 
-const ItemDetails = () => {
+const ItemDetailView = () => {
   let productId = useParams().id;
   productId = Number(productId);
 
@@ -12,4 +12,4 @@ const ItemDetails = () => {
   );
 };
 
-export default ItemDetails;
+export default ItemDetailView;

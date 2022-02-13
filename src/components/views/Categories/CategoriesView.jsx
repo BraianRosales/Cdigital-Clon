@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import ItemListContainer from "../../components-jsx/ItemListContainer";
 
-const Categories = ({ greeting }) => {
+const CategoriesView = ({ greeting }) => {
   let category = useParams().categoryId;
 
   return (
@@ -12,4 +12,4 @@ const Categories = ({ greeting }) => {
   );
 };
 
-export default Categories;
+export default CategoriesView;
