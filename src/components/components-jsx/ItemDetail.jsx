@@ -114,7 +114,7 @@ const ItemDetail = ({ item, img }) => {
                 paddingRight: "50px",
                 height: "440px",
                 border: "1px solid #d7d7d7",
-                overflow: "scroll",
+                overflow: "auto",
               }}
             >
               {/* Component */}
