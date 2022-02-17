@@ -1,9 +1,8 @@
-
 // ------------------------------------------CONTEXT API------------------------------------------
 import React, { createContext, useState } from "react";
 
 // 1 - CREAR EL CONTEXTO
-export const ProductsContext = createContext();
+export const CartContext = createContext();
 
 // STATE que le pasamos al useState
 const initialState = [];
@@ -44,9 +43,9 @@ export const ItemsProvider = ({ children }) => {
 
   // 3 - RETORNAMOS NUESTRO CONTEXT CON UN .PROVIDER
   return (
-    <ProductsContext.Provider value={[items, removeItem, addItem, clear]}>
+    <CartContext.Provider value={[items, removeItem, addItem, clear]}>
       {/* 4 - PROPS.CHILDREN O BIEN CHILDREN */}
       {children}
-    </ProductsContext.Provider>
+    </CartContext.Provider>
   );
 };

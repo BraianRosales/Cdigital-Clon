@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 // Context
-import { ProductsContext } from "../Context/ProductsContext";
+import { CartContext } from "../Context/CartContext";
 import ItemInCart from "./ItemInCart";
 
 const ItemsListInCart = () => {
-  const [items, removeItem, addItem, clear] = useContext(ProductsContext);
+  const [items, removeItem, addItem, clear] = useContext(CartContext);
 
   console.log("DATA", items);
 

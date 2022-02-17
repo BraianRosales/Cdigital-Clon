@@ -11,7 +11,7 @@ import ItemCount from "./ItemCount";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import ItemsListInCart from "./ItemsListInCart";
-import { ProductsContext } from "../Context/ProductsContext";
+import { CartContext } from "../Context/CartContext";
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -22,7 +22,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const ItemDetail = ({ item, img }) => {
   const [render, setRender] = useState(true);
-  const [items, addItem] = useContext(ProductsContext);
+  const [items, removeItem, addItem, clear] = useContext(CartContext);
 
   function onAdd(quantify) {
     console.log(items);
