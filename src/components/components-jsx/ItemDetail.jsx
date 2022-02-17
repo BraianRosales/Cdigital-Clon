@@ -108,6 +108,7 @@ const ItemDetail = ({ item, img }) => {
             </CardContent>
           </Grid>
           <Grid item xs={3} sx={{ paddingLeft: "80px!important" }}>
+            <h3 style={{ textAlign: "center" }}>CARRITO</h3>
             <Item
               sx={{
                 paddingLeft: "50px",
@@ -117,8 +118,11 @@ const ItemDetail = ({ item, img }) => {
                 overflow: "auto",
               }}
             >
-              {/* Component */}
-              <ItemsListInCart />
+              <ItemsListInCart
+                items={items}
+                removeItem={removeItem}
+                clear={clear}
+              />
             </Item>
           </Grid>
         </Grid>

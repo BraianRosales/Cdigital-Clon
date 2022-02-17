@@ -5,7 +5,7 @@ import IconButton from "@mui/material/IconButton";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Box } from "@mui/system";
 
-const StyledBadge = styled(Badge)(({ theme }) => ({
+const StyledBadge = styled(Badge)(() => ({
   "& .MuiBadge-badge": {
     top: 2,
     padding: "0 4px",
