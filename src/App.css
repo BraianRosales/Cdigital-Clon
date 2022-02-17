@@ -137,6 +137,11 @@ hr {
   background-color: #47b8d6;
 }
 
+
+#btn-quitar:hover{
+  background-color: #c16262;
+}
+
 .btn-card:hover {
   border: none !important;
 }

@@ -46,6 +46,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
             >
               <RemoveIcon fontSize="small" />
             </Button>
+            {/* Numero de la cuenta Initial */}
             <Box mx="20px" mt="5px">
               {numInitial}
             </Box>
@@ -62,7 +63,9 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         <Button
           variant="contained"
           id="btn-add"
-          onClick={onAdd}
+          onClick={() => {
+            onAdd(numInitial);
+          }}
           sx={{ width: "30%", float: "right" }}
         >
           Agregar
