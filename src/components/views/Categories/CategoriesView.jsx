@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import ItemListContainer from "../../components-jsx/ItemListContainer";
+import ItemListContainer from "../../itemListContainer/ItemListContainer";
 
 const CategoriesView = ({ greeting }) => {
   let category = useParams().categoryId;

@@ -1,4 +1,4 @@
-import ItemDetailContainer from "../../components-jsx/ItemDetailContainer";
+import ItemDetailContainer from "../../itemDetailContainer/ItemDetailContainer";
 import { useParams } from "react-router-dom";
 
 const ItemDetailView = () => {

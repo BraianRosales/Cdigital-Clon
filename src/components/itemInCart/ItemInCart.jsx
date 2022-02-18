@@ -3,6 +3,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import { Button, CardActionArea } from "@mui/material";
+import DeleteIcon from '@mui/icons-material/Delete';
 
 const ItemInCart = ({ data, removeItem }) => {
   return (
@@ -36,7 +37,7 @@ const ItemInCart = ({ data, removeItem }) => {
             removeItem(data.id);
           }}
         >
-          Quitar
+          <DeleteIcon />
         </Button>
       </Card>
     </div>

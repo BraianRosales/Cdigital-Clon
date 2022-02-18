@@ -1,4 +1,4 @@
-import ItemInCart from "./ItemInCart";
+import ItemInCart from "../itemInCart/ItemInCart";
 
 const ItemsListInCart = ({ items, removeItem, clear }) => {
   return (

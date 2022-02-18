@@ -1,12 +1,12 @@
-@use "./components/components-css/navBar";
-@use "./components/components-css/cartWidget";
-@use "./components/components-css/logo";
-@use "./components/components-css/itemListContainer";
-@use "./components/components-css/header";
-@use "./components/components-css/search";
-@use "./components/components-css/item";
-@use "./components/components-css/ItemCount";
-@use "./components/components-css/itemList";
+@use "./components/navBar/navBar";
+@use "./components/cartWidget/cartWidget";
+@use "./components/logo/logo";
+@use "./components/itemListContainer/itemListContainer";
+@use "./components/header/header";
+@use "./components/search/search";
+@use "./components/item/item";
+@use "./components/itemCount/ItemCount";
+@use "./components/itemList/itemList";
 
 * {
   margin: 0px auto;

@@ -7,10 +7,10 @@ import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
-import ItemCount from "./ItemCount";
+import ItemCount from "../itemCount/ItemCount";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
-import ItemsListInCart from "./ItemsListInCart";
+import ItemsListInCart from "../itemListInCart/ItemsListInCart";
 import { CartContext } from "../Context/CartContext";
 
 const Item = styled(Paper)(({ theme }) => ({

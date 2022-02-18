@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ItemList from "../../components-jsx/ItemList";
+import ItemList from "../../itemList/ItemList";
 import mockApi from "../../../mockApi.json";
 
 const Home = ({ greeting }) => {

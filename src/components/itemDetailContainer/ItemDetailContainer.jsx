@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import ItemDetail from "./ItemDetail";
+import ItemDetail from "../itemDetail/ItemDetail";
 import mockApi from "./../../mockApi.json";
-import Spinner from "./Spinner";
+import Spinner from "./../spinner/Spinner";
 
 const ItemDetailContainer = ({ id }) => {
   const [item, setItem] = useState({});
