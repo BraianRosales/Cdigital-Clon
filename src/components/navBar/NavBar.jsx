@@ -7,7 +7,7 @@ const NavBar = () => {
     <nav id="navBar">
       <Logo />
       <div className="wrap">
-        <CartWidget />
+        <Link to="/cart"><CartWidget /></Link>
         <ul>
           <Link className="li" to="/category/almacen">
             Almacén

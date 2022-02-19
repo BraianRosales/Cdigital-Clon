@@ -11,7 +11,7 @@ const initialState = [];
 export const ItemsProvider = ({ children }) => {
   const [items, setItems] = useState(initialState);
 
-  //FUNCTIONS
+  //-------------------------------FUNCTIONS---------------------------------
   function removeItem(itemId) {
     const updateItems = items.filter((item) => item.id !== itemId);
     setItems(updateItems);
@@ -21,7 +21,7 @@ export const ItemsProvider = ({ children }) => {
     return items.some((item) => item.id === itemId);
   }
 
-  function addItem(itemId, itemName, itemPrice, itemQuantify, img) {
+  function addItem(itemId, itemName, itemPrice, itemQuantify, img, itemDescription) {
     if (isInCart(itemId)) {
       const foundItem = items.find((item) => item.id === itemId);
       foundItem.quantify += itemQuantify;
@@ -32,6 +32,7 @@ export const ItemsProvider = ({ children }) => {
         price: itemPrice,
         quantify: itemQuantify,
         image: img,
+        description: itemDescription
       });
     }
     setItems([...items]);

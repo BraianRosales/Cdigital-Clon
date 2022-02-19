@@ -24,7 +24,7 @@ export default function CartWidget() {
         marginLeft: "-50px",
       }}
     >
-      <StyledBadge badgeContent={1}>
+      <StyledBadge badgeContent={0}>
         <ShoppingCartIcon />
       </StyledBadge>
       <Box id="total-price">$0,00</Box>

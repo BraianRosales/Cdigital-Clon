@@ -27,7 +27,7 @@ const ItemDetail = ({ item, img }) => {
   function onAdd(quantify) {
     console.log(items);
     setRender(false);
-    addItem(item.id, item.name, item.price, quantify, item.image);
+    addItem(item.id, item.name, item.price, quantify, item.image, item.description);
     return console.log("agregaste producto al carrito");
   }
 
@@ -38,7 +38,7 @@ const ItemDetail = ({ item, img }) => {
       <Card sx={{ boxShadow: "none", mt: "100px" }}>
         <Grid container spacing={2} columns={12}>
           <Grid item xs={4}>
-            <Item sx={{ border: "1px solid #d7d7d7" }}>
+            <Item sx={{ border: "1px solid #d7d7d7", padding: "0px" }}>
               <CardMedia component="img" image={`/${img}`} />
             </Item>
           </Grid>
@@ -108,7 +108,6 @@ const ItemDetail = ({ item, img }) => {
             </CardContent>
           </Grid>
           <Grid item xs={3} sx={{ paddingLeft: "80px!important" }}>
-            <h3 style={{ textAlign: "center" }}>CARRITO</h3>
             <Item
               sx={{
                 paddingLeft: "50px",
@@ -118,12 +117,9 @@ const ItemDetail = ({ item, img }) => {
                 overflow: "auto",
               }}
             >
-              <ItemsListInCart
-                items={items}
-                removeItem={removeItem}
-                clear={clear}
-              />
+              <ItemsListInCart items={items} removeItem={removeItem} />
             </Item>
+            <button onClick={() => clear()}>Vaciar carrito</button>
           </Grid>
         </Grid>
       </Card>
