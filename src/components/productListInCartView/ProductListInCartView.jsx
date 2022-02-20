@@ -2,7 +2,6 @@ import React from "react";
 import ProductInCartView from "../productInCartView/ProductInCartView";
 
 const ProductListInCartView = ({ products, removeItem, onAdd }) => {
-  console.log(products);
   return (
     <div>
       {products.map((product) => (

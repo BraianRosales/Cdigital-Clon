@@ -1,13 +1,22 @@
+import React, { useContext } from "react";
 import CartWidget from "../cartWidget/CartWidget";
 import Logo from "../logo/Logo";
 import { Link } from "react-router-dom";
+import { CartContext } from "../Context/CartContext";
 
 const NavBar = () => {
+  const [items, removeItem, addItem, clear, allItems] = useContext(CartContext);
   return (
     <nav id="navBar">
       <Logo />
       <div className="wrap">
-        <Link to="/cart"><CartWidget /></Link>
+        {items.length > 0 ? (
+          <Link to="/cart">
+            <CartWidget allItems={allItems} />
+          </Link>
+        ) : (
+          <p></p>
+        )}
         <ul>
           <Link className="li" to="/category/almacen">
             Almacén

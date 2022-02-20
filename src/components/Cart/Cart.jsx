@@ -3,13 +3,11 @@ import Grid from "@mui/material/Grid";
 import ProductListInCartView from "../productListInCartView/ProductListInCartView";
 import Button from "@mui/material/Button";
 import CardMedia from "@mui/material/CardMedia";
+import { Link } from "react-router-dom";
 
 const Cart = ({ items, removeItem, addItem, clear }) => {
   return (
     <div>
-      <p style={{ fontSize: "30px", marginTop: "20px", marginLeft: "-22px" }}>
-        Carro de compras
-      </p>
       <Grid
         container
         spacing={3}
@@ -19,8 +17,17 @@ const Cart = ({ items, removeItem, addItem, clear }) => {
         pb={1}
       >
         <Grid item xs={4}>
-          <button>Vaciar carrito</button>
-          <button>Seguir comprando</button>
+          <button
+            style={{ cursor: "pointer" }}
+            onClick={() => {
+              clear();
+            }}
+          >
+            Vaciar carrito
+          </button>
+          <Link to="/">
+            <button style={{ cursor: "pointer" }}>Seguir comprando</button>
+          </Link>
         </Grid>
 
         <Grid item xs={4}></Grid>
@@ -33,7 +40,11 @@ const Cart = ({ items, removeItem, addItem, clear }) => {
           </Grid>
 
           <Grid item xs={6} mt={2}>
-            <Button sx={{ width: "90%" }} variant="contained" disableElevation>
+            <Button
+              sx={{ width: "90%", cursor: "pointer" }}
+              variant="contained"
+              disableElevation
+            >
               Pagar
             </Button>
           </Grid>
@@ -119,8 +130,17 @@ const Cart = ({ items, removeItem, addItem, clear }) => {
         pb={1}
       >
         <Grid item xs={4}>
-          <button>Vaciar carrito</button>
-          <button>Seguir comprando</button>
+          <button
+            style={{ cursor: "pointer" }}
+            onClick={() => {
+              clear();
+            }}
+          >
+            Vaciar carrito
+          </button>
+          <Link to="/">
+            <button style={{ cursor: "pointer" }}>Seguir comprando</button>
+          </Link>
         </Grid>
 
         <Grid item xs={4}></Grid>
@@ -133,7 +153,11 @@ const Cart = ({ items, removeItem, addItem, clear }) => {
           </Grid>
 
           <Grid item xs={6} mt={2}>
-            <Button sx={{ width: "90%" }} variant="contained" disableElevation>
+            <Button
+              sx={{ width: "90%", cursor: "pointer" }}
+              variant="contained"
+              disableElevation
+            >
               Pagar
             </Button>
           </Grid>

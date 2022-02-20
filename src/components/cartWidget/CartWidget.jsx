@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import Badge from "@mui/material/Badge";
 import { styled } from "@mui/material/styles";
 import IconButton from "@mui/material/IconButton";
@@ -13,7 +13,7 @@ const StyledBadge = styled(Badge)(() => ({
   },
 }));
 
-export default function CartWidget() {
+export default function CartWidget({ allItems }) {
   return (
     <IconButton
       aria-label="cart"
@@ -24,7 +24,7 @@ export default function CartWidget() {
         marginLeft: "-50px",
       }}
     >
-      <StyledBadge badgeContent={0}>
+      <StyledBadge badgeContent={allItems()}>
         <ShoppingCartIcon />
       </StyledBadge>
       <Box id="total-price">$0,00</Box>

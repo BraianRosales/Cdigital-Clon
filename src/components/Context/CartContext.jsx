@@ -21,7 +21,14 @@ export const ItemsProvider = ({ children }) => {
     return items.some((item) => item.id === itemId);
   }
 
-  function addItem(itemId, itemName, itemPrice, itemQuantify, img, itemDescription) {
+  function addItem(
+    itemId,
+    itemName,
+    itemPrice,
+    itemQuantify,
+    img,
+    itemDescription
+  ) {
     if (isInCart(itemId)) {
       const foundItem = items.find((item) => item.id === itemId);
       foundItem.quantify += itemQuantify;
@@ -32,7 +39,7 @@ export const ItemsProvider = ({ children }) => {
         price: itemPrice,
         quantify: itemQuantify,
         image: img,
-        description: itemDescription
+        description: itemDescription,
       });
     }
     setItems([...items]);
@@ -42,9 +49,13 @@ export const ItemsProvider = ({ children }) => {
     setItems([]);
   }
 
+  function allItems() {
+    return items.reduce((acc, product) => acc + product.quantify, 0);
+  }
+
   // 3 - RETORNAMOS NUESTRO CONTEXT CON UN .PROVIDER
   return (
-    <CartContext.Provider value={[items, removeItem, addItem, clear]}>
+    <CartContext.Provider value={[items, removeItem, addItem, clear, allItems]}>
       {/* 4 - PROPS.CHILDREN O BIEN CHILDREN */}
       {children}
     </CartContext.Provider>

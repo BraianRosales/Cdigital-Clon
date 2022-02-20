@@ -9,6 +9,7 @@ const ProductInCartView = ({ product, removeItem, onAdd }) => {
         <Grid container xs={5}>
           <Grid item xs={1} mt={4}>
             <button
+              style={{ cursor: "pointer" }}
               onClick={() => {
                 removeItem(product.id);
               }}
@@ -35,6 +36,10 @@ const ProductInCartView = ({ product, removeItem, onAdd }) => {
         <Grid container xs={4}>
           <Grid>
             Aca va itemCount
+            <br />
+            {product.quantify}
+            <br />
+            X
             <br />
             {product.price}
           </Grid>
