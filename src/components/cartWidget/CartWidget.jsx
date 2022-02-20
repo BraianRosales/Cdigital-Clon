@@ -13,7 +13,7 @@ const StyledBadge = styled(Badge)(() => ({
   },
 }));
 
-export default function CartWidget({ allItems }) {
+export default function CartWidget({ allItems, totalPrice }) {
   return (
     <IconButton
       aria-label="cart"
@@ -27,7 +27,7 @@ export default function CartWidget({ allItems }) {
       <StyledBadge badgeContent={allItems()}>
         <ShoppingCartIcon />
       </StyledBadge>
-      <Box id="total-price">$0,00</Box>
+      <Box id="total-price">${totalPrice()}</Box>
     </IconButton>
   );
 }

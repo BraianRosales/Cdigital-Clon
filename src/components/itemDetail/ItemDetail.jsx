@@ -31,8 +31,6 @@ const ItemDetail = ({ item, img }) => {
     return console.log("agregaste producto al carrito");
   }
 
-  console.log(addItem);
-
   return (
     <div className="wrap">
       <Card sx={{ boxShadow: "none", mt: "100px" }}>
@@ -79,7 +77,7 @@ const ItemDetail = ({ item, img }) => {
               >
                 Precio regular
               </Box>
-              <Box className="price box-in-product">{item.price}</Box>
+              <Box className="price box-in-product">${item.price}</Box>
               <hr></hr>
               {render ? (
                 <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />

@@ -5,7 +5,8 @@ import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 
 const CarritoView = () => {
-  const [items, removeItem, addItem, clear] = useContext(CartContext);
+  const [items, removeItem, addItem, clear, allItems, totalPrice] =
+    useContext(CartContext);
 
   return (
     <div style={{ width: "60%" }}>
@@ -18,6 +19,7 @@ const CarritoView = () => {
           removeItem={removeItem}
           addItem={addItem}
           clear={clear}
+          totalPrice={totalPrice}
         />
       ) : (
         <div>

@@ -2,7 +2,7 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import CardMedia from "@mui/material/CardMedia";
 
-const ProductInCartView = ({ product, removeItem, onAdd }) => {
+const ProductInCartView = ({ product, removeItem}) => {
   return (
     <>
       <Grid container spacing={3} mt={3} mb={3}>
@@ -41,7 +41,7 @@ const ProductInCartView = ({ product, removeItem, onAdd }) => {
             <br />
             X
             <br />
-            {product.price}
+            ${product.price}
           </Grid>
           <Grid item xs={6}>
             aca va precio total

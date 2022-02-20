@@ -53,9 +53,18 @@ export const ItemsProvider = ({ children }) => {
     return items.reduce((acc, product) => acc + product.quantify, 0);
   }
 
+  function totalPrice() {
+    return items.reduce(
+      (acc, product) => acc + product.price * product.quantify,
+      0
+    );
+  }
+
   // 3 - RETORNAMOS NUESTRO CONTEXT CON UN .PROVIDER
   return (
-    <CartContext.Provider value={[items, removeItem, addItem, clear, allItems]}>
+    <CartContext.Provider
+      value={[items, removeItem, addItem, clear, allItems, totalPrice]}
+    >
       {/* 4 - PROPS.CHILDREN O BIEN CHILDREN */}
       {children}
     </CartContext.Provider>

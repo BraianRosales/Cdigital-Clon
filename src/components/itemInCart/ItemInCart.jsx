@@ -18,7 +18,7 @@ const ItemInCart = ({ data, removeItem }) => {
           />
           <CardContent>
             {data.name}
-            <p>{data.price}</p>
+            <p>${data.price}</p>
             <p>cantidad: {data.quantify}</p>
           </CardContent>
         </CardActionArea>

@@ -42,7 +42,7 @@ export default function Item({ product }) {
           >
             Precio regular
           </Box>
-          <Box className="price box-in-product">{product.price}</Box>
+          <Box className="price box-in-product">${product.price}</Box>
           <Box sx={{ textTransform: "uppercase", my: "5px", color: "red" }}>
             Stock: {product.stock}
           </Box>
