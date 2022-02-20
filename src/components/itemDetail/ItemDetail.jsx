@@ -22,12 +22,20 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const ItemDetail = ({ item, img }) => {
   const [render, setRender] = useState(true);
-  const [items, removeItem, addItem, clear] = useContext(CartContext);
+  const [items, removeItem, addItem, clear, allItems, totalPrice] =
+    useContext(CartContext);
 
   function onAdd(quantify) {
     console.log(items);
     setRender(false);
-    addItem(item.id, item.name, item.price, quantify, item.image, item.description);
+    addItem(
+      item.id,
+      item.name,
+      item.price,
+      quantify,
+      item.image,
+      item.description
+    );
     return console.log("agregaste producto al carrito");
   }
 
@@ -86,21 +94,20 @@ const ItemDetail = ({ item, img }) => {
                   <p style={{ textAlign: "center", color: "#22e122" }}>
                     ¡Se agrego la cantidad al carrito!
                   </p>
-                  <Button
-                    variant="contained"
-                    id="btn-add"
-                    onClick={onAdd}
-                    sx={{
-                      color: "white",
-                      width: "73%",
-                      display: "block",
-                      margin: "0px auto",
-                    }}
-                  >
-                    <Link style={{ color: "white" }} to="/cart">
+                  <Link to="/cart">
+                    <Button
+                      variant="contained"
+                      id="btn-add"
+                      sx={{
+                        color: "white",
+                        width: "73%",
+                        display: "block",
+                        margin: "0px auto",
+                      }}
+                    >
                       Terminar mi compra
-                    </Link>
-                  </Button>
+                    </Button>
+                  </Link>
                 </CardContent>
               )}
             </CardContent>

@@ -10,11 +10,11 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 
 const ItemCount = ({ stock, initial, onAdd }) => {
-  let [numInitial, setInitial] = useState(Number(initial));
+  let [numInitial, setInitial] = useState(initial);
 
   function handleAdd(e) {
     e.preventDefault();
-    if (numInitial < Number(stock)) {
+    if (numInitial < stock) {
       setInitial(numInitial + 1);
     }
   }

@@ -55,7 +55,7 @@ export const ItemsProvider = ({ children }) => {
 
   function totalPrice() {
     return items.reduce(
-      (acc, product) => acc + product.price * product.quantify,
+      (acc, product) => acc + (product.price * product.quantify),
       0
     );
   }

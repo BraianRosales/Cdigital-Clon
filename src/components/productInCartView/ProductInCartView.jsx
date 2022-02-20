@@ -3,6 +3,11 @@ import Grid from "@mui/material/Grid";
 import CardMedia from "@mui/material/CardMedia";
 
 const ProductInCartView = ({ product, removeItem}) => {
+
+  function itemPrice(){
+    return product.price * product.quantify
+  }
+
   return (
     <>
       <Grid container spacing={3} mt={3} mb={3}>
@@ -44,7 +49,7 @@ const ProductInCartView = ({ product, removeItem}) => {
             ${product.price}
           </Grid>
           <Grid item xs={6}>
-            aca va precio total
+            ${itemPrice().toFixed(2)}
           </Grid>
         </Grid>
       </Grid>

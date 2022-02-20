@@ -27,7 +27,7 @@ export default function CartWidget({ allItems, totalPrice }) {
       <StyledBadge badgeContent={allItems()}>
         <ShoppingCartIcon />
       </StyledBadge>
-      <Box id="total-price">${totalPrice()}</Box>
+      <Box id="total-price">${totalPrice().toFixed(2)}</Box>
     </IconButton>
   );
 }
