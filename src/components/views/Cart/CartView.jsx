@@ -4,7 +4,7 @@ import { CartContext } from "../../Context/CartContext";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 
-const CarritoView = () => {
+const CartView = () => {
   const [items, removeItem, addItem, clear, allItems, totalPrice] =
     useContext(CartContext);
 
@@ -54,4 +54,4 @@ const CarritoView = () => {
   );
 };
 
-export default CarritoView;
+export default CartView;
