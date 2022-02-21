@@ -2,10 +2,9 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import CardMedia from "@mui/material/CardMedia";
 
-const ProductInCartView = ({ product, removeItem}) => {
-
-  function itemPrice(){
-    return product.price * product.quantify
+const ProductInCartView = ({ product, removeItem }) => {
+  function itemPrice() {
+    return product.price * product.quantify;
   }
 
   return (
@@ -40,13 +39,9 @@ const ProductInCartView = ({ product, removeItem}) => {
 
         <Grid container xs={4}>
           <Grid>
-            Aca va itemCount
+            Aca va un contador
             <br />
-            {product.quantify}
-            <br />
-            X
-            <br />
-            ${product.price}
+            {product.quantify}X ${product.price}
           </Grid>
           <Grid item xs={6}>
             ${itemPrice().toFixed(2)}

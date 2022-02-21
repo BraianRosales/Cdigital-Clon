@@ -22,7 +22,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const ItemDetail = ({ item, img }) => {
   const [render, setRender] = useState(true);
-  const [items, removeItem, addItem, clear, allItems, totalPrice] =
+  const [items, removeItem, addItem, clear] =
     useContext(CartContext);
 
   function onAdd(quantify) {
