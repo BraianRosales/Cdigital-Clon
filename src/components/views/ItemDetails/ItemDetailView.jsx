@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 
 const ItemDetailView = () => {
   let productId = useParams().id;
-  productId = Number(productId);
 
   return (
     <div>

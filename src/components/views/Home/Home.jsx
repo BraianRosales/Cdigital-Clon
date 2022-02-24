@@ -1,29 +1,30 @@
 import React, { useEffect, useState } from "react";
 import ItemList from "../../itemList/ItemList";
-import mockApi from "../../../mockApi.json";
+//FIREBASE
+import { db } from "../../../firebase/firebaseConfig";
+import { collection, query, getDocs } from "firebase/firestore";
 
 const Home = ({ greeting }) => {
-  const [products, setProducts] = useState([]);
+  const [productsData, setProductsData] = useState([]);
 
   useEffect(() => {
-    function getProducts() {
-      return new Promise((resolve, reject) => {
-        resolve(mockApi);
+    const getProducts = async () => {
+      const q = query(collection(db, "products"));
+      const docs = [];
+      const querySnapshot = await getDocs(q);
+      querySnapshot.forEach((doc) => {
+        docs.push({ ...doc.data(), id: doc.id });
       });
-    }
-    getProducts()
-      .then((res) => {
-        setProducts(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+      console.log(docs);
+      setProductsData(docs);
+    };
+    getProducts();
   }, []);
 
   return (
     <div>
       <div id="p-greeting">{greeting}</div>
-      <ItemList products={products} />
+      <ItemList products={productsData} />
     </div>
   );
 };

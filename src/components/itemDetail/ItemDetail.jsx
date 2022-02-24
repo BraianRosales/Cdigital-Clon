@@ -20,13 +20,12 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-const ItemDetail = ({ item, img }) => {
+const ItemDetail = ({ item }) => {
+  console.log(item.image)
   const [render, setRender] = useState(true);
-  const [items, removeItem, addItem, clear] =
-    useContext(CartContext);
+  const [items, removeItem, addItem, clear] = useContext(CartContext);
 
   function onAdd(quantify) {
-    console.log(items);
     setRender(false);
     addItem(
       item.id,
@@ -36,7 +35,6 @@ const ItemDetail = ({ item, img }) => {
       item.image,
       item.description
     );
-    return console.log("agregaste producto al carrito");
   }
 
   return (
@@ -45,7 +43,7 @@ const ItemDetail = ({ item, img }) => {
         <Grid container spacing={2} columns={12}>
           <Grid item xs={4}>
             <Item sx={{ border: "1px solid #d7d7d7", padding: "0px" }}>
-              <CardMedia component="img" image={`/${img}`} />
+              <CardMedia component="img" image= {item.image} />
             </Item>
           </Grid>
           <Grid item xs={4} sx={{ paddingLeft: "80px!important" }}>

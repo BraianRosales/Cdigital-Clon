@@ -1,32 +1,25 @@
 import React, { useState, useEffect } from "react";
 import ItemList from "../itemList/ItemList";
-import mockApi from "../../mockApi.json";
+import { db } from "./../../firebase/firebaseConfig";
+import { collection, query, getDocs, where } from "firebase/firestore";
 
 const ItemListContainer = ({ greeting, category }) => {
   const [productsCategory, setProductsCategory] = useState([]);
 
   useEffect(() => {
-    function mapItemsCategory() {
-      console.log(category);
-      return mockApi.filter((p) => p.category === category);
-    }
-
-    function getItemsCategory() {
-      return new Promise((resolve, reject) => {
-        setTimeout(() => {
-          resolve(mapItemsCategory());
-        }, 1000);
+    const getProductsCategory = async () => {
+      const q = query(
+        collection(db, "products"),
+        where("category", "==", category)
+      );
+      const docs = [];
+      const querySnapshot = await getDocs(q);
+      querySnapshot.forEach((doc) => {
+        docs.push({ ...doc.data(), id: doc.id });
       });
-    }
-
-    getItemsCategory()
-      .then((res) => {
-        console.log(res);
-        setProductsCategory(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+      setProductsCategory(docs);
+    };
+    getProductsCategory();
   }, [category]);
 
   return (
@@ -36,5 +29,4 @@ const ItemListContainer = ({ greeting, category }) => {
     </>
   );
 };
-
 export default ItemListContainer;

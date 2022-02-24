@@ -26,9 +26,10 @@ export const ItemsProvider = ({ children }) => {
     itemName,
     itemPrice,
     itemQuantify,
-    img,
+    itemImage,
     itemDescription
   ) {
+    console.log(itemImage);
     if (isInCart(itemId)) {
       const foundItem = items.find((item) => item.id === itemId);
       foundItem.quantify += itemQuantify;
@@ -38,7 +39,7 @@ export const ItemsProvider = ({ children }) => {
         name: itemName,
         price: itemPrice,
         quantify: itemQuantify,
-        image: img,
+        image: itemImage,
         description: itemDescription,
       });
     }
@@ -55,7 +56,7 @@ export const ItemsProvider = ({ children }) => {
 
   function totalPrice() {
     return items.reduce(
-      (acc, product) => acc + (product.price * product.quantify),
+      (acc, product) => acc + product.price * product.quantify,
       0
     );
   }

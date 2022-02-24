@@ -19,7 +19,7 @@ export default function Item({ product }) {
           textAlign: "center",
         }}
       >
-        <CardMedia component="img" image={`/${product.image}`} alt="Imagen" />
+        <CardMedia component="img" image={product.image} alt="Imagen" />
         <CardContent>
           <Box
             className="box-in-product"
