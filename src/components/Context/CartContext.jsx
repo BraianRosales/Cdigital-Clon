@@ -51,7 +51,7 @@ export const ItemsProvider = ({ children }) => {
   }
 
   function allItems() {
-    return items.reduce((acc, product) => acc + product.quantify, 0);
+    return items.length;
   }
 
   function totalPrice() {
