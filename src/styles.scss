@@ -7,6 +7,7 @@
 @use "./components/item/item";
 @use "./components/itemCount/ItemCount";
 @use "./components/itemList/itemList";
+@use "./components/views/CashBox/cashBox";
 
 * {
   margin: 0px auto;
@@ -18,3 +19,7 @@
   width: 70%;
 }
 
+.clearFix{
+  clear: both;
+  float: none;
+}

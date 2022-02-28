@@ -10,6 +10,7 @@ import CartView from "./components/views/Cart/CartView";
 
 // 5 - IMPORTAR NUESTRO HOC PROVIDER Y ENVOLVER NUESTRA APP
 import { ItemsProvider } from "./components/Context/CartContext";
+import CashBox from "./components/views/CashBox/CashBox";
 
 const greeting =
   "Indica la cantidad del productos que queres agregar al carrito!";
@@ -28,6 +29,7 @@ const App = () => {
             element={<CategoriesView greeting={greeting} />}
           />
           <Route path="/cart" element={<CartView />} />
+          <Route path="/cashBox" element={<CashBox />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
       </ItemsProvider>

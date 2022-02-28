@@ -29,7 +29,6 @@ export const ItemsProvider = ({ children }) => {
     itemImage,
     itemDescription
   ) {
-    console.log(itemImage);
     if (isInCart(itemId)) {
       const foundItem = items.find((item) => item.id === itemId);
       foundItem.quantify += itemQuantify;
@@ -55,10 +54,11 @@ export const ItemsProvider = ({ children }) => {
   }
 
   function totalPrice() {
-    return items.reduce(
+    let total = items.reduce(
       (acc, product) => acc + product.price * product.quantify,
       0
     );
+    return total.toFixed(2);
   }
 
   // 3 - RETORNAMOS NUESTRO CONTEXT CON UN .PROVIDER

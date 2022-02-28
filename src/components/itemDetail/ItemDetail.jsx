@@ -21,7 +21,6 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const ItemDetail = ({ item }) => {
-  console.log(item.image)
   const [render, setRender] = useState(true);
   const [items, removeItem, addItem, clear] = useContext(CartContext);
 
@@ -43,7 +42,7 @@ const ItemDetail = ({ item }) => {
         <Grid container spacing={2} columns={12}>
           <Grid item xs={4}>
             <Item sx={{ border: "1px solid #d7d7d7", padding: "0px" }}>
-              <CardMedia component="img" image= {item.image} />
+              <CardMedia component="img" image={item.image} />
             </Item>
           </Grid>
           <Grid item xs={4} sx={{ paddingLeft: "80px!important" }}>

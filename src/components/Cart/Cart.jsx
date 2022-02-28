@@ -34,17 +34,19 @@ const Cart = ({ items, removeItem, addItem, clear, totalPrice }) => {
 
         <Grid container xs={4}>
           <Grid item xs={6} mt={4} sx={{ fontSize: "22px" }}>
-            <div className="total">Total: ${totalPrice().toFixed(2)}</div>
+            <div className="total">Total: ${totalPrice()}</div>
           </Grid>
 
           <Grid item xs={6} mt={2}>
-            <Button
-              sx={{ width: "90%", cursor: "pointer" }}
-              variant="contained"
-              disableElevation
-            >
-              Pagar
-            </Button>
+            <Link to="/cashBox">
+              <Button
+                sx={{ width: "90%", cursor: "pointer" }}
+                variant="contained"
+                disableElevation
+              >
+                Pagar
+              </Button>
+            </Link>
           </Grid>
           <Grid item>
             <p
@@ -146,18 +148,20 @@ const Cart = ({ items, removeItem, addItem, clear, totalPrice }) => {
         <Grid container xs={4}>
           <Grid item xs={6} mt={4} sx={{ fontSize: "22px" }}>
             <div className="total">
-              Total: <span>${totalPrice().toFixed(2)}</span>
+              Total: <span>${totalPrice()}</span>
             </div>
           </Grid>
 
           <Grid item xs={6} mt={2}>
-            <Button
-              sx={{ width: "90%", cursor: "pointer" }}
-              variant="contained"
-              disableElevation
-            >
-              Pagar
-            </Button>
+            <Link to="/cashBox">
+              <Button
+                sx={{ width: "90%", cursor: "pointer", background: "#0fabd4" }}
+                variant="contained"
+                disableElevation
+              >
+                Pagar
+              </Button>
+            </Link>
           </Grid>
           <Grid item>
             <p

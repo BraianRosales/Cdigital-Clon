@@ -1,0 +1,119 @@
+$dark-gray: #999;
+$font-1: 16px;
+$font-form: Roboto, sans-serif;
+$without-Borders: none;
+$border-input: 1px solid rgb(224, 224, 224);
+
+@mixin inputDate {
+  float: left;
+  width: 100%;
+  height: 35px;
+  background-color: #e9e9ed;
+  border: $border-input;
+}
+
+@mixin inputHour {
+  float: left;
+  width: 100%;
+  height: 40px;
+  background-color: white;
+  border: $border-input;
+}
+
+@mixin formButtonStyles {
+  border: $without-Borders;
+  border-radius: 10px;
+  width: 60%;
+  height: 40px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+.wrap-box {
+  width: 65%;
+}
+
+form {
+  margin-bottom: 10px;
+}
+
+.input-form {
+  width: 98%;
+  margin-top: 20px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid #dddcdc;
+  color: #6d6d6d;
+}
+
+#p-box {
+  font-family: $font-form;
+  color: $dark-gray;
+  font-size: $font-1;
+}
+
+#p-select {
+  float: left;
+}
+
+#title-box {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 26px;
+  font-family: $font-form;
+}
+
+#div-select {
+  float: left;
+  margin-left: 20px;
+  select {
+    @include inputHour();
+    outline: $without-Borders;
+  }
+}
+
+#div-date {
+  float: left;
+  input {
+    @include inputDate();
+    outline: $without-Borders;
+  }
+}
+
+.text-resume {
+  float: left;
+  margin-left: 20px;
+}
+
+.price-resume {
+  float: right;
+  margin-right: 20px;
+}
+
+#total-price-resume {
+  color: #0fabd4;
+  font-size: 20px;
+}
+
+#btn-form {
+  color: white;
+  background-color: #47b8d6;
+  @include formButtonStyles();
+}
+
+#btn-form:hover {
+  box-shadow: 0px 1px 3px 1px #9b9b9b;
+}
+
+#btn-form-disable {
+  color: #6d6d6d;
+  background-color: #dddcdc;
+  @include formButtonStyles();
+}
+
+#btn-resume {
+  margin-top: 20px;
+  background-color: #47b8d6;
+}
