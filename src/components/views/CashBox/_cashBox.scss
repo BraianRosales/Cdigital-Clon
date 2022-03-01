@@ -14,7 +14,7 @@ $border-input: 1px solid rgb(224, 224, 224);
 
 @mixin inputHour {
   float: left;
-  width: 100%;
+  width: 89%;
   height: 40px;
   background-color: white;
   border: $border-input;
@@ -114,6 +114,7 @@ form {
 }
 
 #btn-resume {
+  width: 70%;
   margin-top: 20px;
   background-color: #47b8d6;
 }

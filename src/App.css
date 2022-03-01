@@ -188,7 +188,7 @@ form {
 }
 #div-select select {
   float: left;
-  width: 100%;
+  width: 89%;
   height: 40px;
   background-color: white;
   border: 1px solid #e0e0e0;
@@ -251,6 +251,7 @@ form {
 }
 
 #btn-resume {
+  width: 70%;
   margin-top: 20px;
   background-color: #47b8d6;
 }

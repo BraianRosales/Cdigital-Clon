@@ -17,21 +17,30 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-const initialState = {
-  date: "",
+const InitialBuyer = {
   daliveryTime: "",
   streetAndHeight: "",
   location: "",
   name: "",
   phone: "",
-  eMail: "",
+  email: "",
+};
+
+const initialPurchase = {
+  buyer: "",
+  items: [],
+  date: "",
+  total: "",
 };
 
 const CashBox = () => {
   const [items, removeItem, addItem, clear, allItems, totalPrice] =
     useContext(CartContext);
   const [isLoading, setIsLoading] = useState(false);
-  const [object, setObject] = useState(initialState);
+  const purchase = initialPurchase;
+  const [buyer, setBuyer] = useState(InitialBuyer);
+  const [idBuyer, setIdBuyer] = useState("");
+  const [successfulAlert, setSuccessfulAlert] = useState("");
 
   function totalPlusShipping() {
     let total = (Number(totalPrice()) + 349.0).toFixed(2);
@@ -44,22 +53,30 @@ const CashBox = () => {
 
   function onChange(e) {
     const { value, name } = e.target;
-    setObject({ ...object, [name]: value });
+    setBuyer({ ...buyer, [name]: value });
+  }
+
+  function onChangeDate(e) {
+    purchase.date = e.target.value;
   }
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    const docRef = await addDoc(collection(db, "buyer"), {
-      object,
+    purchase.buyer = buyer;
+    purchase.items = items;
+    purchase.total = totalPlusShipping();
+    const docRef = await addDoc(collection(db, "shopping"), {
+      purchase,
     });
     console.log("Document written with ID: ", docRef.id);
-    console.log(object);
+    setIdBuyer(docRef.id);
+    clear();
   };
 
   return (
-    <Grid container sx={{ background: "#f9f9f9", paddingBottom: "66px" }}>
+    <Grid container sx={{ background: "#f9f9f9", paddingBottom: "80px" }}>
       <div className="wrap-box">
-        <Box sx={{ flexGrow: 1 }} mt={10}>
+        <Box sx={{ flexGrow: 1 }} mt={8}>
           <Grid
             container
             rowSpacing={1}
@@ -114,7 +131,11 @@ const CashBox = () => {
                       <div id="div-date">
                         <label>Fecha de entrega más cercana</label>
                         <br />
-                        <input type="date" name="date" onChange={onChange} />
+                        <input
+                          type="date"
+                          name="date"
+                          onChange={onChangeDate}
+                        />
                       </div>
                       <div id="div-select">
                         <p id="p-select">Rango horario</p>
@@ -122,7 +143,11 @@ const CashBox = () => {
                           id="select"
                           name="daliveryTime"
                           onChange={onChange}
+                          defaultValue={"DEFAULT"}
                         >
+                          <option value="DEFAULT" disabled>
+                            Horarios de entrega
+                          </option>
                           <option value="13 a 18hs">de 13 a 18hs</option>
                           <option value="18 a 22hs">de 18 a 22hs</option>
                           <option value="9 a 13hs">de 9 a 13hs</option>
@@ -151,7 +176,7 @@ const CashBox = () => {
                       <input
                         type="text"
                         className="input-form"
-                        placeholder="Nombre"
+                        placeholder="Nombre completo"
                         name="name"
                         onChange={onChange}
                       />
@@ -166,7 +191,7 @@ const CashBox = () => {
                         type="email"
                         className="input-form"
                         placeholder="E-mail"
-                        name="eMail"
+                        name="email"
                         onChange={onChange}
                       />
                       {!isLoading ? (
@@ -220,7 +245,15 @@ const CashBox = () => {
                   </Grid>
                 </Grid>
                 {isLoading ? (
-                  <Button variant="contained" id="btn-resume">
+                  <Button
+                    variant="contained"
+                    id="btn-resume"
+                    onClick={() => {
+                      setSuccessfulAlert(
+                        `Compra satisfactoria! su id es: ${idBuyer}`
+                      );
+                    }}
+                  >
                     Confirmar
                   </Button>
                 ) : (
@@ -233,6 +266,7 @@ const CashBox = () => {
                   </Button>
                 )}
               </Item>
+              <span>{successfulAlert}</span>
             </Grid>
             {/* ACA TERMINA EL RESUMEN DE LA COMPRA */}
           </Grid>
