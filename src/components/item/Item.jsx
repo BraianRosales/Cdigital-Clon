@@ -1,53 +1,48 @@
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import { Box } from "@mui/system";
 import { Button } from "@mui/material";
 import Typography from "@mui/material/Typography";
 
 export default function Item({ product }) {
   return (
     <>
-      <Card
-        sx={{
-          border: "1px solid #d7d7d7",
-          mt: "10px",
-          width: "18%",
-          float: "left",
-          marginTop: "80px",
-          marginLeft: "22px",
-          textAlign: "center",
-        }}
-      >
-        <CardMedia component="img" image={product.image} alt="Imagen" />
+      <Card sx={{ maxWidth: 213 }}>
+        <CardMedia component="img" image={product.image} alt="green iguana" />
         <CardContent>
-          <Box
-            className="box-in-product"
-            sx={{ textTransform: "uppercase", mb: 2 }}
+          <Typography variant="h6">{product.name}</Typography>
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            sx={{
+              fontFamily: "Source Sans Pro,sans-serif !important",
+              lineHeight: "21px !important",
+              fontWeight: "lighter",
+            }}
           >
-            <Typography gutterBottom variant="h5" component="div">
-              {product.name}
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              {product.description}
-            </Typography>
-          </Box>
-          <Box
-            className="box-in-product"
+            {product.description}
+          </Typography>
+          <Typography
             sx={{
               textTransform: "uppercase",
               color: "#299f6a",
+              fontSize: " 0.8rem",
               fontWeight: "600",
+              fontFamily: "Open Sans, sans-serif",
             }}
           >
             Precio regular
-          </Box>
-          <Box className="price box-in-product">${product.price}</Box>
-          <Box sx={{ textTransform: "uppercase", my: "5px", color: "red" }}>
+          </Typography>
+          <Typography sx={{ fontWeight: "bold", fontSize: "21px" }}>
+            ${product.price}
+          </Typography>
+          <Typography
+            sx={{ textTransform: "uppercase", my: "5px", color: "red" }}
+          >
             Stock: {product.stock}
-          </Box>
+          </Typography>
           <Button variant="contained" id="btn-add" sx={{ width: "100%" }}>
-            Comprar
+            Agregar
           </Button>
         </CardContent>
       </Card>

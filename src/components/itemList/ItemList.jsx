@@ -17,13 +17,11 @@ const ItemList = ({ products }) => {
       {isLoading ? (
         <Spinner />
       ) : (
-        <div className="wrap">
+        <div id="layout">
           {products.map((product) => {
             return (
-              <div key={product.id}>
-                <Link to={`/item/${product.id}`}>
-                  <Item product={product} />
-                </Link>
+              <div className="box" key={product.id}>
+                <Item product={product} />
               </div>
             );
           })}

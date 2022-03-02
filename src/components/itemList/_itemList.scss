@@ -1,5 +1,12 @@
-.layout {
+#layout {
   display: flex;
-  background-color: gainsboro;
-  align-items: center;
+  width: 50%;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.box {
+  border: 1px solid rgb(240, 240, 240);
+  text-align: center;
+  margin: 0px;
 }
