@@ -8,7 +8,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 const ItemInCart = ({ data, removeItem }) => {
   return (
     <div>
-      <Card sx={{ width: "100%", marginTop: "15px" }}>
+      <Card sx={{ width: "100%" , marginBottom:"15px"}}>
         <CardActionArea>
           <CardMedia
             component="img"

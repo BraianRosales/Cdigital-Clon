@@ -10,7 +10,7 @@ import Box from "@mui/material/Box";
 import ItemCount from "../itemCount/ItemCount";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
-import ItemsListInCart from "../itemListInCart/ItemsListInCart";
+import ItemsListInCart from "../itemsListInCart/ItemsListInCart";
 import { CartContext } from "../Context/CartContext";
 
 const Item = styled(Paper)(({ theme }) => ({

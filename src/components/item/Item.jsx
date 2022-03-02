@@ -3,12 +3,19 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import { Button } from "@mui/material";
 import Typography from "@mui/material/Typography";
+import { Link } from "react-router-dom";
 
 export default function Item({ product }) {
   return (
     <>
       <Card sx={{ maxWidth: 213 }}>
-        <CardMedia component="img" image={product.image} alt="green iguana" />
+        <Link to={`/item/${product.id}`}>
+          <CardMedia
+            component="img"
+            image={product.image}
+            alt="ups! image no render"
+          />
+        </Link>
         <CardContent>
           <Typography variant="h6">{product.name}</Typography>
           <Typography
