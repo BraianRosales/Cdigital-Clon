@@ -1,11 +1,43 @@
+import React, { useState } from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import { Button } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
+import ItemCount from "../itemCount/ItemCount";
+import { doc, updateDoc } from "firebase/firestore";
+import { db } from "../../firebase/firebaseConfig";
 
-export default function Item({ product }) {
+// MEJORAR CONDICIONES. PROBAR RETORNANDO EL ITEM BUSCADO CON VARIABLES.
+
+export default function Item({ product, addItem, items, removeItem }) {
+  const [itemCountEnabled, setItemCountEnabled] = useState(false);
+
+  function cartItem() {
+    return items.find((item) => item.id === product.id);
+  }
+
+  const updateProductTrue = async () => {
+    const productRef = doc(db, "products", `${product.id}`);
+    console.log(productRef);
+    await updateDoc(productRef, {
+      isCounting: true,
+    });
+  };
+
+  function onAdd() {
+    updateProductTrue();
+    setItemCountEnabled(true);
+    addItem(
+      product.id,
+      product.name,
+      product.price,
+      product.image,
+      product.description
+    );
+  }
+
   return (
     <>
       <Card sx={{ maxWidth: 213 }}>
@@ -48,9 +80,26 @@ export default function Item({ product }) {
           >
             Stock: {product.stock}
           </Typography>
-          <Button variant="contained" id="btn-add" sx={{ width: "100%" }}>
-            Agregar
-          </Button>
+          {(product.isCounting || itemCountEnabled) &&
+          cartItem() !== undefined ? (
+            <ItemCount
+              onAdd={onAdd}
+              cartItem={cartItem()}
+              stock={product.stock}
+              removeItem={removeItem}
+            />
+          ) : (
+            <Button
+              variant="contained"
+              id="btn-add"
+              sx={{ width: "100%" }}
+              onClick={() => {
+                onAdd();
+              }}
+            >
+              Agregar
+            </Button>
+          )}
         </CardContent>
       </Card>
     </>

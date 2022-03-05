@@ -13,31 +13,30 @@ export const ItemsProvider = ({ children }) => {
 
   //-------------------------------FUNCTIONS---------------------------------
   function removeItem(itemId) {
-    const updateItems = items.filter((item) => item.id !== itemId);
-    setItems(updateItems);
+    const foundItem = items.find((item) => item.id === itemId);
+    if (foundItem.quantify > 0) {
+      foundItem.quantify -= 1;
+      setItems([...items]);
+    } else {
+      const updateItems = items.filter((item) => item.id !== itemId);
+      setItems(updateItems);
+    }
   }
 
   function isInCart(itemId) {
     return items.some((item) => item.id === itemId);
   }
 
-  function addItem(
-    itemId,
-    itemName,
-    itemPrice,
-    itemQuantify,
-    itemImage,
-    itemDescription
-  ) {
+  function addItem(itemId, itemName, itemPrice, itemImage, itemDescription) {
     if (isInCart(itemId)) {
       const foundItem = items.find((item) => item.id === itemId);
-      foundItem.quantify += itemQuantify;
+      foundItem.quantify += 1;
     } else {
       items.push({
         id: itemId,
         name: itemName,
         price: itemPrice,
-        quantify: itemQuantify,
+        quantify: 1,
         image: itemImage,
         description: itemDescription,
       });

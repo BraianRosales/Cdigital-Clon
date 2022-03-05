@@ -29,7 +29,12 @@ const ItemList = ({ products }) => {
                 {products.map((product) => {
                   return (
                     <div className="box" key={product.id}>
-                      <Item product={product} />
+                      <Item
+                        product={product}
+                        addItem={addItem}
+                        items={items}
+                        removeItem={removeItem}
+                      />
                     </div>
                   );
                 })}
@@ -55,7 +60,12 @@ const ItemList = ({ products }) => {
                 <div className="small-cart">
                   <ItemsListInCart items={items} removeItem={removeItem} />
                 </div>
-                <div id="clear-small-cart">
+                <div
+                  id="clear-small-cart"
+                  onClick={() => {
+                    clear();
+                  }}
+                >
                   <hr></hr>
                   Vaciar carrito
                 </div>

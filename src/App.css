@@ -118,6 +118,11 @@
   color: black !important;
 }
 
+#btn-add {
+  margin-top: 10px;
+  background-color: #47b8d6;
+}
+
 .box-in-product {
   margin-bottom: 10px;
 }
@@ -139,6 +144,35 @@ hr {
 
 .btn-card:hover {
   border: none !important;
+}
+
+#btn-itemCount-add {
+  background: url("https://static.cotodigital3.com.ar/sitios/cdigi/static/content/images/cdigi/touch_right.png") no-repeat !important;
+  width: 43px;
+  height: 38px;
+  display: inline-block;
+  cursor: pointer !important;
+}
+
+#btn-itemCount-subtract {
+  background: url("https://static.cotodigital3.com.ar/sitios/cdigi/static/content/images/cdigi/touch_left.png") no-repeat !important;
+  width: 43px;
+  height: 38px;
+  display: inline-block;
+  cursor: pointer !important;
+  margin-right: 1px;
+}
+
+#box-initial {
+  display: inline-block;
+  width: 36px;
+  height: 35px;
+  margin-right: 4px;
+  font-size: 16px;
+  text-align: center;
+  background: white;
+  border: 1px solid #ccc;
+  margin-left: 10px;
 }
 
 #layout {
