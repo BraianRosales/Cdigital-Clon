@@ -1,6 +1,6 @@
 // ------------------------------------------CONTEXT API------------------------------------------
 import React, { createContext, useState } from "react";
-
+import Swal from "sweetalert2";
 // 1 - CREAR EL CONTEXTO
 export const CartContext = createContext();
 
@@ -14,12 +14,25 @@ export const ItemsProvider = ({ children }) => {
   //-------------------------------FUNCTIONS---------------------------------
   function removeItem(itemId) {
     const foundItem = items.find((item) => item.id === itemId);
-    if (foundItem.quantify > 0) {
+    if (foundItem.quantify > 1) {
       foundItem.quantify -= 1;
       setItems([...items]);
     } else {
-      const updateItems = items.filter((item) => item.id !== itemId);
-      setItems(updateItems);
+      Swal.fire({
+        title: "Atencion",
+        text: "¿Querés eliminar este producto del carrito?",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Si, Eliminar!",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire("Eliminado!", "Su producto ha sido eliminado.", "success");
+          const updateItems = items.filter((item) => item.id !== itemId);
+          setItems(updateItems);
+        }
+      });
     }
   }
 
