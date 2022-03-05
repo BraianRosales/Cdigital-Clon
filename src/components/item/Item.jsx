@@ -20,7 +20,6 @@ export default function Item({ product, addItem, items, removeItem }) {
 
   const updateProductTrue = async () => {
     const productRef = doc(db, "products", `${product.id}`);
-    console.log(productRef);
     await updateDoc(productRef, {
       isCounting: true,
     });
@@ -48,7 +47,7 @@ export default function Item({ product, addItem, items, removeItem }) {
             alt="ups! image no render"
           />
         </Link>
-        <CardContent>
+        <CardContent sx={{ minHeight: "218px" }}>
           <Typography variant="h6">{product.name}</Typography>
           <Typography
             variant="body2"

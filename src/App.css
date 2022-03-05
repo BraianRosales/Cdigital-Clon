@@ -165,7 +165,7 @@ hr {
 
 #box-initial {
   display: inline-block;
-  width: 36px;
+  width: 50px;
   height: 35px;
   margin-right: 4px;
   font-size: 16px;
@@ -173,6 +173,7 @@ hr {
   background: white;
   border: 1px solid #ccc;
   margin-left: 10px;
+  padding-top: 13px;
 }
 
 #layout {
