@@ -8,6 +8,8 @@
 @use "./components/itemCount/ItemCount";
 @use "./components/itemList/itemList";
 @use "./components/views/CashBox/cashBox";
+@use "./components/smallCart/smallCart";
+@use "./components/itemDetail/itemDetail";
 
 * {
   margin: 0px auto;
@@ -19,7 +21,7 @@
   width: 70%;
 }
 
-.clearFix{
+.clearFix {
   clear: both;
   float: none;
 }

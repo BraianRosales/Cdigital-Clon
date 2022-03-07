@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 import Item from "../item/Item";
 import Spinner from "../spinner/Spinner";
 import { Grid } from "@mui/material";
-import ItemsListInCart from "../itemsListInCart/ItemsListInCart";
+import SmallCart from "../smallCart/SmallCart";
 import { CartContext } from "../Context/CartContext";
 
 const ItemList = ({ products }) => {
@@ -21,7 +21,7 @@ const ItemList = ({ products }) => {
       {isLoading ? (
         <Spinner />
       ) : (
-        <Grid container>
+        <Grid container sx={{ marginBottom: "50px" }}>
           <Grid item xs={3}></Grid>
           <Grid item xs={6}>
             <div>
@@ -48,35 +48,13 @@ const ItemList = ({ products }) => {
               overflow: "auto",
             }}
           >
-            <h3 id="title-small-cart">
-              Mi Compra
-              {items.length > 0 ? <span>{allItems()} items</span> : <></>}
-            </h3>
-            {items.length > 0 ? (
-              <>
-                <p id="total-p">
-                  Total: <span>${totalPrice()}</span>
-                </p>
-                <div className="small-cart">
-                  <ItemsListInCart items={items} removeItem={removeItem} />
-                </div>
-                <div
-                  id="clear-small-cart"
-                  onClick={() => {
-                    clear();
-                  }}
-                >
-                  <hr></hr>
-                  Vaciar carrito
-                </div>
-              </>
-            ) : (
-              <div className="small-cart">
-                <p id="p-cart">
-                  No tiene ningún artículo en el carro de compra.
-                </p>
-              </div>
-            )}
+            <SmallCart
+              items={items}
+              allItems={allItems}
+              totalPrice={totalPrice}
+              removeItem={removeItem}
+              clear={clear}
+            />
           </Grid>
         </Grid>
       )}

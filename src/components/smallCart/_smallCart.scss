@@ -1,0 +1,75 @@
+#small-cart {
+  width: 70%;
+  height: 309px;
+}
+
+#small-cart-cleansed {
+  border: 1px solid gainsboro;
+  height: 309px;
+}
+
+#list-small-cart {
+  border: 1px solid gainsboro;
+  height: 249px;
+  overflow: auto;
+}
+
+#title-small-cart {
+  text-align: center;
+  background-color: #094360;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 45px;
+  line-height: 45px;
+  span {
+    float: right;
+    margin-right: 15px;
+  }
+}
+
+#text-cart {
+  font-size: 16px;
+  text-align: center;
+  color: #333;
+  font-weight: normal;
+  margin-top: 40px;
+}
+
+#clear-small-cart {
+  border: none;
+  text-align: center;
+  outline: 0;
+  text-decoration: underline;
+  color: #333;
+  cursor: pointer;
+  background: none;
+  padding: 4px 0px;
+  border-left: 1px solid #e1e1e1;
+  border-right: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  padding-bottom: 8px;
+  hr {
+    width: 35%;
+    margin-bottom: 5px;
+  }
+}
+
+#total-small-cart {
+  display: block;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 20px;
+  border-left: 1px solid gainsboro;
+  border-right: 1px solid gainsboro;
+  padding-top: 20px;
+  span {
+    color: red;
+  }
+}
