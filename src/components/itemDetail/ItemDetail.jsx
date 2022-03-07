@@ -25,6 +25,14 @@ const ItemDetail = ({ item }) => {
   const [items, removeItem, addItem, clear, allItems, totalPrice] =
     useContext(CartContext);
 
+  function productInCart() {
+    return items.find((i) => i.id === item.id);
+  }
+
+  function onAdd() {
+    addItem(item.id, item.name, item.price, item.image, item.description);
+  }
+
   return (
     <div className="wrap">
       <Card sx={{ boxShadow: "none", mt: "100px" }}>
@@ -45,26 +53,37 @@ const ItemDetail = ({ item }) => {
             </div>
             <span>
               <FormControlLabel
-                sx={{ marginTop: "30px", marginLeft: "50px" }}
+                sx={{ marginTop: "30px", marginLeft: "41px" }}
                 control={<Checkbox {...label} color="success" />}
                 label="Comparar"
               />
             </span>
-            <Button
-              variant="contained"
-              className="btn-detail"
-              onClick={() => {
-                addItem(
-                  item.id,
-                  item.name,
-                  item.price,
-                  item.image,
-                  item.description
-                );
-              }}
-            >
-              Agregar
-            </Button>
+            {productInCart() !== undefined ? (
+              <div id="itemCount-detail">
+                <ItemCount
+                  onAdd={onAdd}
+                  cartItem={productInCart()}
+                  stock={item.stock}
+                  removeItem={removeItem}
+                />
+              </div>
+            ) : (
+              <Button
+                variant="contained"
+                className="btn-detail"
+                onClick={() => {
+                  addItem(
+                    item.id,
+                    item.name,
+                    item.price,
+                    item.image,
+                    item.description
+                  );
+                }}
+              >
+                Agregar
+              </Button>
+            )}
           </Grid>
           <Grid item xs={3}>
             <SmallCart
