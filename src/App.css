@@ -432,6 +432,11 @@ form {
   margin-right: 25px;
 }
 
+#price-item-cart {
+  margin-left: 58px;
+  font-size: 1em;
+}
+
 * {
   margin: 0px auto;
   padding: 0px auto;

@@ -5,7 +5,7 @@ import Button from "@mui/material/Button";
 import CardMedia from "@mui/material/CardMedia";
 import { Link } from "react-router-dom";
 
-const Cart = ({ items, removeItem, addItem, clear, totalPrice }) => {
+const Cart = ({ items, removeItem, addItem, clear, allItems, totalPrice }) => {
   return (
     <div>
       <Grid
@@ -105,7 +105,7 @@ const Cart = ({ items, removeItem, addItem, clear, totalPrice }) => {
         <Grid item xs={4}></Grid>
 
         <Grid container xs={4}>
-          <Grid>Precio</Grid>
+          <Grid sx={{marginRight:"87px"}}>Precio</Grid>
           <Grid item xs={6}>
             Total
           </Grid>
@@ -115,9 +115,9 @@ const Cart = ({ items, removeItem, addItem, clear, totalPrice }) => {
       <hr></hr>
       {/*---------------------------Products---------------------------- */}
       <ProductListInCartView
-        products={items}
+        items={items}
         removeItem={removeItem}
-        onAdd={addItem}
+        addItem={addItem}
       />
 
       {/*------------------------Division-----------------------------------  */}

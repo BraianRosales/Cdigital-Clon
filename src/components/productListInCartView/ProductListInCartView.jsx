@@ -1,15 +1,15 @@
 import React from "react";
 import ProductInCartView from "../productInCartView/ProductInCartView";
 
-const ProductListInCartView = ({ products, removeItem, onAdd }) => {
+const ProductListInCartView = ({ items, removeItem, addItem }) => {
   return (
     <div>
-      {products.map((product) => (
+      {items.map((item) => (
         <ProductInCartView
-          key={product.id}
-          product={product}
+          key={item.id}
+          item={item}
           removeItem={removeItem}
-          onAdd={onAdd}
+          addItem={addItem}
         />
       ))}
     </div>
