@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
 import { CartContext } from "../../Context/CartContext";
 import { addDoc, collection } from "firebase/firestore";
-import { db } from "../../../firebase/firebaseConfig";
+import db from "../../../firebaseConfig/firebaseConfig";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",

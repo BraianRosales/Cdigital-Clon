@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ItemList from "../../itemList/ItemList";
-//FIREBASE
-import { db } from "../../../firebase/firebaseConfig";
+import db from "../../../firebaseConfig/firebaseConfig";
 import { collection, query, getDocs } from "firebase/firestore";
 
 const Home = ({ greeting }) => {
@@ -9,7 +8,7 @@ const Home = ({ greeting }) => {
 
   useEffect(() => {
     const getProducts = async () => {
-      const q = query(collection(db, "products"));
+      const q = query(collection(db, "items"));
       const docs = [];
       const querySnapshot = await getDocs(q);
       querySnapshot.forEach((doc) => {

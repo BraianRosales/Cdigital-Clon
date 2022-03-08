@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ItemList from "../itemList/ItemList";
-import { db } from "./../../firebase/firebaseConfig";
+import db from "../../firebaseConfig/firebaseConfig";
 import { collection, query, getDocs, where } from "firebase/firestore";
 
 const ItemListContainer = ({ greeting, category }) => {
@@ -9,7 +9,7 @@ const ItemListContainer = ({ greeting, category }) => {
   useEffect(() => {
     const getProductsCategory = async () => {
       const q = query(
-        collection(db, "products"),
+        collection(db, "items"),
         where("category", "==", category)
       );
       const docs = [];

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ItemDetail from "../itemDetail/ItemDetail";
-import { db } from "./../../firebase/firebaseConfig";
+import db from "../../firebaseConfig/firebaseConfig"
 import {
   collection,
   query,
@@ -17,7 +17,7 @@ const ItemDetailContainer = ({ id }) => {
   useEffect(() => {
     const getItem = async () => {
       const q = query(
-        collection(db, "products"),
+        collection(db, "items"),
         where(documentId(), "==", id)
       );
       const docs = [];
