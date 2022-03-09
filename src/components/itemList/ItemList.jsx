@@ -13,7 +13,7 @@ const ItemList = ({ products }) => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    },1500);
+    }, 1500);
   }, []);
 
   return (
@@ -41,18 +41,13 @@ const ItemList = ({ products }) => {
               </div>
             </div>
           </Grid>
-          <Grid
-            item
-            xs={2}
-            sx={{
-              overflow: "auto",
-            }}
-          >
+          <Grid item xs={2}>
             <SmallCart
               items={items}
               allItems={allItems}
               totalPrice={totalPrice}
               removeItem={removeItem}
+              addItem={addItem}
               clear={clear}
             />
           </Grid>

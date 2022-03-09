@@ -1,7 +1,14 @@
 import React from "react";
-import ItemsListInCart from "../itemsListInCart/ItemsListInCart";
+import ItemListSmallCart from "../itemsListSmallCart/ItemsListSmallCart";
 
-const SmallCart = ({ items, allItems, totalPrice, removeItem, clear }) => {
+const SmallCart = ({
+  items,
+  allItems,
+  totalPrice,
+  removeItem,
+  addItem,
+  clear,
+}) => {
   return (
     <div id="small-cart">
       <h3 id="title-small-cart">
@@ -14,7 +21,11 @@ const SmallCart = ({ items, allItems, totalPrice, removeItem, clear }) => {
             Total: <span>${totalPrice()}</span>
           </div>
           <div id="list-small-cart">
-            <ItemsListInCart items={items} removeItem={removeItem} />
+            <ItemListSmallCart
+              items={items}
+              removeItem={removeItem}
+              addItem={addItem}
+            />
           </div>
           <div
             id="clear-small-cart"

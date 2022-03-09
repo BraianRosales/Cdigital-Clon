@@ -311,7 +311,7 @@ form {
 
 #list-small-cart {
   border: 1px solid gainsboro;
-  height: 249px;
+  height: 336px;
   overflow: auto;
 }
 
@@ -432,9 +432,17 @@ form {
   margin-right: 25px;
 }
 
-#price-item-cart {
-  margin-left: 58px;
+#price-product-cart {
+  margin-left: 60px;
   font-size: 1em;
+}
+
+#circularStatic {
+  margin-left: "60px";
+}
+
+#itemCount-smallCart {
+  margin-left: 5px;
 }
 
 * {

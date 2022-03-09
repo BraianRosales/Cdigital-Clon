@@ -4,7 +4,7 @@ import CardMedia from "@mui/material/CardMedia";
 import ItemCount from "../itemCount/ItemCount";
 import db from "../../firebaseConfig/firebaseConfig";
 import { collection, query, getDocs } from "firebase/firestore";
-import Spinner from "../spinner/Spinner";
+import CircularStatic from "../circularStatic/CircularStatic";
 
 const ProductInCartView = ({ item, removeItem, addItem }) => {
   const [productsData, setProductsData] = useState([]);
@@ -13,7 +13,7 @@ const ProductInCartView = ({ item, removeItem, addItem }) => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 1520);
   }, []);
 
   useEffect(() => {
@@ -75,7 +75,9 @@ const ProductInCartView = ({ item, removeItem, addItem }) => {
         <Grid container xs={4}>
           <Grid>
             {isLoading ? (
-              <Spinner />
+              <div style={{ marginLeft: "42px" }}>
+                <CircularStatic />
+              </div>
             ) : (
               <ItemCount
                 onAdd={onAdd}
@@ -85,7 +87,7 @@ const ProductInCartView = ({ item, removeItem, addItem }) => {
               />
             )}
             <br />
-            <div id="price-item-cart">${item.price}</div>
+            <div id="price-product-cart">${item.price}</div>
           </Grid>
           <Grid
             sx={{ marginTop: "40px", fontWeight: "bold", fontSize: "20px" }}
