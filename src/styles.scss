@@ -12,6 +12,8 @@
 @use "./components/itemDetail/itemDetail";
 @use "./components/productInCartView/productInCartView";
 @use "./components//itemSmallCart/itemSmallCart";
+@use "./components/Cart/cart";
+@use "./components/itemDetailContainer/itemDetailContainer";
 
 * {
   margin: 0px auto;
@@ -26,4 +28,30 @@
 .clearFix {
   clear: both;
   float: none;
+}
+
+.list-title {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 3em;
+  margin-bottom: 40px;
+  float: left;
+}
+
+.btn-lightBlue {
+  margin-top: 30px !important;
+  width: 39%;
+  box-sizing: border-box;
+  float: left;
+  font-weight: 400;
+  background: #47b8d6 !important;
+  color: white;
+  font-size: 14px;
+  border-radius: 2px;
+  padding: 5px !important;
+  margin-left: 35px !important;
+
+  cursor: pointer;
+  -webkit-appearance: none;
+  transition: all 0.3s ease 0s;
 }

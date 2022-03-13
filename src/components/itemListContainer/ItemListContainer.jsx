@@ -3,30 +3,51 @@ import ItemList from "../itemList/ItemList";
 import db from "../../firebaseConfig/firebaseConfig";
 import { collection, query, getDocs, where } from "firebase/firestore";
 
-const ItemListContainer = ({ greeting, category }) => {
-  const [productsCategory, setProductsCategory] = useState([]);
+const ItemListContainer = ({
+  listTitle,
+  category,
+  searchText,
+  stateSearchText,
+}) => {
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    const getProductsCategory = async () => {
-      const q = query(
-        collection(db, "items"),
-        where("category", "==", category)
-      );
-      const docs = [];
-      const querySnapshot = await getDocs(q);
-      querySnapshot.forEach((doc) => {
-        docs.push({ ...doc.data(), id: doc.id });
-      });
-      setProductsCategory(docs);
-    };
-    getProductsCategory();
-  }, [category]);
+    if (searchText === "") {
+      const getProductsCategory = async () => {
+        const q = query(
+          collection(db, "items"),
+          where("category", "==", category)
+        );
+        const docs = [];
+        const querySnapshot = await getDocs(q);
+        querySnapshot.forEach((doc) => {
+          docs.push({ ...doc.data(), id: doc.id });
+        });
+        setProducts(docs);
+      };
+      getProductsCategory();
+    } else {
+      const getProductsSearch = async () => {
+        const q = query(
+          collection(db, "items"),
+          where("typeofproduct", "==", searchText)
+        );
+        const docs = [];
+        const querySnapshot = await getDocs(q);
+        querySnapshot.forEach((doc) => {
+          docs.push({ ...doc.data(), id: doc.id });
+        });
+        setProducts(docs);
+      };
+      getProductsSearch();
+    }
+  }, [category, searchText]);
 
   return (
-    <>
-      <div id="p-greeting">{greeting}</div>
-      <ItemList products={productsCategory} />
-    </>
+    <div>
+      <div className="wrap list-title">{listTitle}</div>
+      <ItemList products={products} stateSearchText={stateSearchText} />
+    </div>
   );
 };
 export default ItemListContainer;

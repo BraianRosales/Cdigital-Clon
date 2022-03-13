@@ -6,7 +6,8 @@ import { CardActionArea } from "@mui/material";
 import ItemCount from "../itemCount/ItemCount";
 import db from "../../firebaseConfig/firebaseConfig";
 import { collection, query, getDocs } from "firebase/firestore";
-import Spinner from "../spinner/Spinner";
+import CircularStatic from "../circularStatic/CircularStatic";
+import { Link } from "react-router-dom";
 
 const ItemSmallCart = ({ item, removeItem, addItem }) => {
   const [productsData, setProductsData] = useState([]);
@@ -15,7 +16,7 @@ const ItemSmallCart = ({ item, removeItem, addItem }) => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 1200);
+    }, 1500);
   }, []);
 
   useEffect(() => {
@@ -39,7 +40,6 @@ const ItemSmallCart = ({ item, removeItem, addItem }) => {
   function onAdd() {
     addItem(item.id, item.name, item.price, item.image, item.description);
   }
-
   return (
     <div>
       <Card
@@ -50,23 +50,26 @@ const ItemSmallCart = ({ item, removeItem, addItem }) => {
           padding: "5px",
         }}
       >
-        <CardActionArea>
-          <CardMedia
-            component="img"
-            width={100}
-            image={item.image}
-            alt="item.img"
-          />
-          <CardContent>
-            {item.name}
-            <p>${item.price}</p>
-            <p>cantidad: {item.quantify}</p>
-          </CardContent>
-        </CardActionArea>
+        <Link to={`/item/${item.id}`}>
+          <CardActionArea sx={{ color: "black" }}>
+            <CardMedia
+              component="img"
+              width={100}
+              image={item.image}
+              alt="item.img"
+            />
+
+            <CardContent>
+              <div id="name_itemSmallCart">{item.name.toUpperCase()}</div>
+              <p>{item.price}</p>
+              <p>cantidad: {item.quantify}</p>
+            </CardContent>
+          </CardActionArea>
+        </Link>
         <div id="itemCount-smallCart">
           {isLoading ? (
-            <div id="spinner-">
-              <Spinner />
+            <div style={{ marginLeft: "55px", marginTop: "15px" }}>
+              <CircularStatic />
             </div>
           ) : (
             <ItemCount

@@ -1,4 +1,4 @@
-#layout {
+.layout {
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -10,4 +10,8 @@
   border: 1px solid rgb(240, 240, 240);
   text-align: center;
   margin: 0px;
+}
+
+.itemList{
+  width: 1%;
 }

@@ -1,10 +1,10 @@
 import React from "react";
 import Search from "./../search/Search";
 
-const Header = () => {
+const Header = ({stateSearchText}) => {
   return (
     <div id="header">
-      <Search />
+      <Search stateSearchText={stateSearchText}/>
     </div>
   );
 };

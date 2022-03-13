@@ -18,15 +18,16 @@ const Cart = ({ items, removeItem, addItem, clear, allItems, totalPrice }) => {
       >
         <Grid item xs={4}>
           <button
-            style={{ cursor: "pointer" }}
+            className="btn-cart"
             onClick={() => {
               clear();
             }}
           >
+            <span className="delete_cart_page"></span>
             Vaciar carrito
           </button>
           <Link to="/">
-            <button style={{ cursor: "pointer" }}>Seguir comprando</button>
+            <button className="btn-cart">Seguir comprando</button>
           </Link>
         </Grid>
 
@@ -105,7 +106,7 @@ const Cart = ({ items, removeItem, addItem, clear, allItems, totalPrice }) => {
         <Grid item xs={4}></Grid>
 
         <Grid container xs={4}>
-          <Grid sx={{marginRight:"87px"}}>Precio</Grid>
+          <Grid sx={{ marginRight: "87px" }}>Precio</Grid>
           <Grid item xs={6}>
             Total
           </Grid>
@@ -131,18 +132,18 @@ const Cart = ({ items, removeItem, addItem, clear, allItems, totalPrice }) => {
       >
         <Grid item xs={4}>
           <button
-            style={{ cursor: "pointer" }}
+            className="btn-cart"
             onClick={() => {
               clear();
             }}
           >
+            <span className="delete_cart_page"></span>
             Vaciar carrito
           </button>
           <Link to="/">
-            <button style={{ cursor: "pointer" }}>Seguir comprando</button>
+            <button className="btn-cart">Seguir comprando</button>
           </Link>
         </Grid>
-
         <Grid item xs={4}></Grid>
 
         <Grid container xs={4}>

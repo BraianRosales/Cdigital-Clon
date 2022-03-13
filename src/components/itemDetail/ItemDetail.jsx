@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import { styled } from "@mui/material/styles";
@@ -9,8 +9,6 @@ import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
 import SmallCart from "../smallCart/SmallCart";
 import { CartContext } from "../Context/CartContext";
-import Checkbox from "@mui/material/Checkbox";
-import FormControlLabel from "@mui/material/FormControlLabel";
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -18,8 +16,6 @@ const Item = styled(Paper)(({ theme }) => ({
   textAlign: "center",
   color: theme.palette.text.secondary,
 }));
-
-const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
 const ItemDetail = ({ item }) => {
   const [items, removeItem, addItem, clear, allItems, totalPrice] =
@@ -51,13 +47,11 @@ const ItemDetail = ({ item }) => {
               <span id="price-detail"> ${item.price}</span>
               <div id="stock-detail">Stock: {item.stock}</div>
             </div>
-            <span>
-              <FormControlLabel
-                sx={{ marginTop: "30px", marginLeft: "41px" }}
-                control={<Checkbox {...label} color="success" />}
-                label="Comparar"
-              />
-            </span>
+            <Link to="/Cart">
+              <Button variant="contained" className="btn-lightBlue">
+                Terminar la compra
+              </Button>
+            </Link>
             {productInCart() !== undefined ? (
               <div id="itemCount-detail">
                 <ItemCount
@@ -70,7 +64,7 @@ const ItemDetail = ({ item }) => {
             ) : (
               <Button
                 variant="contained"
-                className="btn-detail"
+                className="btn-lightBlue"
                 onClick={() => {
                   addItem(
                     item.id,
@@ -91,6 +85,7 @@ const ItemDetail = ({ item }) => {
               allItems={allItems}
               totalPrice={totalPrice}
               removeItem={removeItem}
+              addItem={addItem}
               clear={clear}
             />
           </Grid>

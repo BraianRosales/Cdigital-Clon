@@ -6,7 +6,13 @@ import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
 import ItemCount from "../itemCount/ItemCount";
 
-export default function Item({ product, addItem, items, removeItem }) {
+export default function Item({
+  product,
+  addItem,
+  items,
+  removeItem,
+  stateSearchText,
+}) {
   function productInCart() {
     return items.find((item) => item.id === product.id);
   }
@@ -24,15 +30,22 @@ export default function Item({ product, addItem, items, removeItem }) {
   return (
     <>
       <Card sx={{ maxWidth: 213 }}>
-        <Link to={`/item/${product.id}`}>
+        <Link
+          to={`/item/${product.id}`}
+          onClick={() => {
+            stateSearchText("");
+          }}
+        >
           <CardMedia
             component="img"
             image={product.image}
-            alt="ups! image no render"
+            alt="ups! image no render."
           />
         </Link>
         <CardContent sx={{ minHeight: "218px" }}>
-          <Typography variant="h6">{product.name}</Typography>
+          <Typography variant="h6" sx={{ textTransform: "uppercase" }}>
+            {product.name}
+          </Typography>
           <Typography
             variant="body2"
             color="text.secondary"
@@ -51,15 +64,14 @@ export default function Item({ product, addItem, items, removeItem }) {
               fontSize: " 0.8rem",
               fontWeight: "600",
               fontFamily: "Open Sans, sans-serif",
+              mt: "10px",
             }}
           >
             Precio regular
           </Typography>
-          <Typography sx={{ fontWeight: "bold", fontSize: "21px" }}>
-            ${product.price}
-          </Typography>
+          <div id="item_price">${product.price}</div>
           <Typography
-            sx={{ textTransform: "uppercase", my: "5px", color: "red" }}
+            sx={{ textTransform: "uppercase", mt: "5px", color: "red" }}
           >
             Stock: {product.stock}
           </Typography>

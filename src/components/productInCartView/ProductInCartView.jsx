@@ -5,6 +5,7 @@ import ItemCount from "../itemCount/ItemCount";
 import db from "../../firebaseConfig/firebaseConfig";
 import { collection, query, getDocs } from "firebase/firestore";
 import CircularStatic from "../circularStatic/CircularStatic";
+import { Link } from "react-router-dom";
 
 const ProductInCartView = ({ item, removeItem, addItem }) => {
   const [productsData, setProductsData] = useState([]);
@@ -58,12 +59,14 @@ const ProductInCartView = ({ item, removeItem, addItem }) => {
           </Grid>
 
           <Grid xs={4}>
-            <CardMedia
-              component="img"
-              sx={{ width: "60%" }}
-              image={item.image}
-              alt="product"
-            />
+            <Link to={`/item/${item.id}`}>
+              <CardMedia
+                component="img"
+                sx={{ width: "60%" }}
+                image={item.image}
+                alt="product"
+              />
+            </Link>
           </Grid>
           <Grid mt={4} xs={7}>
             {item.description}
@@ -75,19 +78,22 @@ const ProductInCartView = ({ item, removeItem, addItem }) => {
         <Grid container xs={4}>
           <Grid>
             {isLoading ? (
-              <div style={{ marginLeft: "42px" }}>
+              <div style={{ marginLeft: "42px", marginTop: "15px" }}>
                 <CircularStatic />
               </div>
             ) : (
-              <ItemCount
-                onAdd={onAdd}
-                cartItem={item}
-                stock={stockProduct()}
-                removeItem={removeItem}
-              />
+              <>
+                <div className="stock">Stock: {stockProduct()}</div>
+                <ItemCount
+                  onAdd={onAdd}
+                  cartItem={item}
+                  stock={stockProduct()}
+                  removeItem={removeItem}
+                />
+                <br />
+                <div id="price-product-cart">${item.price}</div>
+              </>
             )}
-            <br />
-            <div id="price-product-cart">${item.price}</div>
           </Grid>
           <Grid
             sx={{ marginTop: "40px", fontWeight: "bold", fontSize: "20px" }}
