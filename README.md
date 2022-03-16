@@ -6,7 +6,7 @@ Este proyecto es un E-commerce,un clon de la pagina coto digital.
 pueda de dicha pagina en el tiempo del desarrollo de la cursada, este proyecto va a seguir mejorando dia a dia hasta quede
 lo mas identica posible o me aburra.
 
-# functionalidad
+# funcionalidad
 
 \*Es un E-commerce, el usuario al ingresar a la aplicacion se encontrara con la pagina de catalogos, podra clickear en cualquier imagen
 y dicha imagen lo redireccionara a una lista de productos(Cada imagen hace referencia a los productos que contiene), en esta seccion podra interactuar agregando productos al carrito desde la lista productos por medio del boton agregar. Al hacer click en el boton agregar el boton cambiara a un contador con sus botones + y - donde incrementara o decrementara la cantidad del producto, cuando decremente a cero, le saldra una alerta preguntando si quiere eliminar el producto del carrito en su totalidad.Al agregar un producto se podra ver visible dentro del carrito que se encuentra del lado derecho de la pantalla, tambien podra ver como aparece un carrito dinamico sobre la barra de navegacion, si le da click lo redireccionara a la pagina carrito, un detalle si hace click sobre la imagen de los productos el router lo direccionara hacia la vista detalle de dicho producto donde lo podra apreciar con mayor acercamiento.
