@@ -8,7 +8,7 @@ import { collection, query, where, getDocs } from "firebase/firestore";
 import ItemList from "../../itemList/ItemList";
 import Spinner from "../../spinner/Spinner";
 
-const CartView = ({ listTitle, searchText, stateSearchText }) => {
+const CartView = ({ searchText, stateSearchText }) => {
   const [
     items,
     removeItem,
@@ -103,7 +103,6 @@ const CartView = ({ listTitle, searchText, stateSearchText }) => {
             </div>
           ) : (
             <div>
-              <div className="wrap list-title">{listTitle}</div>
               <ItemList products={products} stateSearchText={stateSearchText} />
             </div>
           )}

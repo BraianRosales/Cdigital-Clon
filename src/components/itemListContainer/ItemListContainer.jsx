@@ -4,7 +4,6 @@ import db from "../../firebaseConfig/firebaseConfig";
 import { collection, query, getDocs, where } from "firebase/firestore";
 
 const ItemListContainer = ({
-  listTitle,
   category,
   searchText,
   stateSearchText,

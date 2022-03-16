@@ -4,7 +4,7 @@ import { Grid } from "@mui/material";
 import SmallCart from "../smallCart/SmallCart";
 import { CartContext } from "../Context/CartContext";
 
-const ItemList = ({ products, stateSearchText, listTitle }) => {
+const ItemList = ({ products, stateSearchText }) => {
   const [items, removeItem, addItem, clear, allItems, totalPrice] =
     useContext(CartContext);
 

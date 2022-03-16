@@ -11,12 +11,7 @@ import {
   documentId,
 } from "firebase/firestore";
 
-const ItemDetailContainer = ({
-  id,
-  searchText,
-  listTitle,
-  stateSearchText,
-}) => {
+const ItemDetailContainer = ({ id, searchText, stateSearchText }) => {
   const [item, setItem] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [products, setProducts] = useState([]);
@@ -67,7 +62,6 @@ const ItemDetailContainer = ({
         </div>
       ) : (
         <div>
-          <div className="wrap list-title">{listTitle}</div>
           <ItemList products={products} stateSearchText={stateSearchText} />
         </div>
       )}

@@ -1,7 +1,7 @@
 import ItemDetailContainer from "../../itemDetailContainer/ItemDetailContainer";
 import { useParams } from "react-router-dom";
 
-const ItemDetailView = ({ searchText, listTitle, stateSearchText }) => {
+const ItemDetailView = ({ searchText, stateSearchText }) => {
   let productId = useParams().id;
 
   return (
@@ -9,7 +9,6 @@ const ItemDetailView = ({ searchText, listTitle, stateSearchText }) => {
       <ItemDetailContainer
         id={productId}
         searchText={searchText}
-        listTitle={listTitle}
         stateSearchText={stateSearchText}
       />
     </div>

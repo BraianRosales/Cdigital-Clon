@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import ItemListContainer from "../../itemListContainer/ItemListContainer";
 import Spinner from "../../spinner/Spinner";
 
-const CategoriesView = ({ listTitle, searchText, stateSearchText }) => {
+const CategoriesView = ({ searchText, stateSearchText }) => {
   let category = useParams().categoryId;
   const [isLoading, setIsLoading] = useState(true);
 
@@ -22,7 +22,6 @@ const CategoriesView = ({ listTitle, searchText, stateSearchText }) => {
       ) : (
         <ItemListContainer
           category={category}
-          listTitle={listTitle}
           searchText={searchText}
           stateSearchText={stateSearchText}
         />

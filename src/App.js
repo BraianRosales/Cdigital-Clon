@@ -12,8 +12,6 @@ import { ItemsProvider } from "./components/Context/CartContext";
 import CashBox from "./components/views/CashBox/CashBox";
 import Footer from "./components/footer/Footer";
 
-const listTitle = "Productos encontrados:";
-
 const App = () => {
   const [searchText, setSearchText] = useState("");
 
@@ -30,18 +28,13 @@ const App = () => {
           <Route
             path="/"
             element={
-              <Home
-                listTitle={listTitle}
-                searchText={searchText}
-                stateSearchText={stateSearchText}
-              />
+              <Home searchText={searchText} stateSearchText={stateSearchText} />
             }
           />
           <Route
             path="/item/:id"
             element={
               <ItemDetailView
-                listTitle={listTitle}
                 searchText={searchText}
                 stateSearchText={stateSearchText}
               />
@@ -51,7 +44,6 @@ const App = () => {
             path="/category/:categoryId"
             element={
               <CategoriesView
-                listTitle={listTitle}
                 searchText={searchText}
                 stateSearchText={stateSearchText}
               />
@@ -61,7 +53,6 @@ const App = () => {
             path="/cart"
             element={
               <CartView
-                listTitle={listTitle}
                 searchText={searchText}
                 stateSearchText={stateSearchText}
               />
@@ -71,7 +62,6 @@ const App = () => {
             path="/cashBox"
             element={
               <CashBox
-                listTitle={listTitle}
                 searchText={searchText}
                 stateSearchText={stateSearchText}
               />

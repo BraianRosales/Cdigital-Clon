@@ -36,7 +36,7 @@ const initialPurchase = {
   total: "",
 };
 
-const CashBox = ({ listTitle, searchText, stateSearchText }) => {
+const CashBox = ({ searchText, stateSearchText }) => {
   const [items, removeItem, addItem, clear, allItems, totalPrice] =
     useContext(CartContext);
   const [isRendering, setIsRendering] = useState(false);
@@ -318,7 +318,6 @@ const CashBox = ({ listTitle, searchText, stateSearchText }) => {
             </Grid>
           ) : (
             <div>
-              <div className="wrap list-title">{listTitle}</div>
               <ItemList products={products} stateSearchText={stateSearchText} />
             </div>
           )}
