@@ -1,18 +1,18 @@
 import React, { useContext } from "react";
 import Item from "../item/Item";
-
 import { Grid } from "@mui/material";
 import SmallCart from "../smallCart/SmallCart";
 import { CartContext } from "../Context/CartContext";
 
-const ItemList = ({ products, stateSearchText }) => {
+const ItemList = ({ products, stateSearchText, listTitle }) => {
   const [items, removeItem, addItem, clear, allItems, totalPrice] =
     useContext(CartContext);
 
-  //PONER LOS SETTIMEOUT EN LOS COMPONENTES PADRES EN ESTE CASO CARTVIEW
-
   return (
     <div>
+      <div className="wrap list-title">
+        Productos encontrados: {products.length}
+      </div>
       <Grid container sx={{ marginBottom: "50px" }}>
         <Grid item xs={3}></Grid>
         <Grid item xs={6}>

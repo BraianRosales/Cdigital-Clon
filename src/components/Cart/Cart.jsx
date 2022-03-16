@@ -5,7 +5,15 @@ import Button from "@mui/material/Button";
 import CardMedia from "@mui/material/CardMedia";
 import { Link } from "react-router-dom";
 
-const Cart = ({ items, removeItem, addItem, clear, allItems, totalPrice }) => {
+const Cart = ({
+  items,
+  removeItem,
+  addItem,
+  clear,
+  allItems,
+  totalPrice,
+  removeItemCart,
+}) => {
   return (
     <div>
       <Grid
@@ -41,7 +49,8 @@ const Cart = ({ items, removeItem, addItem, clear, allItems, totalPrice }) => {
           <Grid item xs={6} mt={2}>
             <Link to="/cashBox">
               <Button
-                sx={{ width: "90%", cursor: "pointer" }}
+                className="btn-pagar-cart"
+                sx={{ width: "90%", cursor: "pointer", background: "#0fabd4" }}
                 variant="contained"
                 disableElevation
               >
@@ -63,7 +72,6 @@ const Cart = ({ items, removeItem, addItem, clear, allItems, totalPrice }) => {
           </Grid>
         </Grid>
       </Grid>
-      {/*------------------------------Division--------------------------------  */}
 
       <Grid
         container
@@ -96,7 +104,6 @@ const Cart = ({ items, removeItem, addItem, clear, allItems, totalPrice }) => {
         </Grid>
       </Grid>
 
-      {/*------------------------ Division--------------------------------*/}
       <h2 style={{ color: "#6dc5e9", marginLeft: "-22px" }}>Productos</h2>
       <Grid container spacing={3} mt={3} mb={1}>
         <Grid container xs={4}>
@@ -114,14 +121,14 @@ const Cart = ({ items, removeItem, addItem, clear, allItems, totalPrice }) => {
       </Grid>
 
       <hr></hr>
-      {/*---------------------------Products---------------------------- */}
+      {/* Lista de productos dentro del carrito */}
       <ProductListInCartView
         items={items}
         removeItem={removeItem}
         addItem={addItem}
+        removeItemCart={removeItemCart}
       />
 
-      {/*------------------------Division-----------------------------------  */}
       <Grid
         container
         spacing={3}
@@ -156,6 +163,7 @@ const Cart = ({ items, removeItem, addItem, clear, allItems, totalPrice }) => {
           <Grid item xs={6} mt={2}>
             <Link to="/cashBox">
               <Button
+                className="btn-pagar-cart"
                 sx={{ width: "90%", cursor: "pointer", background: "#0fabd4" }}
                 variant="contained"
                 disableElevation

@@ -7,7 +7,7 @@ import { collection, query, getDocs } from "firebase/firestore";
 import CircularStatic from "../circularStatic/CircularStatic";
 import { Link } from "react-router-dom";
 
-const ProductInCartView = ({ item, removeItem, addItem }) => {
+const ProductInCartView = ({ item, removeItem, addItem,removeItemCart }) => {
   const [productsData, setProductsData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -43,15 +43,16 @@ const ProductInCartView = ({ item, removeItem, addItem }) => {
     addItem(item.id, item.name, item.price, item.image, item.description);
   }
 
+ 
   return (
     <>
       <Grid container spacing={3} mt={3} mb={3}>
         <Grid container xs={5}>
           <Grid xs={1} mt={4}>
             <button
-              style={{ cursor: "pointer" }}
+              style={{ cursor: "pointer", border:"1px solid #e6e6e6",borderRadius:"5px" }}
               onClick={() => {
-                removeItem(item.id);
+                removeItemCart(item.id)
               }}
             >
               X

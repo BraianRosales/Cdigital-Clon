@@ -10,6 +10,7 @@ import CategoriesView from "./components/views/Categories/CategoriesView";
 import CartView from "./components/views/CartView/CartView";
 import { ItemsProvider } from "./components/Context/CartContext";
 import CashBox from "./components/views/CashBox/CashBox";
+import Footer from "./components/footer/Footer";
 
 const listTitle = "Productos encontrados:";
 
@@ -28,7 +29,13 @@ const App = () => {
         <Routes>
           <Route
             path="/"
-            element={<Home listTitle={listTitle} searchText={searchText} />}
+            element={
+              <Home
+                listTitle={listTitle}
+                searchText={searchText}
+                stateSearchText={stateSearchText}
+              />
+            }
           />
           <Route
             path="/item/:id"
@@ -72,6 +79,7 @@ const App = () => {
           />
           <Route path="*" element={<Error404 />} />
         </Routes>
+        <Footer />
       </ItemsProvider>
     </Router>
   );

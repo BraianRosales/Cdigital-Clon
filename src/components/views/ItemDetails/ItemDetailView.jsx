@@ -5,7 +5,7 @@ const ItemDetailView = ({ searchText, listTitle, stateSearchText }) => {
   let productId = useParams().id;
 
   return (
-    <div>
+    <div className="height-view">
       <ItemDetailContainer
         id={productId}
         searchText={searchText}

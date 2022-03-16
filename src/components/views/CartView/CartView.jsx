@@ -9,8 +9,15 @@ import ItemList from "../../itemList/ItemList";
 import Spinner from "../../spinner/Spinner";
 
 const CartView = ({ listTitle, searchText, stateSearchText }) => {
-  const [items, removeItem, addItem, clear, allItems, totalPrice] =
-    useContext(CartContext);
+  const [
+    items,
+    removeItem,
+    addItem,
+    clear,
+    allItems,
+    totalPrice,
+    removeItemCart,
+  ] = useContext(CartContext);
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -37,13 +44,13 @@ const CartView = ({ listTitle, searchText, stateSearchText }) => {
   }, []);
 
   return (
-    <>
+    <div className="height-view">
       {isLoading ? (
         <div className="layout">
           <Spinner />
         </div>
       ) : (
-        <div style={{marginTop:"50px"}}>
+        <div style={{ marginTop: "50px" }}>
           {searchText === "" ? (
             <div style={{ width: "60%" }}>
               <p
@@ -62,6 +69,7 @@ const CartView = ({ listTitle, searchText, stateSearchText }) => {
                   addItem={addItem}
                   clear={clear}
                   totalPrice={totalPrice}
+                  removeItemCart={removeItemCart}
                 />
               ) : (
                 <div>
@@ -101,7 +109,7 @@ const CartView = ({ listTitle, searchText, stateSearchText }) => {
           )}
         </div>
       )}
-    </>
+    </div>
   );
 };
 

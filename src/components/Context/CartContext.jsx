@@ -1,13 +1,10 @@
-// ------------------------------------------CONTEXT API------------------------------------------
 import React, { createContext, useState } from "react";
 import Swal from "sweetalert2";
-// 1 - CREAR EL CONTEXTO
+
 export const CartContext = createContext();
 
-// STATE que le pasamos al useState
 const initialState = [];
 
-// 2 - CREAR EL COMPONENTE PROVIDER (ItemsProvider)
 export const ItemsProvider = ({ children }) => {
   const [items, setItems] = useState(initialState);
 
@@ -57,6 +54,11 @@ export const ItemsProvider = ({ children }) => {
     setItems([...items]);
   }
 
+  function removeItemCart(itemId) {
+    const updateItems = items.filter((item) => item.id !== itemId);
+    setItems(updateItems);
+  }
+
   function clear() {
     setItems([]);
   }
@@ -73,12 +75,18 @@ export const ItemsProvider = ({ children }) => {
     return total.toFixed(2);
   }
 
-  // 3 - RETORNAMOS NUESTRO CONTEXT CON UN .PROVIDER
   return (
     <CartContext.Provider
-      value={[items, removeItem, addItem, clear, allItems, totalPrice]}
+      value={[
+        items,
+        removeItem,
+        addItem,
+        clear,
+        allItems,
+        totalPrice,
+        removeItemCart,
+      ]}
     >
-      {/* 4 - PROPS.CHILDREN O BIEN CHILDREN */}
       {children}
     </CartContext.Provider>
   );

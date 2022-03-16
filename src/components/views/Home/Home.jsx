@@ -5,7 +5,7 @@ import { collection, query, getDocs, where } from "firebase/firestore";
 import Spinner from "../../spinner/Spinner";
 import Catalogs from "../../catalogs/Catalogs";
 
-const Home = ({ listTitle, searchText }) => {
+const Home = ({ listTitle, searchText, stateSearchText }) => {
   const [searchProducts, setSearchProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -32,7 +32,7 @@ const Home = ({ listTitle, searchText }) => {
   }, []);
 
   return (
-    <div>
+    <div className="height-view">
       {isLoading ? (
         <div className="layout">
           <Spinner />
@@ -40,10 +40,11 @@ const Home = ({ listTitle, searchText }) => {
       ) : (
         <div>
           {searchText === "" ? (
-            <Catalogs />
+            <div id="catalogs">
+              <Catalogs stateSearchText={stateSearchText} />
+            </div>
           ) : (
             <div>
-              <div className="wrap list-title">{listTitle}</div>
               <ItemList products={searchProducts} listTitle={listTitle} />
             </div>
           )}

@@ -45,7 +45,6 @@ const ItemListContainer = ({
 
   return (
     <div>
-      <div className="wrap list-title">{listTitle}</div>
       <ItemList products={products} stateSearchText={stateSearchText} />
     </div>
   );

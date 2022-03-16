@@ -1,7 +1,7 @@
 import React from "react";
 
 const Error404 = () => {
-  return <div>Error al renderizar la vista. 404.</div>;
+  return <div className="height-view">Error al renderizar la vista. 404.</div>;
 };
 
 export default Error404;

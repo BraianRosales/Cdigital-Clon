@@ -59,30 +59,12 @@ const NavBar = ({ stateSearchText }) => {
           </Link>
           <Link
             className="li"
-            to="/category/congelados"
+            to="/category/rotiseria"
             onClick={() => {
               stateSearchText("");
             }}
           >
-            Congelados
-          </Link>
-          <Link
-            className="li"
-            to="/category/limpieza"
-            onClick={() => {
-              stateSearchText("");
-            }}
-          >
-            Limpieza
-          </Link>
-          <Link
-            className="li"
-            to="/category/perfumeria"
-            onClick={() => {
-              stateSearchText("");
-            }}
-          >
-            Perfumeria
+            Rotiseria
           </Link>
           <Link
             className="li"

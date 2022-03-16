@@ -14,7 +14,7 @@ const CategoriesView = ({ listTitle, searchText, stateSearchText }) => {
   }, []);
 
   return (
-    <div>
+    <div className="height-view">
       {isLoading ? (
         <div className="layout">
           <Spinner />

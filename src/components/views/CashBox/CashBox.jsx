@@ -10,6 +10,7 @@ import { addDoc, collection, query, where, getDocs } from "firebase/firestore";
 import db from "../../../firebaseConfig/firebaseConfig";
 import ItemList from "../../itemList/ItemList";
 import Spinner from "../../spinner/Spinner";
+import Swal from "sweetalert2";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -42,7 +43,6 @@ const CashBox = ({ listTitle, searchText, stateSearchText }) => {
   const purchase = initialPurchase;
   const [buyer, setBuyer] = useState(InitialBuyer);
   const [idBuyer, setIdBuyer] = useState("");
-  const [successfulAlert, setSuccessfulAlert] = useState("");
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -100,7 +100,7 @@ const CashBox = ({ listTitle, searchText, stateSearchText }) => {
   }, []);
 
   return (
-    <>
+    <div className="height-view">
       {isLoading ? (
         <div className="layout">
           <Spinner />
@@ -110,7 +110,7 @@ const CashBox = ({ listTitle, searchText, stateSearchText }) => {
           {searchText === "" ? (
             <Grid
               container
-              sx={{ background: "#f9f9f9", paddingBottom: "80px" }}
+              sx={{ background: "#f9f9f9", paddingBottom: "150px" }}
             >
               <div className="wrap-box">
                 <Box sx={{ flexGrow: 1 }} mt={8}>
@@ -158,7 +158,7 @@ const CashBox = ({ listTitle, searchText, stateSearchText }) => {
                               </Link>
                             </Grid>
                           </Grid>
-                          {/* ACA COMIENZA EL FORMULARIO / SEPARAR EN OTRO COMPONENTE EL FORMULARIO */}
+
                           <Item
                             sx={{
                               marginTop: "30px",
@@ -252,11 +252,9 @@ const CashBox = ({ listTitle, searchText, stateSearchText }) => {
                               )}
                             </form>
                           </Item>
-                          {/* TERMINA FORMULARIO */}
                         </div>
                       </Item>
                     </Grid>
-                    {/* ACA COMIENZA EL RESUMEN DE LA COMPRA SEPARARLO EN OTRO COMPONENTE */}
                     <Grid item xs={6} md={4}>
                       <Item sx={{ paddingBottom: "20px" }}>
                         <h3 id="title-box" className="text-resume">
@@ -291,13 +289,13 @@ const CashBox = ({ listTitle, searchText, stateSearchText }) => {
                             </h2>
                           </Grid>
                         </Grid>
-                        {isLoading ? (
+                        {isRendering ? (
                           <Button
                             variant="contained"
                             id="btn-resume"
                             onClick={() => {
-                              setSuccessfulAlert(
-                                `Compra satisfactoria! su id es: ${idBuyer}`
+                              Swal.fire(
+                                `Compra satisfactoria! si id es: ${idBuyer}`
                               );
                             }}
                           >
@@ -313,9 +311,7 @@ const CashBox = ({ listTitle, searchText, stateSearchText }) => {
                           </Button>
                         )}
                       </Item>
-                      <span>{successfulAlert}</span>
                     </Grid>
-                    {/* ACA TERMINA EL RESUMEN DE LA COMPRA */}
                   </Grid>
                 </Box>
               </div>
@@ -328,7 +324,7 @@ const CashBox = ({ listTitle, searchText, stateSearchText }) => {
           )}
         </div>
       )}
-    </>
+    </div>
   );
 };
 

@@ -1,0 +1,289 @@
+@mixin imageProperties {
+  background-repeat: no-repeat;
+  background-position: right !important;
+  background-size: contain;
+  border: 1px solid rgb(238, 238, 238);
+}
+
+@mixin p1Content {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 24px;
+  text-transform: inherit;
+  display: block;
+  margin-top: 20px;
+  float: left;
+  margin-left: 20px;
+}
+
+@mixin p2Content {
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 18px;
+  margin-bottom: 0;
+  margin-top: 5px;
+  float: left;
+  margin-left: 20px;
+  width: 54%;
+  text-transform: inherit;
+  text-align: initial;
+}
+
+@mixin electroPictures {
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 1px solid rgb(238, 238, 238);
+}
+
+@mixin p-span-electro {
+  font-weight: 600;
+  font-size: 23px;
+  color: #636363;
+  line-height: 20px;
+  text-transform: inherit;
+  display: block;
+  float: left;
+  margin-top: 57px;
+  margin-left: 135px;
+}
+
+#catalogs {
+  min-height: 1100px;
+  background: rgb(246, 246, 246);
+}
+
+// ------------------------------------------------------------Comidas-bebidas-------------------------------------------------------
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 35px;
+  text-align: center;
+  padding: 100px 10px 10px 10px;
+  height: 400px;
+}
+
+.image-box {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  border-radius: 10px;
+  margin: 0.5px;
+  border: 0px;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid rgb(238, 238, 238);
+}
+
+.fish {
+  grid-column: 1/4;
+  grid-row: 1/3;
+  background-image: url(../public/images/pescaderia.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-color: #f8fcff;
+  border-radius: 10px;
+}
+
+.juices {
+  grid-column: 4/7;
+  background-image: url(../public/images/jugos.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-color: #ecece1;
+}
+
+.alcohol {
+  grid-column: 4/7;
+  background-image: url(../public/images/alcohol.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: #343434;
+}
+
+.delicatessen {
+  grid-column: 1/3;
+  background-color: #fff;
+  background-image: url(../public/images/rotiseria.png);
+  @include imageProperties();
+}
+
+.bakery {
+  grid-column: 3/5;
+  background-color: #fff;
+  background-image: url(../public/images/panaderia-artesanal.png);
+  @include imageProperties();
+}
+
+.pasta {
+  grid-column: 5/7;
+  background-color: #fff;
+  background-image: url(../public/images/pastas.png);
+  @include imageProperties();
+}
+
+#content-fish {
+  display: block;
+  height: 220px;
+  max-width: 35%;
+  padding: 15px;
+  margin-left: 2%;
+  #p1-span {
+    font-weight: 500;
+    color: #636363;
+    line-height: 24px;
+    text-transform: inherit;
+    display: block;
+    margin-top: 10%;
+  }
+  #p2-span {
+    font-weight: 900;
+    font-size: 30px;
+    color: #636363;
+    line-height: 26px;
+    text-transform: inherit;
+    display: block;
+    margin-bottom: 25px;
+  }
+  #p3-span {
+    color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: inherit;
+    line-height: 16px;
+    margin-top: 0;
+    background-color: #00bcd4;
+    padding: 2px 11px 2px 25px;
+    margin-left: -26px;
+  }
+}
+
+#content-juices {
+  padding-top: 0;
+  padding-bottom: 0;
+  position: absolute;
+  width: 21%;
+  display: block;
+  #p1-span {
+    color: #01afc7;
+    @include p1Content();
+  }
+  #p2-span {
+    color: #636363;
+    @include p2Content();
+  }
+}
+
+#content-alcohol {
+  padding-top: 0;
+  padding-bottom: 0;
+  position: absolute;
+  width: 21%;
+  display: block;
+  #p1-span {
+    color: #ffc107;
+    @include p1Content();
+  }
+  #p2-span {
+    color: #d6d6d6;
+    @include p2Content();
+  }
+}
+
+#content-delicatessen,
+#content-bakery,
+#content-pasta {
+  padding: 28px 12px 12px 15px;
+  float: left;
+  margin-left: 20px;
+  width: 20%;
+  text-transform: inherit;
+  text-align: left;
+  #p-span {
+    font-weight: 600;
+    font-size: 22px;
+    color: #636363;
+    line-height: 26px;
+  }
+}
+
+// ------------------------------------------------------------Electros-------------------------------------------------------
+
+.grid-layout-electros {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin-top: 50px;
+  text-align: center;
+  padding: 10px;
+  height: 400px;
+}
+
+.electros {
+  grid-column: 1/3;
+  grid-row: 1/4;
+  margin-right: 20px;
+  background-color: white;
+  background-image: url(../public/images/electros.png);
+  background-position: 54px 77px;
+  border-radius: 6px 6px 0 0;
+  background-size: 80%;
+  background-repeat: no-repeat;
+}
+
+#content-electros {
+  padding: 15px 12px 12px 5px;
+  display: block;
+  float: left;
+  margin-top: 300px;
+  #p1-span {
+    font-weight: 600;
+    font-size: 30px;
+    color: #01afc7;
+    line-height: 26px;
+    text-transform: inherit;
+    float: left;
+  }
+  #p2-span {
+    color: #636363;
+    font-weight: 600;
+    font-size: 24px;
+    text-transform: inherit;
+    line-height: 20px;
+    margin-bottom: 0;
+  }
+}
+
+.televisores {
+  background-image: url(../public/images/tv.png);
+  @include electroPictures();
+  #p-span {
+    @include p-span-electro();
+  }
+}
+
+.heladeras {
+  background-image: url(../public/images/heladera.png);
+  @include electroPictures();
+  #p-span {
+    @include p-span-electro();
+  }
+}
+
+.climatizacion {
+  background-image: url(../public/images/aire.png);
+  @include electroPictures();
+  #p-span {
+    @include p-span-electro();
+  }
+}
+
+.desayuno {
+  background-image: url(../public/images/desayuno.png);
+  @include electroPictures();
+  #p-span {
+    @include p-span-electro();
+  }
+}
