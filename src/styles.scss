@@ -7,7 +7,6 @@
 @use "./components/item/item";
 @use "./components/itemCount/ItemCount";
 @use "./components/itemList/itemList";
-@use "./components/views/CashBox/cashBox";
 @use "./components/smallCart/smallCart";
 @use "./components/itemDetail/itemDetail";
 @use "./components/productInCartView/productInCartView";
@@ -16,7 +15,8 @@
 @use "./components/itemDetailContainer/itemDetailContainer";
 @use "./components/catalogs/Catalogs";
 @use "./components/footer/footer";
-
+@use "./components/form/form";
+@use "./components/purchaseSummary/purchaseSummary";
 
 * {
   margin: 0px auto;
@@ -59,6 +59,6 @@
   transition: all 0.3s ease 0s;
 }
 
-.height-view{
+.height-view {
   min-height: 900px;
 }
