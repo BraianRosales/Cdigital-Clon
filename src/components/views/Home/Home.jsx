@@ -23,7 +23,7 @@ const Home = ({ searchText, stateSearchText }) => {
       setSearchProducts(docs);
     };
     getProductsSearch();
-  }, [searchText]);
+  }, [searchText,stateSearchText]);
 
   useEffect(() => {
     setTimeout(() => {

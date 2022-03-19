@@ -17,7 +17,7 @@ export const ItemsProvider = ({ children }) => {
     } else {
       Swal.fire({
         title: "Atencion",
-        text: "¿Querés eliminar este producto del carrito?",
+        text: "¿quieres eliminar este producto del carrito?",
         icon: "warning",
         showCancelButton: true,
         confirmButtonColor: "#3085d6",
@@ -60,7 +60,22 @@ export const ItemsProvider = ({ children }) => {
   }
 
   function clear() {
-    setItems([]);
+    Swal.fire({
+      title: "Atencion",
+      text: "¿Estas seguro que quieres vaciar el carrito?",
+      icon: "warning",
+      showDenyButton: true,
+      showCancelButton: true,
+      confirmButtonText: "Vaciar",
+      denyButtonText: `No Vaciar`,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        setItems([]);
+        Swal.fire("Se vacio el carrito!", "", "success");
+      } else if (result.isDenied) {
+        Swal.fire("No se vacio el carrito.", "", "info");
+      }
+    });
   }
 
   function allItems() {

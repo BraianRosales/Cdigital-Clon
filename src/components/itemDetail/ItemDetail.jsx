@@ -32,7 +32,12 @@ const ItemDetail = ({ item }) => {
   return (
     <div className="wrap">
       <Card sx={{ boxShadow: "none", mt: "100px" }}>
-        <Grid container spacing={2} columns={12}>
+        <Grid
+          container
+          spacing={2}
+          columns={12}
+          sx={{ marginLeft: "50px", marginTop: "10px" }}
+        >
           <Grid item xs={4}>
             <Item sx={{ border: "1px solid #d7d7d7", padding: "0px" }}>
               <CardMedia component="img" image={item.image} />
@@ -79,7 +84,7 @@ const ItemDetail = ({ item }) => {
               </Button>
             )}
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={3} sx={{ marginTop: "10px" }}>
             <SmallCart
               items={items}
               allItems={allItems}
