@@ -186,6 +186,16 @@ hr {
   width: 1%;
 }
 
+.list-title {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 3em;
+  margin-bottom: 40px;
+  float: left;
+  color: lightcoral;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
 #small-cart {
   width: 70%;
   min-height: 309px;
@@ -812,14 +822,6 @@ form {
 .clearFix {
   clear: both;
   float: none;
-}
-
-.list-title {
-  text-align: center;
-  font-size: 25px;
-  margin-top: 3em;
-  margin-bottom: 40px;
-  float: left;
 }
 
 .btn-lightBlue {

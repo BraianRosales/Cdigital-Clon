@@ -1,7 +1,6 @@
 @use "./components/navBar/navBar";
 @use "./components/cartWidget/cartWidget";
 @use "./components/logo/logo";
-@use "./components/itemListContainer/itemListContainer";
 @use "./components/header/header";
 @use "./components/search/search";
 @use "./components/item/item";
@@ -33,13 +32,6 @@
   float: none;
 }
 
-.list-title {
-  text-align: center;
-  font-size: 25px;
-  margin-top: 3em;
-  margin-bottom: 40px;
-  float: left;
-}
 
 .btn-lightBlue {
   margin-top: 30px !important;

@@ -35,3 +35,16 @@ Estan separados por su tipo a medidas que pase el tiempo ire agregando mas tipos
 CashBox donde esta su caja de pago.
 
 \*Cuando rellene el formulario donde indicara su dia de entrega, fecha y horario (ya que es un E-commerce online a domicilio) podra darle al boton aceptar donde obtendra acceso al boton confirmar al darle click se concretara la compra, al concretarse la compra le saltara una alerta donde podra ver su id de compra, procure poner bien sus datos o sino no tendremos contacto y su compra no se despachara.
+
+# Descargar y correr la aplicacion.
+
+1- instalar nodejs: https://nodejs.org/es/
+2- abrir la terminal de comandos e instalar la utlima version de npm que hay disponible:
+	npm install -g npm@latest
+3- borrar cache: npm cache clean --force
+2- instalar visual studio code: https://code.visualstudio.com/download.
+3- abrir visual estudio code, abrir la terminal en visual studio code y tipear: 
+    git clone https://github.com/BraianRosales/Cdigital-Clon.git
+4- ir a Open Folder buscar la ruta donde se descargo la carpeta ejemplo: D:\CursosProgramacion\CursoReactJsCoder
+5- instalar node_modules: ir a la terminal una vez abierto el directorio de la carpeta y tipear, npm install
+6- npm run start/npm start
