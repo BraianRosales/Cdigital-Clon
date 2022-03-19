@@ -13,7 +13,7 @@ const ItemList = ({ products, stateSearchText }) => {
       <div className="wrap list-title">
         Productos encontrados: {products.length}
       </div>
-      <Grid container sx={{ marginBottom: "50px" }}>
+      <Grid container sx={{ marginBottom: "125px" }}>
         <Grid item xs={3}></Grid>
         <Grid item xs={6}>
           <div>
