@@ -7,7 +7,6 @@ import db from "../../../firebaseConfig/firebaseConfig";
 import ItemList from "../../itemList/ItemList";
 import Spinner from "../../spinner/Spinner";
 import Form from "../../form/Form";
-import PurchaseSummary from "../../purchaseSummary/PurchaseSummary";
 
 const CashBox = ({ searchText, stateSearchText }) => {
   const [items, removeItem, addItem, clear, allItems, totalPrice] =
@@ -45,7 +44,7 @@ const CashBox = ({ searchText, stateSearchText }) => {
   }, []);
 
   return (
-    <div className="height-view">
+    <div className="height-view" style={{ backgroundColor: "#ecf1f7" }}>
       {isLoading ? (
         <div className="layout">
           <Spinner />
@@ -53,35 +52,25 @@ const CashBox = ({ searchText, stateSearchText }) => {
       ) : (
         <div>
           {searchText === "" ? (
-            <Grid
-              container
-              sx={{ background: "#ecf1f7", paddingBottom: "150px" }}
-            >
-              <div className="wrap-box">
-                <Box sx={{ flexGrow: 1, width: "100%" }} mt={8}>
-                  <Grid
-                    container
-                    rowSpacing={1}
-                    columnSpacing={{ xs: 2, sm: 2, md: 3 }}
-                  >
-                    <Form
-                      setIsRendering={setIsRendering}
-                      totalPlusShipping={totalPlusShipping}
-                      setIdBuyer={setIdBuyer}
-                      isRendering={isRendering}
-                      items={items}
-                      clear={clear}
-                    />
-                    <PurchaseSummary
-                      totalPrice={totalPrice}
-                      totalPlusShipping={totalPlusShipping}
-                      isRendering={isRendering}
-                      idBuyer={idBuyer}
-                    />
-                  </Grid>
-                </Box>
-              </div>
-            </Grid>
+            <div className="wrap-box">
+              <Box sx={{ flexGrow: 1, width: "100%" }} pt={8}>
+                <Grid
+                  container
+                  rowSpacing={1}
+                  columnSpacing={{ xs: 2, sm: 2, md: 3 }}
+                >
+                  <Form
+                    setIsRendering={setIsRendering}
+                    totalPlusShipping={totalPlusShipping}
+                    setIdBuyer={setIdBuyer}
+                    idBuyer={idBuyer}
+                    totalPrice={totalPrice}
+                    isRendering={isRendering}
+                    items={items}
+                  />
+                </Grid>
+              </Box>
+            </div>
           ) : (
             <div>
               <ItemList products={products} stateSearchText={stateSearchText} />

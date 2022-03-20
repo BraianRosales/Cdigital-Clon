@@ -5,6 +5,7 @@ import Paper from "@mui/material/Paper";
 import { styled } from "@mui/material/styles";
 import db from "../../firebaseConfig/firebaseConfig";
 import { addDoc, collection } from "firebase/firestore";
+import PurchaseSummary from "../purchaseSummary/PurchaseSummary";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -36,14 +37,11 @@ const Form = ({
   setIdBuyer,
   isRendering,
   items,
-  clear,
+  idBuyer,
+  totalPrice,
 }) => {
   const [buyer, setBuyer] = useState(InitialBuyer);
   const purchase = initialPurchase;
-
-  function handleClickAccept() {
-    setIsRendering(true);
-  }
 
   function onChange(e) {
     const { value, name } = e.target;
@@ -54,6 +52,17 @@ const Form = ({
     purchase.date = e.target.value;
   }
 
+  function onChangeEmailConfirmation(e) {
+    return e.target.value;
+  }
+
+  function onChangeEMail(e) {
+    const eMail = e.target.value;
+    buyer.email = eMail;
+  }
+
+  console.log(onChangeEMail);
+
   const onSubmit = async (e) => {
     e.preventDefault();
     purchase.buyer = buyer;
@@ -62,14 +71,16 @@ const Form = ({
     const docRef = await addDoc(collection(db, "shopping"), {
       purchase,
     });
-    console.log("Document written with ID: ", docRef.id);
     setIdBuyer(docRef.id);
-    clear();
   };
 
+  function handleClickAccept() {
+    setIsRendering(true);
+  }
+
   return (
-    <div>
-      <Grid item xs={12} md={8} sx={{ maxWidth: "100.667%!important" }}>
+    <>
+      <Grid item xs={8}>
         <Item>
           <div style={{ textAlign: "center" }}>
             <Grid item xs={6} md={12} mt={5}>
@@ -177,7 +188,14 @@ const Form = ({
                   className="input-form"
                   placeholder="E-mail"
                   name="email"
-                  onChange={onChange}
+                  onChange={onChangeEMail}
+                />
+                <input
+                  type="email"
+                  className="input-form"
+                  placeholder="Confirmacion E-mail"
+                  name="email"
+                  onChange={onChangeEmailConfirmation}
                 />
                 {!isRendering ? (
                   <button
@@ -196,7 +214,13 @@ const Form = ({
           </div>
         </Item>
       </Grid>
-    </div>
+      <PurchaseSummary
+        totalPrice={totalPrice}
+        totalPlusShipping={totalPlusShipping}
+        isRendering={isRendering}
+        idBuyer={idBuyer}
+      />
+    </>
   );
 };
 

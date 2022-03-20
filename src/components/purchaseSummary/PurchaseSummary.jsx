@@ -20,8 +20,8 @@ const PurchaseSummary = ({
   idBuyer,
 }) => {
   return (
-   <>
-      <Grid item xs={6} md={4}>
+    <>
+      <Grid item xs={4}>
         <Item sx={{ paddingBottom: "20px" }}>
           <h3 id="title-box" className="text-resume">
             Resumen de la compra
@@ -57,19 +57,29 @@ const PurchaseSummary = ({
               variant="contained"
               id="btn-resume"
               onClick={() => {
-                Swal.fire(`Compra satisfactoria! si id es: ${idBuyer}`);
+                Swal.fire({
+                  title: "Atencion!",
+                  text: `Compra satisfactoria! su id es: ${idBuyer}`,
+                  icon: "success",
+
+                  confirmButtonText: "Ok",
+                }).then((result) => {
+                  if (result.isConfirmed) {
+                    window.location.href = "/";
+                  }
+                });
               }}
             >
-              Confirmar
+              ID compra
             </Button>
           ) : (
             <Button variant="contained" disabled sx={{ marginTop: "20px" }}>
-              Confirmar
+              ID compra
             </Button>
           )}
         </Item>
       </Grid>
-      </>
+    </>
   );
 };
 
