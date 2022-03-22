@@ -42,6 +42,9 @@ const Form = ({
 }) => {
   const [buyer, setBuyer] = useState(InitialBuyer);
   const purchase = initialPurchase;
+  const [errorMsg, setErrorMsg] = useState(false);
+  const [eMail, setEMail] = useState("");
+  const [confirmationEMail, setConfirmationEMail] = useState("");
 
   function onChange(e) {
     const { value, name } = e.target;
@@ -53,30 +56,35 @@ const Form = ({
   }
 
   function onChangeEmailConfirmation(e) {
-    return e.target.value;
+    setConfirmationEMail(e.target.value);
   }
 
   function onChangeEMail(e) {
     const eMail = e.target.value;
+    setEMail(e.target.value);
     buyer.email = eMail;
   }
 
-  console.log(onChangeEMail);
+  function emptyEmail() {
+    return eMail === "";
+  }
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    purchase.buyer = buyer;
-    purchase.items = items;
-    purchase.total = totalPlusShipping();
-    const docRef = await addDoc(collection(db, "shopping"), {
-      purchase,
-    });
-    setIdBuyer(docRef.id);
+    if (emptyEmail() || eMail !== confirmationEMail) {
+      setErrorMsg(true);
+    } else {
+      setErrorMsg(false);
+      setIsRendering(true);
+      purchase.buyer = buyer;
+      purchase.items = items;
+      purchase.total = totalPlusShipping();
+      const docRef = await addDoc(collection(db, "shopping"), {
+        purchase,
+      });
+      setIdBuyer(docRef.id);
+    }
   };
-
-  function handleClickAccept() {
-    setIsRendering(true);
-  }
 
   return (
     <>
@@ -194,18 +202,14 @@ const Form = ({
                   type="email"
                   className="input-form"
                   placeholder="Confirmacion E-mail"
-                  name="email"
+                  name="emailConfirmation"
                   onChange={onChangeEmailConfirmation}
                 />
+                {errorMsg && (
+                  <div className="error-msg-form">E-mail vacio o no coinciden los E-mail.</div>
+                )}
                 {!isRendering ? (
-                  <button
-                    id="btn-form"
-                    onClick={() => {
-                      handleClickAccept();
-                    }}
-                  >
-                    ACEPTAR
-                  </button>
+                  <button id="btn-form">ACEPTAR</button>
                 ) : (
                   <button id="btn-form-disable">Aceptar</button>
                 )}

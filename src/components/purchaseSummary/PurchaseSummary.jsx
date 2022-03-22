@@ -61,7 +61,6 @@ const PurchaseSummary = ({
                   title: "Atencion!",
                   text: `Compra satisfactoria! su id es: ${idBuyer}`,
                   icon: "success",
-
                   confirmButtonText: "Ok",
                 }).then((result) => {
                   if (result.isConfirmed) {

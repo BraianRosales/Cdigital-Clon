@@ -97,3 +97,11 @@ form {
     background-color: #dddcdc;
     @include formButtonStyles();
   }
+
+  .error-msg-form{
+    color: red;
+    background-color: mistyrose;
+    margin-top: 15px;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+  }

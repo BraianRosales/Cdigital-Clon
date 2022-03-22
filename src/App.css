@@ -796,6 +796,14 @@ form {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
 
+.error-msg-form {
+  color: red;
+  background-color: mistyrose;
+  margin-top: 15px;
+  border-top: 1px solid gainsboro;
+  border-bottom: 1px solid gainsboro;
+}
+
 .text-resume {
   float: left;
   margin-left: 20px;
@@ -850,7 +858,7 @@ form {
 }
 
 .height-view {
-  min-height: 900px;
+  min-height: 100vh;
 }
 
 /*# sourceMappingURL=App.css.map */
