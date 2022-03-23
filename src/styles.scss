@@ -32,7 +32,6 @@
   float: none;
 }
 
-
 .btn-lightBlue {
   margin-top: 30px !important;
   width: 39%;
@@ -52,5 +51,14 @@
 }
 
 .height-view {
-  min-height: 900px;
+  min-height: 100vh;
+}
+
+.error404 {
+  color: red;
+  background-color: mistyrose;
+  height: 55px;
+  font-size: 20px;
+  line-height: 55px;
+  padding-left: 10px;
 }

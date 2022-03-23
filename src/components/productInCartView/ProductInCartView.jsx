@@ -63,7 +63,7 @@ const ProductInCartView = ({ item, removeItem, addItem,removeItemCart }) => {
             <Link to={`/item/${item.id}`}>
               <CardMedia
                 component="img"
-                sx={{ width: "60%" }}
+                sx={{ width: "70%" }}
                 image={item.image}
                 alt="product"
               />

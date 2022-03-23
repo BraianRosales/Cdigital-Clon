@@ -3,7 +3,10 @@
   width: 100%;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-left: 45px;
+}
+
+.item-list{
+  margin-left: 50px;
 }
 
 .box {
@@ -12,16 +15,13 @@
   margin: 0px;
 }
 
-.itemList{
-  width: 1%;
-}
-
 .list-title {
   text-align: center;
   font-size: 25px;
   margin-top: 3em;
   margin-bottom: 40px;
+  margin-left: 50px;
   float: left;
   color: lightcoral;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }

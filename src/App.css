@@ -181,7 +181,10 @@ hr {
   width: 100%;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-left: 45px;
+}
+
+.item-list {
+  margin-left: 50px;
 }
 
 .box {
@@ -190,15 +193,12 @@ hr {
   margin: 0px;
 }
 
-.itemList {
-  width: 1%;
-}
-
 .list-title {
   text-align: center;
   font-size: 25px;
   margin-top: 3em;
   margin-bottom: 40px;
+  margin-left: 50px;
   float: left;
   color: lightcoral;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
@@ -353,9 +353,10 @@ hr {
   background-color: white;
   border-radius: 4px;
   color: #545454;
-  margin-left: 10px;
+  margin-left: 15px;
   cursor: pointer;
   padding: 5px;
+  margin-top: 35px;
 }
 
 .delete_cart_page {
@@ -365,6 +366,22 @@ hr {
 
 .btn-pagar-cart:hover {
   background-color: #0fabd4 !important;
+}
+
+.p-text-cart {
+  font-size: 12px;
+  float: left;
+  margin-top: 4px;
+  margin-bottom: 5px;
+}
+
+#h3-cart {
+  margin-left: -15px;
+  line-height: 50px;
+}
+
+#h2-products-cart {
+  color: #6dc5e9;
 }
 
 #spinner-itemDetailContainer {
@@ -859,6 +876,15 @@ form {
 
 .height-view {
   min-height: 100vh;
+}
+
+.error404 {
+  color: red;
+  background-color: mistyrose;
+  height: 55px;
+  font-size: 20px;
+  line-height: 55px;
+  padding-left: 10px;
 }
 
 /*# sourceMappingURL=App.css.map */

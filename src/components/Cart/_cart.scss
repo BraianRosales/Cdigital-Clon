@@ -3,9 +3,10 @@
   background-color: white;
   border-radius: 4px;
   color: #545454;
-  margin-left: 10px;
+  margin-left: 15px;
   cursor: pointer;
   padding: 5px;
+  margin-top: 35px;
 }
 
 .delete_cart_page {
@@ -13,6 +14,22 @@
   padding-left: 20px !important;
 }
 
-.btn-pagar-cart:hover{
-  background-color: #0fabd4!important;
+.btn-pagar-cart:hover {
+  background-color: #0fabd4 !important;
+}
+
+.p-text-cart {
+  font-size: 12px;
+  float: left;
+  margin-top: 4px;
+  margin-bottom: 5px;
+}
+
+#h3-cart {
+  margin-left: -15px;
+  line-height: 50px;
+}
+
+#h2-products-cart {
+  color: #6dc5e9;
 }

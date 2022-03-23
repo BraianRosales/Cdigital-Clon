@@ -9,14 +9,11 @@ const ItemList = ({ products, stateSearchText }) => {
     useContext(CartContext);
 
   return (
-    <div>
-      <div className="wrap list-title">
-        Productos encontrados: {products.length}
-      </div>
-      <Grid container sx={{ marginBottom: "125px" }}>
-        <Grid item xs={3}></Grid>
-        <Grid item xs={6}>
-          <div>
+    <div className="wrap">
+      <div className="list-title">Productos encontrados: {products.length}</div>
+      <Grid container sx={{ marginBottom: "125px" }} columns={12}>
+        <Grid item xs={9}>
+          <div className="item-list">
             <div className="layout">
               {products.map((product) => {
                 return (
@@ -34,7 +31,7 @@ const ItemList = ({ products, stateSearchText }) => {
             </div>
           </div>
         </Grid>
-        <Grid item xs={2}>
+        <Grid item xs={3}>
           <SmallCart
             items={items}
             allItems={allItems}

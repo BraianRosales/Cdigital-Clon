@@ -18,7 +18,6 @@ const Cart = ({
     <div>
       <Grid
         container
-        spacing={3}
         sx={{ background: "#f2f2f2", border: "1px solid #cccccc" }}
         mt={3}
         mb={3}
@@ -59,14 +58,7 @@ const Cart = ({
             </Link>
           </Grid>
           <Grid item>
-            <p
-              style={{
-                fontSize: "12px",
-                float: "left",
-                marginTop: "4px",
-                marginBottom: "5px",
-              }}
-            >
+            <p className="p-text-cart">
               Las promociones se aplicarán al momento del cobro.
             </p>
           </Grid>
@@ -75,10 +67,10 @@ const Cart = ({
 
       <Grid
         container
-        spacing={3}
         sx={{
           background: "#f2f2f2",
           border: "1px solid #cccccc",
+          height: "60px",
         }}
         mt={3}
         mb={3}
@@ -87,9 +79,7 @@ const Cart = ({
           <CardMedia
             component="img"
             sx={{
-              width: "75%",
-              marginLeft: "-20px",
-              marginTop: "-22px",
+              width: "60%",
               padding: "8px",
             }}
             image={
@@ -98,14 +88,12 @@ const Cart = ({
           />
         </Grid>
         <Grid item xs={11}>
-          <h3 style={{ marginLeft: "-50px", marginTop: "-7px" }}>
-            ENVIO A DOMICILIO
-          </h3>
+          <h3 id="h3-cart">ENVIO A DOMICILIO</h3>
         </Grid>
       </Grid>
 
-      <h2 style={{ color: "#6dc5e9", marginLeft: "-22px" }}>Productos</h2>
-      <Grid container spacing={3} mt={3} mb={1}>
+      <h2 id="h2-products-cart">Productos</h2>
+      <Grid container mt={3} mb={1}>
         <Grid container xs={4}>
           <p>Articulos y cantidad</p>
         </Grid>
@@ -131,7 +119,6 @@ const Cart = ({
 
       <Grid
         container
-        spacing={3}
         sx={{ background: "#f2f2f2", border: "1px solid #cccccc" }}
         mt={3}
         mb={3}
@@ -173,14 +160,7 @@ const Cart = ({
             </Link>
           </Grid>
           <Grid item>
-            <p
-              style={{
-                fontSize: "12px",
-                float: "left",
-                marginTop: "4px",
-                marginBottom: "5px",
-              }}
-            >
+            <p className="p-text-cart">
               Las promociones se aplicarán al momento del cobro.
             </p>
           </Grid>
