@@ -711,6 +711,44 @@ hr {
   margin-left: 135px;
 }
 
+.ventilacion {
+  background-image: url(../public/images/ventilador.jpg);
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 1px solid #eeeeee;
+}
+.ventilacion #p-span {
+  font-weight: 600;
+  font-size: 23px;
+  color: #636363;
+  line-height: 20px;
+  text-transform: inherit;
+  display: block;
+  float: left;
+  margin-top: 57px;
+  margin-left: 135px;
+}
+
+.cuidadoPersonal {
+  background-image: url(../public/images/secador.png);
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 1px solid #eeeeee;
+}
+.cuidadoPersonal #p-span {
+  font-weight: 600;
+  font-size: 23px;
+  color: #636363;
+  line-height: 20px;
+  text-transform: inherit;
+  display: block;
+  float: left;
+  margin-top: 57px;
+  margin-left: 135px;
+}
+
 #footer {
   height: 95px;
   background-color: #2aa9ca;

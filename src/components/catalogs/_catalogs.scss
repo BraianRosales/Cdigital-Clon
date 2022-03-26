@@ -287,3 +287,20 @@
     @include p-span-electro();
   }
 }
+
+.ventilacion {
+  background-image: url(../public/images/ventilador.jpg);
+  @include electroPictures();
+  #p-span {
+    @include p-span-electro();
+  }
+}
+
+.cuidadoPersonal {
+  background-image: url(../public/images/secador.png);
+  @include electroPictures();
+  #p-span {
+    @include p-span-electro();
+  }
+}
+

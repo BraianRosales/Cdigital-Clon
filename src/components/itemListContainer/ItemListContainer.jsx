@@ -3,11 +3,7 @@ import ItemList from "../itemList/ItemList";
 import db from "../../firebaseConfig/firebaseConfig";
 import { collection, query, getDocs, where } from "firebase/firestore";
 
-const ItemListContainer = ({
-  category,
-  searchText,
-  stateSearchText,
-}) => {
+const ItemListContainer = ({ category, searchText, stateSearchText }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {

@@ -106,6 +106,22 @@ const Catalogs = ({ stateSearchText }) => {
         >
           <span id="p-span">Desayuno</span>
         </div>
+        <div
+          className="image-box ventilacion"
+          onClick={() => {
+            stateSearchText("ventilacion");
+          }}
+        >
+          <span id="p-span">Ventilzacion</span>
+        </div>
+        <div
+          className="image-box cuidadoPersonal"
+          onClick={() => {
+            stateSearchText("cuidado personal");
+          }}
+        >
+          <span id="p-span">Cuidado personal</span>
+        </div>
       </div>
     </>
   );
