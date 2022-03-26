@@ -44,7 +44,7 @@ const CashBox = ({ searchText, stateSearchText }) => {
   }, []);
 
   return (
-    <div className="height-view" style={{ backgroundColor: "#ecf1f7" }}>
+    <div className="height-view">
       {isLoading ? (
         <div className="layout">
           <Spinner />
@@ -52,24 +52,26 @@ const CashBox = ({ searchText, stateSearchText }) => {
       ) : (
         <div>
           {searchText === "" ? (
-            <div className="wrap-box">
-              <Box sx={{ flexGrow: 1, width: "100%" }} pt={8}>
-                <Grid
-                  container
-                  rowSpacing={1}
-                  columnSpacing={{ xs: 2, sm: 2, md: 3 }}
-                >
-                  <Form
-                    setIsRendering={setIsRendering}
-                    totalPlusShipping={totalPlusShipping}
-                    setIdBuyer={setIdBuyer}
-                    idBuyer={idBuyer}
-                    totalPrice={totalPrice}
-                    isRendering={isRendering}
-                    items={items}
-                  />
-                </Grid>
-              </Box>
+            <div className="height-view" style={{ backgroundColor: "#ecf1f7" }}>
+              <div className="wrap-box">
+                <Box sx={{ flexGrow: 1, width: "100%" }} pt={8}>
+                  <Grid
+                    container
+                    rowSpacing={1}
+                    columnSpacing={{ xs: 2, sm: 2, md: 3 }}
+                  >
+                    <Form
+                      setIsRendering={setIsRendering}
+                      totalPlusShipping={totalPlusShipping}
+                      setIdBuyer={setIdBuyer}
+                      idBuyer={idBuyer}
+                      totalPrice={totalPrice}
+                      isRendering={isRendering}
+                      items={items}
+                    />
+                  </Grid>
+                </Box>
+              </div>
             </div>
           ) : (
             <div>
