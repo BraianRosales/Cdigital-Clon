@@ -9,7 +9,7 @@ const NavBar = ({ stateSearchText }) => {
     useContext(CartContext);
   return (
     <nav id="navBar">
-      <div
+      <div className="div-navBar"
         onClick={() => {
           stateSearchText("");
         }}
@@ -29,7 +29,7 @@ const NavBar = ({ stateSearchText }) => {
         ) : (
           <p></p>
         )}
-        <ul>
+        <ul className="ul-navBar">
           <Link
             className="li"
             to="/category/almacen"

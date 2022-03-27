@@ -2,7 +2,7 @@
   background-repeat: no-repeat;
   background-position: right !important;
   background-size: contain;
-  border: 1px solid rgb(238, 238, 238);
+  border: 1px solid #e3e3e3;
 }
 
 @mixin p1Content {
@@ -74,7 +74,12 @@
   border: 0px;
   cursor: pointer;
   background-color: white;
-  border: 1px solid rgb(238, 238, 238);
+  border: 1px solid #ddd;
+  transition: 150ms all;
+}
+
+.image-box:hover{
+  box-shadow: 2px 1px 5px 0px lightblue;
 }
 
 .fish {
@@ -218,7 +223,7 @@
   margin-top: 50px;
   text-align: center;
   padding: 10px;
-  height: 400px;
+  min-height: 400px;
 }
 
 .electros {
@@ -303,4 +308,5 @@
     @include p-span-electro();
   }
 }
+
 

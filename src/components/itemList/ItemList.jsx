@@ -28,7 +28,7 @@ const ItemList = ({ products, stateSearchText }) => {
             Productos encontrados: {products.length}
           </div>
           <Grid container sx={{ marginBottom: "125px" }} columns={12}>
-            <Grid item xs={8} sm={6} md={9}>
+            <Grid item xs={12} sm={12} md={9}>
               <div className="item-list">
                 <div className="layout">
                   {products.map((product) => {
@@ -47,7 +47,7 @@ const ItemList = ({ products, stateSearchText }) => {
                 </div>
               </div>
             </Grid>
-            <Grid item xs={4} sm={6} md={3}>
+            <Grid item xs={9} sm={7} md={3}>
               <SmallCart
                 items={items}
                 allItems={allItems}
