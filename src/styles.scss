@@ -66,14 +66,11 @@
 // ------------------Responsive web desing-----------------------
 
 @media (max-width: 1440px) {
-  #small-cart {
-    width: 90%;
-  }
-}
-
-@media (max-width: 1440px) {
   .css-iv7vbz-MuiGrid-root {
     margin-top: 0px;
+  }
+  #small-cart {
+    width: 90%;
   }
   #content-alcohol #p1-span {
     margin-top: 10px;
@@ -227,6 +224,10 @@
   .televisores {
     grid-column: 3/4;
     grid-row: 1/2;
+  }
+  .css-1vb78ys {
+    margin-left: 120px !important;
+    margin-top: 50px !important;
   }
 }
 
@@ -424,6 +425,8 @@
   }
   .box {
     margin-bottom: 30px;
+    border: 1px solid #e6e6e6;
+    box-shadow: 1px 0px 3px 0px #d0d0d0;
   }
   .list-title {
     margin-top: 2em;
@@ -433,8 +436,14 @@
     width: 80%;
     margin-left: 38px;
   }
-  .css-a4f2b1{
-    max-width: 298px!important;
+  .css-a4f2b1 {
+    max-width: 298px !important;
+  }
+  .css-1vb78ys {
+    margin-left: 49px !important;
+  }
+  .css-7b8fbf {
+    margin-left: 10px !important;
   }
 }
 
@@ -445,7 +454,7 @@
   .list-title {
     margin-left: 38px;
   }
-  .css-a4f2b1{
-    max-width: 298px!important;
+  .css-a4f2b1 {
+    max-width: 298px !important;
   }
 }
