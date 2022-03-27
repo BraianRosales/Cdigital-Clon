@@ -1361,7 +1361,7 @@ form {
   }
 
   .css-a4f2b1 {
-    max-width: 298px;
+    max-width: 298px !important;
   }
 }
 @media (max-width: 375px) {
