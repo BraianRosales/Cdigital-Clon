@@ -55,8 +55,21 @@ export const ItemsProvider = ({ children }) => {
   }
 
   function removeItemCart(itemId) {
-    const updateItems = items.filter((item) => item.id !== itemId);
-    setItems(updateItems);
+    Swal.fire({
+      title: "Atencion",
+      text: "¿quieres eliminar este producto del carrito?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Si, Eliminar!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire("Eliminado!", "Su producto ha sido eliminado.", "success");
+        const updateItems = items.filter((item) => item.id !== itemId);
+        setItems(updateItems);
+      }
+    });
   }
 
   function clear() {

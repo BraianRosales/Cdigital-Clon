@@ -7,7 +7,6 @@ import ItemCount from "../itemCount/ItemCount";
 import db from "../../firebaseConfig/firebaseConfig";
 import { collection, query, getDocs } from "firebase/firestore";
 import CircularStatic from "../circularStatic/CircularStatic";
-import { Link } from "react-router-dom";
 
 const ItemSmallCart = ({ item, removeItem, addItem }) => {
   const [productsData, setProductsData] = useState([]);
@@ -50,22 +49,21 @@ const ItemSmallCart = ({ item, removeItem, addItem }) => {
           padding: "5px",
         }}
       >
-        <Link to={`/item/${item.id}`}>
-          <CardActionArea sx={{ color: "black" }}>
-            <CardMedia
-              component="img"
-              width={100}
-              image={item.image}
-              alt="item.img"
-            />
+        <CardActionArea sx={{ color: "black" }}>
+          <CardMedia
+            component="img"
+            width={100}
+            image={item.image}
+            alt="item.img"
+          />
 
-            <CardContent>
-              <div id="name_itemSmallCart">{item.name.toUpperCase()}</div>
-              <p>{item.price}</p>
-              <p>cantidad: {item.quantify}</p>
-            </CardContent>
-          </CardActionArea>
-        </Link>
+          <CardContent>
+            <div id="name_itemSmallCart">{item.name.toUpperCase()}</div>
+            <p>{item.price}</p>
+            <p>cantidad: {item.quantify}</p>
+          </CardContent>
+        </CardActionArea>
+
         <div id="itemCount-smallCart">
           {isLoading ? (
             <div style={{ marginLeft: "55px", marginTop: "15px" }}>
