@@ -4,12 +4,12 @@
 
 #description-detail {
   margin-top: 10px;
-  margin-left: 20px;
   font-weight: 400;
   padding-top: 0px;
   font-family: "Source Sans Pro", sans-serif !important;
   color: #34495e !important;
   font-size: 33px;
+  margin-left: 5px;
 }
 
 #regular-price {
@@ -28,8 +28,8 @@
 
 #stock-detail {
   text-transform: uppercase;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 15px;
+  margin-bottom: -10px;
   color: red;
 }
 
@@ -37,4 +37,32 @@
   float: right;
   margin-top: 20px;
   margin-right: 25px;
+}
+
+.btn-lightBlue {
+  margin-top: 30px !important;
+  width: 39%;
+  box-sizing: border-box;
+  float: left;
+  font-weight: 400;
+  background: #47b8d6 !important;
+  color: white;
+  font-size: 14px;
+  border-radius: 2px;
+  padding: 5px !important;
+
+  cursor: pointer;
+  -webkit-appearance: none;
+  transition: all 0.3s ease 0s;
+}
+
+.btn-terminarCompra {
+  width: 29%;
+  line-height: 13px !important;
+  margin-right: 10px;
+  margin-left: 85px !important;
+}
+
+.btn-agregar {
+  margin-left: 15px !important;
 }

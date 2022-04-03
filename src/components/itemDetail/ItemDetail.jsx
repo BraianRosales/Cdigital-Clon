@@ -38,12 +38,12 @@ const ItemDetail = ({ item }) => {
           columns={12}
           sx={{ marginLeft: "50px", marginTop: "10px" }}
         >
-          <Grid item xs={4}>
+          <Grid item xs={12} sm={8} md={4} className="detail-img">
             <Item sx={{ border: "1px solid #d7d7d7", padding: "0px" }}>
               <CardMedia component="img" image={item.image} />
             </Item>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={12} sm={7} md={4} className="detail-description">
             <div>
               <div id="description-detail">{item.description}</div>
             </div>
@@ -53,8 +53,11 @@ const ItemDetail = ({ item }) => {
               <div id="stock-detail">Stock: {item.stock}</div>
             </div>
             <Link to="/Cart">
-              <Button variant="contained" className="btn-lightBlue">
-                Terminar la compra
+              <Button
+                variant="contained"
+                className="btn-lightBlue btn-terminarCompra"
+              >
+                Terminar compra
               </Button>
             </Link>
             {productInCart() !== undefined ? (
@@ -69,7 +72,8 @@ const ItemDetail = ({ item }) => {
             ) : (
               <Button
                 variant="contained"
-                className="btn-lightBlue"
+                className="btn-lightBlue btn-agregar"
+                sx={{ width: "29%", lineHeight: "25px" }}
                 onClick={() => {
                   addItem(
                     item.id,
@@ -84,7 +88,7 @@ const ItemDetail = ({ item }) => {
               </Button>
             )}
           </Grid>
-          <Grid item xs={3} sx={{ marginTop: "10px" }}>
+          <Grid item xs={9} sm={4} md={3} className="detail-SmallCart">
             <SmallCart
               items={items}
               allItems={allItems}

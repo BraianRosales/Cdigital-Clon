@@ -286,12 +286,12 @@ hr {
 
 #description-detail {
   margin-top: 10px;
-  margin-left: 20px;
   font-weight: 400;
   padding-top: 0px;
   font-family: "Source Sans Pro", sans-serif !important;
   color: #34495e !important;
   font-size: 33px;
+  margin-left: 5px;
 }
 
 #regular-price {
@@ -310,8 +310,8 @@ hr {
 
 #stock-detail {
   text-transform: uppercase;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 15px;
+  margin-bottom: -10px;
   color: red;
 }
 
@@ -319,6 +319,33 @@ hr {
   float: right;
   margin-top: 20px;
   margin-right: 25px;
+}
+
+.btn-lightBlue {
+  margin-top: 30px !important;
+  width: 39%;
+  box-sizing: border-box;
+  float: left;
+  font-weight: 400;
+  background: #47b8d6 !important;
+  color: white;
+  font-size: 14px;
+  border-radius: 2px;
+  padding: 5px !important;
+  cursor: pointer;
+  -webkit-appearance: none;
+  transition: all 0.3s ease 0s;
+}
+
+.btn-terminarCompra {
+  width: 29%;
+  line-height: 13px !important;
+  margin-right: 10px;
+  margin-left: 85px !important;
+}
+
+.btn-agregar {
+  margin-left: 15px !important;
 }
 
 #price-product-cart {
@@ -900,23 +927,6 @@ form {
   float: none;
 }
 
-.btn-lightBlue {
-  margin-top: 30px !important;
-  width: 39%;
-  box-sizing: border-box;
-  float: left;
-  font-weight: 400;
-  background: #47b8d6 !important;
-  color: white;
-  font-size: 14px;
-  border-radius: 2px;
-  padding: 5px !important;
-  margin-left: 35px !important;
-  cursor: pointer;
-  -webkit-appearance: none;
-  transition: all 0.3s ease 0s;
-}
-
 .height-view {
   min-height: 100vh;
 }
@@ -1119,6 +1129,23 @@ form {
   .css-1vb78ys {
     margin-left: 120px !important;
     margin-top: 50px !important;
+  }
+
+  .css-3ktufm-MuiGrid-root {
+    margin-left: -16px !important;
+  }
+
+  .detail-img {
+    margin-left: 100px !important;
+    margin-bottom: 50px !important;
+  }
+
+  .detail-description {
+    margin-left: 30px !important;
+  }
+
+  .detail-SmallCart {
+    margin-bottom: 100px !important;
   }
 }
 @media (max-width: 414px) {
@@ -1377,6 +1404,46 @@ form {
   .css-7b8fbf {
     margin-left: 10px !important;
   }
+
+  .css-j09zq2-MuiPaper-root-MuiCard-root {
+    margin-top: 45px !important;
+  }
+
+  .css-3ktufm-MuiGrid-root {
+    margin-left: -16px !important;
+  }
+
+  .btn-lightBlue {
+    margin-left: -5px !important;
+  }
+
+  .css-1pxusvs-MuiGrid-root {
+    margin-top: 20px !important;
+    margin-bottom: 45px !important;
+  }
+
+  .css-sghohy-MuiButtonBase-root-MuiButton-root {
+    margin-left: 65px !important;
+  }
+
+  .css-1qtbgh3-MuiButtonBase-root-MuiButton-root {
+    margin-left: 25px !important;
+  }
+
+  .detail-SmallCart {
+    margin-left: 50px !important;
+    margin-top: 25px !important;
+    margin-bottom: 40px !important;
+  }
+
+  .detail-img {
+    margin-left: 0px !important;
+    margin-bottom: 0px !important;
+  }
+
+  .detail-description {
+    margin-left: 0px !important;
+  }
 }
 @media (max-width: 375px) {
   .ul-navBar {
@@ -1389,6 +1456,14 @@ form {
 
   .css-a4f2b1 {
     max-width: 298px !important;
+  }
+
+  .css-sghohy-MuiButtonBase-root-MuiButton-root {
+    margin-left: 61px !important;
+  }
+
+  .css-1qtbgh3-MuiButtonBase-root-MuiButton-root {
+    margin-left: 25px !important;
   }
 }
 
