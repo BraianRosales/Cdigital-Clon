@@ -365,6 +365,23 @@ hr {
   margin-left: 15px;
 }
 
+.product-total-count {
+  margin-top: 40px;
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 41px;
+}
+
+.productInCart-img {
+  width: 70% !important;
+}
+
+.x-product-delete {
+  cursor: pointer;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+}
+
 #itemCount-smallCart {
   margin-left: 5px;
 }
@@ -409,6 +426,24 @@ hr {
 
 #h2-products-cart {
   color: #6dc5e9;
+}
+
+.cart-title {
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.cart-content {
+  width: 60%;
+}
+
+.price-title {
+  margin-right: 102px;
+}
+
+.truck-in-cart {
+  width: 60% !important;
+  padding: 8px;
 }
 
 #spinner-itemDetailContainer {
@@ -1459,6 +1494,52 @@ form {
 
   .css-jgrsjy {
     margin-left: 38px !important;
+  }
+
+  .cart-content {
+    width: 90%;
+  }
+
+  .itemCount-content {
+    margin-left: 130px;
+  }
+
+  .product-total-count {
+    margin-left: 179px;
+  }
+
+  .productInCart-img {
+    width: 150% !important;
+  }
+
+  .productInCart-description-content {
+    margin-bottom: 30px;
+    margin-left: 100px;
+  }
+
+  .productInCart-description {
+    margin-left: 75px;
+  }
+
+  .x-product-delete {
+    margin-left: 30px;
+    margin-bottom: 10px;
+  }
+
+  .checkout-cart {
+    padding-left: 17px;
+  }
+
+  .p-articles-amount {
+    margin-left: 58px;
+  }
+
+  .truck-in-cart {
+    width: 185% !important;
+  }
+
+  #h3-cart {
+    margin-left: 40px;
   }
 }
 @media (max-width: 375px) {

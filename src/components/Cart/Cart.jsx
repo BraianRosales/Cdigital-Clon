@@ -23,7 +23,7 @@ const Cart = ({
         mb={3}
         pb={1}
       >
-        <Grid item xs={4}>
+        <Grid item xs={12} sm={8} md={4}>
           <button
             className="btn-cart"
             onClick={() => {
@@ -38,10 +38,10 @@ const Cart = ({
           </Link>
         </Grid>
 
-        <Grid item xs={4}></Grid>
+        <Grid item xs={12} sm={8} md={4}></Grid>
 
-        <Grid container xs={4}>
-          <Grid item xs={6} mt={4} sx={{ fontSize: "22px" }}>
+        <Grid className="checkout-cart" container xs={12} sm={8} md={4}>
+          <Grid item xs={12} sm={8} md={6} mt={4} sx={{ fontSize: "22px" }}>
             <div className="total">Total: ${totalPrice()}</div>
           </Grid>
 
@@ -78,10 +78,7 @@ const Cart = ({
         <Grid item xs={1}>
           <CardMedia
             component="img"
-            sx={{
-              width: "60%",
-              padding: "8px",
-            }}
+            className="truck-in-cart"
             image={
               "https://static.cotodigital3.com.ar/sitios/cdigi/static/content/images/cvirtual/imagenes/ic_truck.png"
             }
@@ -95,13 +92,13 @@ const Cart = ({
       <h2 id="h2-products-cart">Productos</h2>
       <Grid container mt={3} mb={1}>
         <Grid container xs={4}>
-          <p>Articulos y cantidad</p>
+          <p className="p-articles-amount">Articulos y cantidad</p>
         </Grid>
 
         <Grid item xs={4}></Grid>
 
         <Grid container xs={4}>
-          <Grid sx={{ marginRight: "87px" }}>Precio</Grid>
+          <Grid className="price-title">Precio</Grid>
           <Grid item xs={6}>
             Total
           </Grid>
@@ -124,7 +121,7 @@ const Cart = ({
         mb={3}
         pb={1}
       >
-        <Grid item xs={4}>
+        <Grid item xs={12} sm={8} md={4}>
           <button
             className="btn-cart"
             onClick={() => {
@@ -138,13 +135,12 @@ const Cart = ({
             <button className="btn-cart">Seguir comprando</button>
           </Link>
         </Grid>
-        <Grid item xs={4}></Grid>
 
-        <Grid container xs={4}>
-          <Grid item xs={6} mt={4} sx={{ fontSize: "22px" }}>
-            <div className="total">
-              Total: <span>${totalPrice()}</span>
-            </div>
+        <Grid item xs={12} sm={8} md={4}></Grid>
+
+        <Grid className="checkout-cart" container xs={12} sm={8} md={4}>
+          <Grid item xs={12} sm={8} md={6} mt={4} sx={{ fontSize: "22px" }}>
+            <div className="total">Total: ${totalPrice()}</div>
           </Grid>
 
           <Grid item xs={6} mt={2}>

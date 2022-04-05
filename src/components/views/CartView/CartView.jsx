@@ -50,18 +50,10 @@ const CartView = ({ searchText, stateSearchText }) => {
           <Spinner />
         </div>
       ) : (
-        <div style={{ marginTop: "50px" }}>
+        <div style={{ marginTop: "50px",marginBottom:"100px" }}>
           {searchText === "" ? (
-            <div style={{ width: "60%" }}>
-              <p
-                style={{
-                  fontSize: "30px",
-                  marginTop: "20px",
-                  marginLeft: "-22px",
-                }}
-              >
-                Carro de compras
-              </p>
+            <div className="cart-content">
+              <p className="cart-title">Carro de compras</p>
               {items.length > 0 ? (
                 <Cart
                   items={items}
@@ -82,7 +74,7 @@ const CartView = ({ searchText, stateSearchText }) => {
                       color: "red",
                     }}
                   >
-                    No tiene ningún artículo en el carro de compra.{" "}
+                    No tiene ningún artículo en el carro de compra.
                   </p>
                   <Link to="/">
                     <Button

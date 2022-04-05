@@ -7,7 +7,7 @@ import { collection, query, getDocs } from "firebase/firestore";
 import CircularStatic from "../circularStatic/CircularStatic";
 import { Link } from "react-router-dom";
 
-const ProductInCartView = ({ item, removeItem, addItem,removeItemCart }) => {
+const ProductInCartView = ({ item, removeItem, addItem, removeItemCart }) => {
   const [productsData, setProductsData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -43,40 +43,40 @@ const ProductInCartView = ({ item, removeItem, addItem,removeItemCart }) => {
     addItem(item.id, item.name, item.price, item.image, item.description);
   }
 
- 
   return (
     <>
       <Grid container spacing={3} mt={3} mb={3}>
-        <Grid container xs={5}>
+        <Grid container xs={5} className="productInCart-description-content">
           <Grid xs={1} mt={4}>
             <button
-              style={{ cursor: "pointer", border:"1px solid #e6e6e6",borderRadius:"5px" }}
+            className="x-product-delete"
+             
               onClick={() => {
-                removeItemCart(item.id)
+                removeItemCart(item.id);
               }}
             >
               X
             </button>
           </Grid>
 
-          <Grid xs={4}>
+          <Grid xs={12} sm={8} md={4}>
             <Link to={`/item/${item.id}`}>
               <CardMedia
                 component="img"
-                sx={{ width: "70%" }}
+                className="productInCart-img"
                 image={item.image}
                 alt="product"
               />
             </Link>
           </Grid>
-          <Grid mt={4} xs={7}>
+          <Grid className="productInCart-description" mt={4} xs={7}>
             {item.description}
           </Grid>
         </Grid>
 
         <Grid xs={3}></Grid>
 
-        <Grid container xs={4}>
+        <Grid container xs={12} sm={8} md={4}>
           <Grid>
             {isLoading ? (
               <div style={{ marginLeft: "42px", marginTop: "15px" }}>
@@ -96,10 +96,7 @@ const ProductInCartView = ({ item, removeItem, addItem,removeItemCart }) => {
               </>
             )}
           </Grid>
-          <Grid
-            sx={{ marginTop: "40px", fontWeight: "bold", fontSize: "20px" }}
-            xs={6}
-          >
+          <Grid className="product-total-count " xs={6}>
             ${itemPrice().toFixed(2)}
           </Grid>
         </Grid>
