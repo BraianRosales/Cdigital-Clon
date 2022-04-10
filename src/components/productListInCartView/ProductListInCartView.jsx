@@ -8,7 +8,7 @@ const ProductListInCartView = ({
   removeItemCart,
 }) => {
   return (
-    <div>
+    <div className="productListInCartView">
       {items.map((item) => (
         <ProductInCartView
           key={item.id}

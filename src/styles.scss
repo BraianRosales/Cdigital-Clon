@@ -490,10 +490,10 @@
     margin-left: 130px;
   }
   .product-total-count {
-    margin-left: 179px;
+    margin-left: 180px;
   }
   .productInCart-img {
-    width: 150% !important;
+    width: 130% !important;
   }
   .productInCart-description-content {
     margin-bottom: 30px;
@@ -503,20 +503,41 @@
     margin-left: 75px;
   }
   .x-product-delete {
-    margin-left: 30px;
+    margin-left: 24px;
     margin-bottom: 10px;
+    width: 100%;
+    background-color: #e26060;
+    color: white;
+    border: 0px;
   }
   .checkout-cart {
     padding-left: 17px;
   }
-  .p-articles-amount {
-    margin-left: 58px;
-  }
+
   .truck-in-cart {
     width: 185% !important;
   }
   #h3-cart {
     margin-left: 40px;
+  }
+  .productInCart-description {
+    margin-top: -20px;
+  }
+  .itemCount-div {
+    margin-left: 128px;
+  }
+  #price-product-cart {
+    margin-left: 58px;
+  }
+  .price-title {
+    margin-left: 0px;
+  }
+  .productListInCartView {
+    border: 1px solid #f0f0f0;
+    box-shadow: 0px 1px 6px 1px #9f9f9f;
+  }
+  .p-articles-amount{
+    margin-left: 0px;
   }
 }
 
@@ -535,5 +556,29 @@
   }
   .css-1qtbgh3-MuiButtonBase-root-MuiButton-root {
     margin-left: 25px !important;
+  }
+  .productInCart-description {
+    margin-left: 72px;
+  }
+  .product-total-count {
+    margin-left: 172px;
+  }
+  .x-product-delete {
+    width: 100%;
+    background-color: #e26060;
+    color: white;
+    border: 0px;
+  }
+
+  .itemCount-div {
+    margin-left: 119px;
+  }
+  
+  #price-product-cart {
+    margin-left: 55px;
+  }
+
+  .price-title {
+    margin-left: 0px;
   }
 }

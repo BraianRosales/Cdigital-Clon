@@ -47,7 +47,7 @@ const ProductInCartView = ({ item, removeItem, addItem, removeItemCart }) => {
     <>
       <Grid container spacing={3} mt={3} mb={3}>
         <Grid container xs={5} className="productInCart-description-content">
-          <Grid xs={1} mt={4}>
+          <Grid xs={6} sm={8} md={1} mt={4}>
             <button
             className="x-product-delete"
              
@@ -77,7 +77,7 @@ const ProductInCartView = ({ item, removeItem, addItem, removeItemCart }) => {
         <Grid xs={3}></Grid>
 
         <Grid container xs={12} sm={8} md={4}>
-          <Grid>
+          <Grid className="itemCount-div">
             {isLoading ? (
               <div style={{ marginLeft: "42px", marginTop: "15px" }}>
                 <CircularStatic />

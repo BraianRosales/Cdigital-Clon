@@ -91,15 +91,15 @@ const Cart = ({
 
       <h2 id="h2-products-cart">Productos</h2>
       <Grid container mt={3} mb={1}>
-        <Grid container xs={4}>
+        <Grid container xs={12} sm={8} md={4}>
           <p className="p-articles-amount">Articulos y cantidad</p>
         </Grid>
 
-        <Grid item xs={4}></Grid>
+        <Grid item xs={0} sm={8} md={4}></Grid>
 
-        <Grid container xs={4}>
+        <Grid container xs={12} sm={8} md={4}>
           <Grid className="price-title">Precio</Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={8} md={6}>
             Total
           </Grid>
         </Grid>
