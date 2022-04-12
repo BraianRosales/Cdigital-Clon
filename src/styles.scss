@@ -65,6 +65,13 @@
     font-size: 15px;
     width: 66%;
   }
+  .btn-empty-view {
+    margin-top: 40px !important;
+    width: 30% !important;
+  }
+  .itemCount-div {
+    margin-left: -46px;
+  }
 }
 
 @media (max-width: 810px) {
@@ -223,6 +230,43 @@
   }
   .detail-SmallCart {
     margin-bottom: 100px !important;
+  }
+  .btn-empty-view {
+    margin-top: 40px !important;
+    width: 60% !important;
+  }
+  .itemCount-container {
+    margin-top: 120px;
+  }
+  .product-total-count {
+    margin-left: 10px;
+  }
+  .x-product-delete {
+    margin-left: 32px;
+    margin-bottom: 45px;
+    width: 50%;
+    background-color: #e26060;
+    color: white;
+    border: 0px;
+    height: 28px;
+    font-size: 15px;
+  }
+  .productInCart-description {
+    margin-left: 55px;
+  }
+  .truck-in-cart {
+    width: 60px !important;
+  }
+  #h3-cart {
+    margin-left: 30px;
+  }
+  .p-articles-amount {
+    margin: 0px;
+    font-size: 18px;
+  }
+  .price-title {
+    margin-left: 0px;
+    font-size: 18px;
   }
 }
 
@@ -490,7 +534,7 @@
     margin-left: 130px;
   }
   .product-total-count {
-    margin-left: 180px;
+    margin-left: 182px;
   }
   .productInCart-img {
     width: 130% !important;
@@ -509,6 +553,8 @@
     background-color: #e26060;
     color: white;
     border: 0px;
+    height: 28px;
+    font-size: 15px;
   }
   .checkout-cart {
     padding-left: 17px;
@@ -536,8 +582,16 @@
     border: 1px solid #f0f0f0;
     box-shadow: 0px 1px 6px 1px #9f9f9f;
   }
-  .p-articles-amount{
+  .p-articles-amount {
     margin-left: 0px;
+  }
+  .btn-empty-view {
+    margin-top: 40px !important;
+    width: 80% !important;
+  }
+  .itemCount-container{
+    margin-top: 0px;
+  
   }
 }
 
@@ -558,10 +612,10 @@
     margin-left: 25px !important;
   }
   .productInCart-description {
-    margin-left: 72px;
+    margin-left: 65px;
   }
   .product-total-count {
-    margin-left: 172px;
+    margin-left: 170px;
   }
   .x-product-delete {
     width: 100%;
@@ -573,7 +627,7 @@
   .itemCount-div {
     margin-left: 119px;
   }
-  
+
   #price-product-cart {
     margin-left: 55px;
   }

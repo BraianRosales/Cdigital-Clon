@@ -50,7 +50,7 @@ const CartView = ({ searchText, stateSearchText }) => {
           <Spinner />
         </div>
       ) : (
-        <div style={{ marginTop: "50px",marginBottom:"100px" }}>
+        <div style={{ marginTop: "50px", marginBottom: "100px" }}>
           {searchText === "" ? (
             <div className="cart-content">
               <p className="cart-title">Carro de compras</p>
@@ -78,12 +78,7 @@ const CartView = ({ searchText, stateSearchText }) => {
                   </p>
                   <Link to="/">
                     <Button
-                      sx={{
-                        width: "15%",
-                        display: "block",
-                        margin: "0px auto",
-                        background: "#47b8d6",
-                      }}
+                      className="btn-empty-view"
                       variant="contained"
                       disableElevation
                     >

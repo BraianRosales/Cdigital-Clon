@@ -59,7 +59,7 @@ const ProductInCartView = ({ item, removeItem, addItem, removeItemCart }) => {
             </button>
           </Grid>
 
-          <Grid xs={12} sm={8} md={4}>
+          <Grid xs={12} sm={12} md={4}>
             <Link to={`/item/${item.id}`}>
               <CardMedia
                 component="img"
@@ -69,14 +69,14 @@ const ProductInCartView = ({ item, removeItem, addItem, removeItemCart }) => {
               />
             </Link>
           </Grid>
-          <Grid className="productInCart-description" mt={4} xs={7}>
+          <Grid className="productInCart-description" mt={4} xs={12} sm={8} md={7}>
             {item.description}
           </Grid>
         </Grid>
 
-        <Grid xs={3}></Grid>
+        <Grid xs={0} sm={0} md={3}></Grid>
 
-        <Grid container xs={12} sm={8} md={4}>
+        <Grid className="itemCount-container" container xs={12} sm={4} md={4}>
           <Grid className="itemCount-div">
             {isLoading ? (
               <div style={{ marginLeft: "42px", marginTop: "15px" }}>

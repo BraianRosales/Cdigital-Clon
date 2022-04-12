@@ -446,6 +446,13 @@ hr {
   padding: 8px;
 }
 
+.btn-empty-view {
+  width: 15% !important;
+  display: block !important;
+  margin: 0px auto !important;
+  background: #47b8d6 !important;
+}
+
 #spinner-itemDetailContainer {
   margin-top: 30px;
 }
@@ -996,6 +1003,15 @@ form {
     font-size: 15px;
     width: 66%;
   }
+
+  .btn-empty-view {
+    margin-top: 40px !important;
+    width: 30% !important;
+  }
+
+  .itemCount-div {
+    margin-left: -46px;
+  }
 }
 @media (max-width: 810px) {
   .css-1pxusvs-MuiGrid-root {
@@ -1181,6 +1197,52 @@ form {
 
   .detail-SmallCart {
     margin-bottom: 100px !important;
+  }
+
+  .btn-empty-view {
+    margin-top: 40px !important;
+    width: 60% !important;
+  }
+
+  .itemCount-container {
+    margin-top: 120px;
+  }
+
+  .product-total-count {
+    margin-left: 10px;
+  }
+
+  .x-product-delete {
+    margin-left: 32px;
+    margin-bottom: 45px;
+    width: 50%;
+    background-color: #e26060;
+    color: white;
+    border: 0px;
+    height: 28px;
+    font-size: 15px;
+  }
+
+  .productInCart-description {
+    margin-left: 55px;
+  }
+
+  .truck-in-cart {
+    width: 60px !important;
+  }
+
+  #h3-cart {
+    margin-left: 30px;
+  }
+
+  .p-articles-amount {
+    margin: 0px;
+    font-size: 18px;
+  }
+
+  .price-title {
+    margin-left: 0px;
+    font-size: 18px;
   }
 }
 @media (max-width: 414px) {
@@ -1505,7 +1567,7 @@ form {
   }
 
   .product-total-count {
-    margin-left: 180px;
+    margin-left: 182px;
   }
 
   .productInCart-img {
@@ -1528,6 +1590,8 @@ form {
     background-color: #e26060;
     color: white;
     border: 0px;
+    height: 28px;
+    font-size: 15px;
   }
 
   .checkout-cart {
@@ -1566,6 +1630,15 @@ form {
   .p-articles-amount {
     margin-left: 0px;
   }
+
+  .btn-empty-view {
+    margin-top: 40px !important;
+    width: 80% !important;
+  }
+
+  .itemCount-container {
+    margin-top: 0px;
+  }
 }
 @media (max-width: 375px) {
   .ul-navBar {
@@ -1589,11 +1662,11 @@ form {
   }
 
   .productInCart-description {
-    margin-left: 72px;
+    margin-left: 65px;
   }
 
   .product-total-count {
-    margin-left: 172px;
+    margin-left: 170px;
   }
 
   .x-product-delete {
