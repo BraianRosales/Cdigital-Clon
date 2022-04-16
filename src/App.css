@@ -1299,6 +1299,7 @@ form {
 
   .btn-form-gray {
     height: 35px;
+    width: 43%;
   }
 
   #p-shipping {
@@ -1717,8 +1718,7 @@ form {
 
   #div-date {
     margin-top: 15px;
-    float: none;
-    width: 90%;
+    width: 92%;
   }
 
   #div-select {
@@ -1742,6 +1742,11 @@ form {
     cursor: pointer;
     margin-bottom: 3px;
     width: 90%;
+  }
+
+  #btn-resume {
+    display: flex;
+    margin-left: 50px !important;
   }
 }
 @media (max-width: 375px) {
