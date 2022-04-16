@@ -21,7 +21,7 @@ const PurchaseSummary = ({
 }) => {
   return (
     <>
-      <Grid item xs={4}>
+      <Grid item xs={12} sm={4} md={4} className="contained-purchaseSummary">
         <Item sx={{ paddingBottom: "20px" }}>
           <h3 id="title-box" className="text-resume">
             Resumen de la compra

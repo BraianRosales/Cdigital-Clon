@@ -933,6 +933,28 @@ form {
   border-bottom: 1px solid gainsboro;
 }
 
+.item-form {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 18px;
+  width: 70%;
+}
+
+.btn-form-gray {
+  cursor: pointer;
+  margin-left: 5px;
+  width: 35%;
+  background-color: #47b8d6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  height: 25px;
+}
+
+.btn-form-gray:hover {
+  box-shadow: 0px 1px 3px 1px #9b9b9b;
+}
+
 .text-resume {
   float: left;
   margin-left: 20px;
@@ -1011,6 +1033,26 @@ form {
 
   .itemCount-div {
     margin-left: -46px;
+  }
+
+  .btn-form-gray {
+    width: 45%;
+  }
+
+  #div-select {
+    margin-left: 0px;
+  }
+
+  #div-select select {
+    width: 87%;
+  }
+
+  .form_cashBox {
+    padding-bottom: 100px;
+  }
+
+  .btn-terminarCompra {
+    margin-left: 50px !important;
   }
 }
 @media (max-width: 810px) {
@@ -1243,6 +1285,28 @@ form {
   .price-title {
     margin-left: 0px;
     font-size: 18px;
+  }
+
+  .wrap-box {
+    width: 90%;
+  }
+
+  #div-select {
+    float: left;
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+
+  .btn-form-gray {
+    height: 35px;
+  }
+
+  #p-shipping {
+    margin-left: 12px;
+  }
+
+  #div-select select {
+    width: 86%;
   }
 }
 @media (max-width: 414px) {
@@ -1638,6 +1702,46 @@ form {
 
   .itemCount-container {
     margin-top: 0px;
+  }
+
+  .wrap-box {
+    width: 85%;
+  }
+
+  .item-form {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 18px;
+    width: 85%;
+  }
+
+  #div-date {
+    margin-top: 15px;
+    float: none;
+    width: 90%;
+  }
+
+  #div-select {
+    margin-top: 15px !important;
+  }
+
+  #p-select {
+    margin-left: 80px;
+  }
+
+  #div-select select {
+    width: 95%;
+  }
+
+  .contained-purchaseSummary {
+    margin-bottom: 60px !important;
+    margin-top: 35px !important;
+  }
+
+  .btn-form-gray {
+    cursor: pointer;
+    margin-bottom: 3px;
+    width: 90%;
   }
 }
 @media (max-width: 375px) {

@@ -88,10 +88,10 @@ const Form = ({
 
   return (
     <>
-      <Grid item xs={8}>
+      <Grid item xs={12} sm={8} md={8}>
         <Item>
           <div style={{ textAlign: "center" }}>
-            <Grid item xs={6} md={12} mt={5}>
+            <Grid item xs={12} sm={12} md={12} mt={5}>
               <h3 id="title-box">Forma de pago</h3>
               <p id="p-box">
                 Seleccioná la fecha de entrega y banda horaria para la entrega
@@ -106,35 +106,19 @@ const Form = ({
             >
               <Grid item xs={6}>
                 <div>
-                  <p>Envio a domicilio - Supermercado</p>
+                  <p id="p-shipping">Envio a domicilio - Supermercado</p>
                 </div>
               </Grid>
               <Grid item xs={6}>
                 <Link to="/">
-                  <button style={{ cursor: "pointer" }}>
-                    Seguir comprando
-                  </button>
+                  <button className="btn-form-gray">Seguir comprando</button>
                 </Link>
                 <Link to="/cart">
-                  <button
-                    style={{
-                      cursor: "pointer",
-                      marginLeft: "10px",
-                    }}
-                  >
-                    volver al carrito
-                  </button>
+                  <button className="btn-form-gray">volver al carrito</button>
                 </Link>
               </Grid>
             </Grid>
-            <Item
-              sx={{
-                marginTop: "30px",
-                marginBottom: "30px",
-                paddingTop: "18px",
-                width: "70%",
-              }}
-            >
+            <Item className="item-form">
               <form onSubmit={onSubmit}>
                 <div id="div-date">
                   <label>Fecha de entrega más cercana</label>
@@ -206,7 +190,9 @@ const Form = ({
                   onChange={onChangeEmailConfirmation}
                 />
                 {errorMsg && (
-                  <div className="error-msg-form">E-mail vacio o no coinciden los E-mail.</div>
+                  <div className="error-msg-form">
+                    E-mail vacio o no coinciden los E-mail.
+                  </div>
                 )}
                 {!isRendering ? (
                   <button id="btn-form">ACEPTAR</button>

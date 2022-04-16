@@ -83,25 +83,47 @@ form {
 }
 
 #btn-form {
-    color: white;
-    background-color: #47b8d6;
-    @include formButtonStyles();
-  }
-  
-  #btn-form:hover {
-    box-shadow: 0px 1px 3px 1px #9b9b9b;
-  }
-  
-  #btn-form-disable {
-    color: #6d6d6d;
-    background-color: #dddcdc;
-    @include formButtonStyles();
-  }
+  color: white;
+  background-color: #47b8d6;
+  @include formButtonStyles();
+}
 
-  .error-msg-form{
-    color: red;
-    background-color: mistyrose;
-    margin-top: 15px;
-    border-top: 1px solid gainsboro;
-    border-bottom: 1px solid gainsboro;
-  }
+#btn-form:hover {
+  box-shadow: 0px 1px 3px 1px #9b9b9b;
+}
+
+#btn-form-disable {
+  color: #6d6d6d;
+  background-color: #dddcdc;
+  @include formButtonStyles();
+}
+
+.error-msg-form {
+  color: red;
+  background-color: mistyrose;
+  margin-top: 15px;
+  border-top: 1px solid gainsboro;
+  border-bottom: 1px solid gainsboro;
+}
+
+.item-form {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 18px;
+  width: 70%;
+}
+
+.btn-form-gray {
+  cursor: pointer;
+  margin-left: 5px;
+  width: 35%;
+  background-color: #47b8d6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  height: 25px;
+}
+
+.btn-form-gray:hover {
+  box-shadow: 0px 1px 3px 1px #9b9b9b;
+}

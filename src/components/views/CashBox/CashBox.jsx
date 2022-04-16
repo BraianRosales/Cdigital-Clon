@@ -54,7 +54,11 @@ const CashBox = ({ searchText, stateSearchText }) => {
           {searchText === "" ? (
             <div className="height-view" style={{ backgroundColor: "#ecf1f7" }}>
               <div className="wrap-box">
-                <Box sx={{ flexGrow: 1, width: "100%" }} pt={8}>
+                <Box
+                  className="form_cashBox"
+                  sx={{ flexGrow: 1, width: "100%" }}
+                  pt={8}
+                >
                   <Grid
                     container
                     rowSpacing={1}
